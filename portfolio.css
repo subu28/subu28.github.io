@@ -1,0 +1,100 @@
+html,body,.fullwrapper{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0px;
+}
+#tourright{
+    width: 30%;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+}
+.left{
+    width: 70%;
+    min-height: 100%;
+}
+#profile{
+    background: #00bad3;
+    overflow: hidden;
+}
+#photodiv{
+    background: #fff;
+    border: solid #ff0 5px;
+    border-radius: 200px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    float: right;
+    position: relative;
+    right: -60px;
+    top: -65px;
+}
+#photodiv img{
+    position: relative;
+    height: 785px;
+    top: -90px;
+    left: 0px;
+}
+#reachdiv{
+    float: left;
+    width: 80px;
+    padding: 150px 0px 0px 0px;
+}
+#reachdiv div{
+    width: 60px;
+    height: 60px;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+    left: -30px;
+    border: solid 2px #fff;
+    margin: 5px;
+}
+#reachdiv img{
+    width:60px;
+}
+#profilecontent{
+    padding: 30px 0px 0px 100px;
+    color: #fff;
+}
+#namediv{
+    font-size: 70px;
+    font-family: verdana sans-serif;
+    padding: 70px 0px 10px 0px;
+    text-shadow: 2px 2px 4px #000;
+}
+#creddiv{
+    padding: 10px 0px 10px 40px;
+    font-size: 25px;
+}
+#creddiv span{
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #000;
+}
+#about{
+    font-size: 20px;
+    font-family: Georgia;
+    text-align: justify;
+    padding: 40px 120px 20px 40px;
+}
+#about span{
+    text-shadow: 2px 2px 4px #000;
+}
+#loves{
+    font-size: 25px;
+    padding: 10px 0px 30px 40px;
+}
+#loves img{
+    width: 75px;
+    height: 75px;
+    border-radius: 32px;
+    vertical-align: middle;
+}
+.pics{
+    border: 2px solid;
+}
