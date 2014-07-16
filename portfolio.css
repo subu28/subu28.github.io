@@ -98,3 +98,44 @@ body{
 .pics{
     border: 2px solid;
 }
+#navbar{
+    width: 100px;
+    background: maroon;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+#navbar ul{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+#navbar ul a li{
+    height: 25%;
+    display: block;
+    border: 2px solid;
+}
+#navbar ul a{
+    color:white;
+    text-decoration: none;
+}
+#navbar ul a li span{
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#navbar ul a li div{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+}
+#maglens{
+    position: relative;
+    border: 2px solid black;
+    border-radius: 75px;
+    height: 150px;
+    width: 150px;
+    top: -356px;
+    left: -27px;
+}
