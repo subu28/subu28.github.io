@@ -95,8 +95,40 @@ body{
     border-radius: 32px;
     vertical-align: middle;
 }
-.pics{
-    border: 2px solid;
+#loves img:hover{
+    width: 69px;
+    height: 69px;
+    border-radius: 32px;
+    border: solid 3px rgba(0,0,0,0.5)
+}
+#clicks{
+    background: #60008d;
+}
+#clickhead{
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+#picmain{
+    margin: auto;
+    padding-bottom: 60px;
+    width: 760px;
+    overflow: auto;
+}
+.picholder{
+    float: left;
+}
+.picholder img{
+    padding: 4px;
+    display: block;
+}
+.picsmall{
+    height: 136px;
+}
+.picbig{
+    height: 280px;
 }
 #navbar{
     width: 100px;
