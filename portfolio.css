@@ -101,10 +101,13 @@ body{
     border-radius: 32px;
     border: solid 3px rgba(0,0,0,0.5)
 }
-#clicks{
-    background: #60008d;
+#works{
+    background: #ffcc00;
 }
-#clickhead{
+#clicks{
+    background: #E00057;
+}
+.divhead{
     text-align: center;
     font-size: 50px;
     padding: 20px;
