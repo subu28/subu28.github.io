@@ -89,6 +89,26 @@ body{
     font-size: 25px;
     padding: 10px 0px 30px 40px;
 }
+#loves div{
+    float: left;
+    margin: 5px;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+#loves div:hover{
+    overflow: visible;
+}
+.microdetails{
+    font-size: 12px;
+    background: #000;
+    box-shadow: 0px 0px 3px 3px #000;
+    height: auto !important;
+    width: 200px !important;
+    position: relative;
+    top: -165px;
+    left: -65px;
+}
 #loves img{
     width: 75px;
     height: 75px;
@@ -103,6 +123,42 @@ body{
 }
 #works{
     background: #ffcc00;
+}
+.workholder{
+    height: 150px;
+    padding: 20px 10px 20px 10px;
+    width: 750px;
+    margin: auto;
+    overflow: visible;
+}
+.workholder span{
+    font-size: 25px;
+}
+.workspacer{
+    width: 250px;
+    height: 150px;
+    padding: 0px 10px 0px 10px;
+}
+.work{
+    width:250px;
+    height:150px;
+    transition: height 1s,box-shadow 300ms;
+    position: absolute;
+}
+.work:hover{
+    box-shadow: 0px 0px 6px #000;
+}
+#work1:hover{
+    height:313px;
+}
+#work3:hover{
+    height:238px;
+}
+#work4:hover{
+    height:164px;
+}
+#work6:hover{
+    height:313px;
 }
 #clicks{
     background: #E00057;
@@ -129,9 +185,11 @@ body{
 }
 .picsmall{
     height: 136px;
+    width: 244px;
 }
 .picbig{
     height: 280px;
+    width: 496px;
 }
 #navbar{
     width: 100px;
