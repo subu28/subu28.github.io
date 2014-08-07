@@ -52,11 +52,21 @@ body{
     overflow: hidden;
     position: relative;
     left: -30px;
-    border: solid 2px #fff;
+    box-shadow: 0px 0px 0px 2px #fff;
     margin: 5px;
+    transition: width 500ms,height 500ms,border-radius 500ms;
+}
+#reachdiv div:hover{
+    width: 90px;
+    height: 90px;
+    border-radius: 47px;
 }
 #reachdiv img{
     width:60px;
+    transition: width 500ms;
+}
+#reachdiv img:hover{
+    width: 90px;
 }
 #profilecontent{
     padding: 30px 0px 0px 100px;
