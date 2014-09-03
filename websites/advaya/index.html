@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Advaya Home</title>
+<link rel="stylesheet" type="text/css" href="main.css" />
+<script language="javascript">
+    var datedat = new Date();
+document.write("<script src=scripts/updates.js?q="+datedat.getDate()+"><\/script>");
+document.write("<script src=scripts/events.js?q="+datedat.getDate()+"><\/script>");
+</script>
+<script src="main.js" type="text/javascript"></script>
+</head>
+<body onload="anim(); slideaut(0); updatediv(); eventlinker();">
+<div id="screen">
+	<div id="centering" align="center">
+    	<div id="maindiv">
+        	<div id="header">
+      			<ul>
+            		<li><a> Home </a></li>
+                	<li><a href="events.html"> Events </a></li>
+                	<li><a href="sponsors.html"> Sponsors </a></li>
+                	<li><a href="contactus.html"> Contact Us </a></li>
+            	</ul>
+			</div>
+            <div id="logodiv">
+			<iframe src="time.jsp"></iframe>
+            <img src="images/final1.png"/>
+			</div>
+            <div id="logindiv">
+            <br/>
+            <a onclick="bring(1);">Login</a>
+            <p> or </p>
+            <a onclick="bring(2);">Sign up now!!</a>
+            </div>
+    		<div id="slides">
+            <img onmouseover="this.src='images/slides/mpa.png'" onmouseout="this.src='images/slides/mpb.png'" onClick="sld=50; slideman(1);" style="cursor:pointer; float:left; position:relative; top:205px;" src="images/slides/mpb.png"/>
+            <img onmouseover="this.src='images/slides/mna.png'" onmouseout="this.src='images/slides/mnb.png'" onClick="sld=-50; slideman(2);" style="cursor:pointer; float:right; position:relative; top:205px;" src="images/slides/mnb.png"/>
+            <div id="slidimg" style="height:400px; width:800px; overflow:hidden;">
+			<img id="sl1" style="top:10px;" src="images/slides/slid1.jpg"/>
+            <img id="sl2" style="top:-370px;" src="images/slides/slid2.jpg"/>
+			<img id="sl3" style="top:-750px;" src="images/slides/slid3.jpg"/>
+            <img id="sl4" style="top:-1130px;" src="images/slides/slid4.jpg"/>
+			<img id="sl5" style="top:-1510px;" src="images/slides/slid5.jpg"/>
+            <img id="sl6" style="top:-1890px;" src="images/slides/slid6.jpg"/>
+			</div>
+            <div style="margin:20px;" id="contente">
+            <font style='font-family:"Comic Sans MS", cursive;'>Welcome to ADVAYA, the first intra-institute technical festival of IIT Hyderabad.
+<br/><br/>The theme for this edition is “Invention”. The driving force behind its inception has been the desire to integrate scientific and technical thinking into the minds of the students.
+<br/><br/>Mankind's ever-increasing quest for knowledge has been the reason for its exponential development over the ages. "To know,to create and to be known" has been the motto of all the greatest technical thinkers that have ever set foot on this world, including Archimedes,Galileo and Newton. In ADVAYA we have the right method of bringing out these characteristics of the students to the forelight and we guarantee do it in such a way that even the passers-by, who weren't interested in it in the first place, get dazzling and hungry and greedy for raw scientific knowledge.
+<br/><br/>So, make sure you don't miss the clashing of robots ,cracking of codes ,fusion of circuits and a lot of other stuff from Pandora's Box of mind-blowing and infectious Technical events waiting to happen in front of you on the 5-6th of November.
+</font>
+            </div>
+			</div>
+            <div id="updates">
+				<font size="+2">UPDATES</font><br/><br/>
+				<div style="height:200px; overflow:hidden;">
+				
+					<div id="up1"></div>
+					<div id="up2"></div>
+				</div>
+            	<div style="width:100px; overflow:hidden;">
+                	<img id="imag" src="images/anim.png" alt="anim" />
+                </div>
+            </div>
+            <div id="eventimg">
+            <font size="+2">Events</font>
+            <div id="eventlink">
+			<a id="totlink">
+                <img id="changimg"/>
+                <div id="changtxt"></div>
+			</a>
+            </div>
+            </div>
+            
+            <div id="footer">
+                <font color="#FFFFFF" size="+1">&copy; The Advaya Web and Arts Team<br/><a target="_blank" href="http://www.facebook.com/mudit.tanwani">Mudit</a> | <a target="_blank" href="http://www.facebook.com/ssubu">Subhash</a> | <a target="_blank" href="http://www.facebook.com/rockstarjindal">Rohit</a> | <a target="_blank" href="http://www.facebook.com/mayankthp">Mayank</a><br/>IITH<br/><br/></font>
+            </div>
+		</div>
+	</div>
+    <div id="popups">
+    	<div id="loginpop">
+        <a onclick="closepop();"> [close] </a>
+        <iframe src="db/login.jsp"></iframe>
+        </div>
+        <div id="regpop">
+        <a onclick="closepop();"> [close] </a>
+        <iframe src="db/registration.jsp"></iframe>
+        </div>
+    </div>
+	<div style="clear:both;"/>
+</div>
+<div id="popback" onclick="closepop();"/>
+</body>
+</html>

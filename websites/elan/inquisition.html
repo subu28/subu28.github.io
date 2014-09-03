@@ -1,0 +1,185 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "<b>InQuisition</b>";		
+		document.getElementById('para2').innerHTML = "It's simple<br/>	  You know stuff other people don't. You can work things out. You can make out the connections others can't. Your head is buzzing with information that others have no clue about. In short: You know. They don't.<br/>Enter the General Quiz. People who know stuff descend upon the venue to compete with other people who also know stuff to prove who knows more stuff. The catch is, they are likely to be asked a lot of stuff they all don't know about.<br/>";
+	    document.getElementById('para3').innerHTML ="<b>The Bottom Line: A quiz spanning anything and everything under the sun. And More... <br/><br/>Registration : On the spot at the venue during ELAN '10. The competition is open only to college students with a valid college I-card.</b>";
+		document.getElementById('para4').innerHTML = "";
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Format</b>';
+		document.getElementById('para3').innerHTML = 'Coming Soon';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>RULES</b>';
+		document.getElementById('para3').innerHTML = "Everyone's welcome, amateurs and serious quizzers alike.<br/>Team Size : 2<br/>Written Eliminations followed by an on-stage finals for the qualifying teams.<br/>Participants are expected to carry pens for the competition.<br/>Use of unfair means is prohibited and shall lead to disqualification.<br/>Decision of the quizmaster is final and binding.<br/>";
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Co-ordinator';
+		document.getElementById('para2').innerHTML = 'Siddhartha Kampali<br/>Ee09b031@iith.ac.in';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">InQuisition</h2> 
+      <p align="left" id="para2">It's simple<br/>
+	  You know stuff other people don't. You can work things out. You can make out the connections others can't. Your head is buzzing with information that others have no clue about. In short: You know. They don't.
+<br/>Enter the General Quiz. People who know stuff descend upon the venue to compete with other people who also know stuff to prove who knows more stuff. The catch is, they are likely to be asked a lot of stuff they all don't know about.
+<br/>
+	  </p> 
+	  
+      <p align="left" id="para3"><b>The Bottom Line: A quiz spanning anything and everything under the sun. And More...<br/><br/>Registration : On the spot at the venue during ELAN '10. The competition is open only to college students with a valid college I-card.  </b></p>
+	  
+	<p align="left" id="para4"><b></b></p> 
+	
+	<p align="left" id="para5"></p> 
+	<p align="left" id="para6"></p> 
+	<p align="left" id="para7"></p>
+	<p align="left" id="para8"></p>
+	<p align="left" id="para9"></p>
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

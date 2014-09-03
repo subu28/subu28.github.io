@@ -1,0 +1,225 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var tr=1;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+	{
+		tab(k);
+	}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "<h3><b>Robo Epic</b>";
+		
+		document.getElementById('para2').innerHTML = 'Robots are undoubtedly the mother of simplification of all future human tasks. these perform specialized functions and carry them out efficiently and accurately.<br/>Come January And you will be thrilled and enthralled with one the most amazing ROBOTICS event in recent memory.<br/>It is the perfect blend of human and robot acumen and will test varied skills such as swiftness, strength and control of your RC BOT. so, gear up for the robo season this ELAN and show your mettle.<br/>EXCITEMENT AWAITS YOU!<br/><br/>The king is no more. Long live the king!!!<br/>Due to the sudden demise of the King, there is a frantic search for his heir and the right successor as he had left no kin or kith.<br/>Civil war has broken out. All the tribes in this glorious and wealthy land are claiming their supremacy and want the next king one among their own.<br/>This inevitably led to tribal wars among the various factions. The respective tribes ought to choose the best warriors among themselves to fight this sacred war and choose the next leader.<br/>But, here comes the catch! This is the time for him to exhibit his martial skills to conquer the state and to be crowned.';
+
+	    document.getElementById('para3').innerHTML ="Prize money of Rs.20,000/- to be won.<br/>Participation certificates will be given to all the participants.";
+		document.getElementById('para4').innerHTML = "<b>The last date of submission of TDP is 20th January 2011 and the results will be updated on the web page .Also shortlisted participants will be informed through the mail. </b>";
+		document.getElementById('para5').innerHTML = "<a href='problem_robo_epic.pdf'>click here</a> to download problem statement";
+		document.getElementById('para6').innerHTML = "<a  href='tdp_robo_epic.docx'>click here</a> for TDP";
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+		if(tr==1)
+			{
+				tr=2;
+				repclk(1);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Problem Statement</b>';
+		document.getElementById('para3').innerHTML = "The participants will pre-design an RC bot which is capable of performing two tasks such as<br/>1.	Completing the 'obstacle race' without hitting any of the obstacles on the path. Points will be allotted depending on its performance.<br/>2.	The second task is very similar to the Japanese sport SUMO WRESTLING. In this your bot must be capable of pushing out the opponent's bot out of the boundary in the specified time limit without allowing your bot to cross the boundary.";
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+			{
+				tr=2;
+				repclk(2);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>RULES</b>';
+		document.getElementById('para3').innerHTML = '1.	Weight limit &ndash; 3 kg<br/>2. Max Power supply &ndash; 12v<br/>3. The dimensions of the bot should not exceed 15*15 cm<br/>4.	The team must consist of a maximum of 3 members.<br/>5.	If a team is not ready when their challenge round is called by     the judge, the team forfeits and the opposing team is declared the winner by default.<br/>6.	The participants are not allowed to touch the robot during the duel.<br/>7.	For sumo wrestling the participating teams can choose their own mode of lifting and pushing mechanism.(Hydraulics and pneumatics cannot be used here)..	The arena for this task is a black circular surface on which the bots have to fight. The outer line of the arena is covered with white surface. The bot which enters the white surface loses.<br/>8.	The judgement of the organizers is final and abiding to all.<br/><br/>for SUMO WRESTLING<br/>Dimensions of the arena: It is a circle of 1 meter in diameter<br/>';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+		if(tr==1)
+			{
+				tr=2;
+				repclk(3);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Organizers';
+		document.getElementById('para2').innerHTML = 'M.Rahul Chauhan <br/>+91-9963775190<br/>ee09b019@iith.ac.in';
+		document.getElementById('para3').innerHTML = 'T.Anil Kumar<br/>+91-9014876567<br/>ee09b033@iith.ac.in';
+		document.getElementById('para4').innerHTML = 'MUSTAFA  BAQARI<br/>+919652451752<br/>me10b025@iith.ac.in<br/><br/>MAYANK THAPLIYAL<br/>+919502602937<br/>cs10b025@iith.ac.in';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+		if(tr==1)
+			{
+				tr=2;
+				repclk(4);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">RoboEpic</h2> 
+      <p align="left" id="para2">Robots are undoubtedly the mother of simplification of all future human tasks. these perform specialized functions and carry them out efficiently and accurately.<br/>Come January And you will be thrilled and enthralled with one the most amazing ROBOTICS event in recent memory.<br/>It is the perfect blend of human and robot acumen and will test varied skills such as swiftness, strength and control of your RC BOT. so, gear up for the robo season this ELAN and show your mettle.<br/>EXCITEMENT AWAITS YOU!<br/><br/>The king is no more. Long live the king!!!<br/>Due to the sudden demise of the King, there is a frantic search for his heir and the right successor as he had left no kin or kith.<br/>Civil war has broken out. All the tribes in this glorious and wealthy land are claiming their supremacy and want the next king one among their own.<br/>This inevitably led to tribal wars among the various factions. The respective tribes ought to choose the best warriors among themselves to fight this sacred war and choose the next leader.<br/>But, here comes the catch! This is the time for him to exhibit his martial skills to conquer the state and to be crowned.</p> 
+	  	<p align="left" id="para3">Prize money of Rs.20,000/- to be won.<br/>Participation certificates will be given to all the participants.</p> 
+
+      <p align="left" id="para4"><b>The last date of submission of TDP is 20th January 2011 and the results will be updated on the web page .Also shortlisted participants will be informed through the mail.</b></p>
+	  
+	<p align="left" id="para5"><a href='problem_robo_epic.pdf'>click here</a> to download problem statement</p> 
+	
+	<p align="left" id="para6"><a  href='tdp_robo_epic.docx'>click here</a> for TDP</p> 
+	<p align="left" id="para7"></p>
+	<p align="left" id="para8"></p>
+	<p align="left" id="para9"></p>
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

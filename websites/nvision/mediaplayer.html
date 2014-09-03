@@ -1,0 +1,71 @@
+<div class="wintop" style="height:550px; width:750px;">
+	<div class="titlebar" onmousedown="selectwin(4,event);" style="width:750px; height:30px; border-top-left-radius: 10px; border-top-right-radius: 10px; cursor:move;">
+		<img src="images/folder.png" style="float:left; height:20px; width:20px; margin-top:3px; margin-left:6px;"/>
+		<div style="float:left; width:150px; height:30px;">
+			<font class="foldername" style="color:#fff; float:left; font-size:14px; font-family:Verdana; margin-top:3px; cursor:default;">&eta;vision Explorer</font>
+		</div>
+		<div class="customwin" style="float:right; width:100px;height:30px; cursor:pointer;">
+			<img class="close" onclick="closethis(4);" src="images/close.png" style="float:right; width:20px; height:20px; border:1px solid #fff; margin:5px; border-radius:3px;" alt="close"/>
+			<img class="maximise" onclick="resize(4)" src="images/maximise.png" style="float:right; width:20px; height:20px; position:relative;top:5px;left:3px; border:1px solid #fff; border-radius:3px;" alt="maximise"/>
+			<img class="minimise" src="images/minimise.png" style="float:right; width:20px; height:20px;position:relative;top:5px;left:1px;border:1px solid #fff; border-radius:3px;" alt="minimise"/>
+		</div>
+	</div>
+	<div class="leftborder" style="width:5px; height:515px; float:left; border-bottom-left-radius:1px; "></div>
+	<div class="rightborder" style="width:5px; height:515px; float:right; border-bottom-right-radius:1px;"></div>
+	<div class="windowbody" style="background:#FFF; float:left; width:740px; height:515px;">
+		<div class="greybar" style="width:100%;height:20px;background:rgb(239,237,221);">
+			<div style="width:740px;height:19px; border-bottom:solid 1px #d8d2bd;">
+				<div class="menu" style="margin-left:5px; margin-right:5px; height:20px;float:left;">nvision</div>
+				<div class="menu" style="margin-left:5px; margin-right:5px; height:20px;float:left;">view</div>
+				<div class="menu" style="margin-left:5px; margin-right:5px; height:20px;float:left;">about</div>
+				<div class="menu" style="margin-left:5px; margin-right:5px; height:20px;float:left;">developers</div>
+			</div>
+		</div>
+		<div id="mpbody" style="height:495px;width:740px; background:#222;">
+			<div id="videoframe">
+				<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/WA3dl7BbCR8?rel=0&wmode=opaque" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div style="overflow:scroll; width:740px;">
+			<div id="mpplaylist" style="margin:10px; height:123px; width:1580px;">
+                                <div class="playlist" onclick="videochanger(9);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid9.jpg);">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">propeller Clock</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">0:47</p>
+				</div>
+				<div class="playlist" onclick="videochanger(8);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid8.jpg);">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">Project-X</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">1:12</p>
+				</div>
+				<div class="playlist" onclick="videochanger(7);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid7.jpg)">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">Robo-Soccer</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">:27</p>
+				</div>    
+                                <div class="playlist" onclick="videochanger(6);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid6.jpg);">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">Robo-Soccer</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">1:52</p>
+				</div>
+				<div class="playlist" onclick="videochanger(5);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid5.jpg);">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">Mouse Trap Car</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">0:04</p>
+				</div>
+				<div class="playlist" onclick="videochanger(4);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid4.jpg)">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">Mouse Trap Car</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">0:57</p>
+				</div>
+                                <div class="playlist" onclick="videochanger(3);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid3.png);">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">&eta;vision Teaser</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">1:40</p>
+				</div>
+				<div class="playlist" onclick="videochanger(1);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid1.jpg);">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">Advaya</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">0:49</p>
+				</div>
+				<div class="playlist" onclick="videochanger(2);" style="height:120px; border:solid 2px #aaa; float:left; cursor:pointer; margin:5px; width:160px; background:url(images/vid2.jpg)">
+					<p style="color:#fff; padding:5px; margin:0px; background:rgba(0,0,0,0.5)">Advaya Teaser</p>
+					<p style="color:#fff; padding:5px; margin-top:64px; font-size:13px; text-align:right; background:rgba(0,0,0,0.5)">1:00</p>
+				</div>				
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottomborder" style="float:left; width:750px; height:4px;"></div>
+</div>

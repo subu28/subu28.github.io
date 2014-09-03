@@ -1,0 +1,172 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+	<div  style="position:relative;" id="Scroller-1" > 
+		<div class="Scroller-Container"  > 
+			<h2 align="center" id="para1">Extra Mural Lectures</h2> 
+			<p align="left" id="para2">Are you looking for a breather from lectures that are extremely course oriented or are purely based on technical knowledge? The talks at Elan 2k11 offer you the perfect opportunity to satiate your thirst for some extensive knowledge on topics which you would otherwise not come across in your curriculum.<br/></p> 
+			<p align="left" id="para3">The lectures will be delivered by noted personalities from various fields and thus an enriching and enthralling experience is assured for all the attendees.<br/></p> 
+			<p align="left" id="para4"><b>SPeakers:-</b></p>
+			<p align="left" id="para5"></p>
+			<p align="center" id="para6"><img style="cursor:pointer;"    width="140" height="100" onClick="tab(2);" id="t2" src="images/ManishGupta.jpg"/><br/>Manish Gupta<br/>Director, IBM Research - India <br/>Chief Technologist, IBM India / South Asia </p> 
+			<p align="center" id="para7"><img style="cursor:pointer;"    width="140" height="100" onClick="tab(3);" id="t3" src="images/SVk.PNG"/><br/>S. Vijay Kumar<br/>Founder, VR1 Forever</p> 
+		</div> 
+	</div> 
+  	
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+		<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+		<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+		<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+		</div> 
+	</div> 
+</div>
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+	var r=0;
+	var tr=1;
+	var scroller  = null;
+	var scrollbar = null;
+	function f1 ()
+	{
+		if(r==0)
+		{
+			scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+			scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+			r++;
+		}
+	}
+	function repclk(k)
+	{
+		tab(k);
+	}
+	function tab(t)
+	{
+		scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+		scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+
+		if(t==1)
+		{
+			document.getElementById('para1').innerHTML = "Extra Mural Lectures";
+			document.getElementById('para2').innerHTML = "Are you looking for a breather from lectures that are extremely course oriented or are purely based on technical knowledge? The talks at Elan 2k11 offer you the perfect opportunity to satiate your thirst for some extensive knowledge on topics which you would otherwise not come across in your curriculum.<br/>";
+			document.getElementById('para3').innerHTML = "The lectures will be delivered by noted personalities from various fields and thus an enriching and enthralling experience is assured for all the attendees.<br/>";
+			document.getElementById('para4').innerHTML = "<b>Speakers:-</b>";
+			document.getElementById('para5').innerHTML = '';
+			document.getElementById('para6').innerHTML = '<img style="cursor:pointer;"    width="140" height="100" onClick="tab(2);" id="t2" src="images/ManishGupta.jpg"/><br/>Manish Gupta<br/>Director, IBM Research - India <br/>Chief Technologist, IBM India / South Asia';
+			document.getElementById('para7').innerHTML = '<img style="cursor:pointer;"    width="140" height="100" onClick="tab(3);" id="t3" src="images/SVk.PNG"/><br/>S. Vijay Kumar<br/>Founder, VR1 Forever';
+			
+			if(tr==1)
+			{
+				tr=2;
+				repclk(1);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+		}
+		if(t==2)
+		{
+			document.getElementById('para1').innerHTML = 'Manish Gupta<img  width="140" height="100" id="t2" src="images/ManishGupta.jpg"/>';
+			document.getElementById('para2').innerHTML = 'Director, IBM Research - India<br/>Chief Technologist, IBM India / South Asia';
+			document.getElementById('para3').innerHTML = '<b>Title&nbsp;-&nbsp;</b>Challenges and Opportunities for Innovations in IT based Services';
+			document.getElementById('para4').innerHTML = 'IT based Services are sometimes viewed as mundane, less challenging than IT product development. In this talk, we describe enormous opportunities for innovation in delivering information technology based services. We start by describing the tremendous inefficiencies, estimated to be about $15 Trillion, in how the world operates today (e.g. in industries like transportation and healthcare), some of which can be eliminated by infusing more instrumentation and intelligence into these systems. We then describe some unique challenges faced in emerging economies like India, and present an example of developing a solution built from the ground up with those unique requirements in mind. The specific example we present is Spoken Web, our attempt to create a new world wide web, accessible over the (mobile) phone network, for the masses in countries like India. Finally, we describe several opportunities for improving efficiency, quality and value from delivering various kinds of services globally (an area of unique strength for India), and the interesting computer science and multidisciplinary problems that arise in the context of pursuing those opportunities. ';
+			document.getElementById('para5').innerHTML = '<br/><b>Bio: <br/>Manish Gupta</b> is the Director of IBM Research - India and Chief Technologist for IBM India/South Asia. He leads a team developing breakthrough technologies underlying innovation in Services, Software and Systems, and is leading the IBM Research activities across the world in the Mobile Web area. Previously, he has held senior leadership positions at IBM Research - India, IBM India Systems and Technology Lab, and the T. J. Watson Research Center, where he led research on software for the IBM Blue Gene supercomputer. IBM was awarded the 2008 National Medal of Technology and Innovation for the invention of the Blue Gene supercomputer by US President Barack Obama in October 2009. Manish received a B.Tech. in Computer Science from IIT Delhi in 1987 and a Ph.D. from the University of Illinois at Urbana-Champaign in 1992. He has co-authored over 70 papers, with more than 3000 citations in Google Scholar, in the areas of high performance compilers, parallel computing, and Java Virtual Machine optimizations, and has filed eighteen patents. Manish has received an Outstanding Innovation Award, two Outstanding Technical Achievement Awards and the Gerstner Team Award for Client Excellence at IBM, and has been invited to give keynotes at several international conferences and workshops. He is an ACM Distinguished Scientist and a member of the IBM Academy of Technology.';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('para7').innerHTML = '<a style="cursor:pointer;" onClick="tab(1);">Back</a>';
+			
+			if(tr==1)
+			{
+				tr=2;
+				repclk(2);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+		}
+		if(t==3)
+		{
+			document.getElementById('para1').innerHTML = 'S. Vijay Kumar<img width="140" height="100" src="images/SVk.PNG"/>';
+			document.getElementById('para2').innerHTML = "Founder, VR1 Forever";
+			document.getElementById('para3').innerHTML = '<b>Title&nbsp;-&nbsp;</b>Leadership - Qualities and means to overcome its challenges';
+			document.getElementById('para4').innerHTML = "Leadership is nothing but the quality which makes a person stand out different from other ordinary people , it is the ability to successfully integrate and maximize available resources for the attainment of organizational or societal goals. The talk starts off with a briefing of some general principles about leadership qualities and what makes a good leader. Though leadership involves decisions and actions relating to all sorts of other things, it is very special because leadership is centrally concerned with people. hence, the path of a growing leader is full of obstacles and is troublesome. The lecture concentrates on the various troubles a person faces on his journey to become a leader ( eg : team attitude problem , communication problems ). Then the focus of the talk shifts to the most important and the most interesting part i.e. the different means by which one can overcome these obstacles. Thus the lecture concludes by providing a complete outlook to transform one's self into a successful leader in any field.";
+			document.getElementById('para5').innerHTML = "<br/><b>Bio: <br/>S. VIJAY KUMAR</b> popularly known as <b>SVK</b> is a well-known academician mentoring many students for over 30 years. He is also the vice chairman of the National Memory Council of India (NMCI). He is most popular as the founder and the spearhead of the organization named &ldquo;VR1 Forever&rdquo;. Besides being an academician for over 30 years, he has been striving vigorously to contrive one permanent and fruitful solution to make this society a happy place to live in and out of his vision and action, 'VR1 forever' has emerged with a mission to make the world 'One Happy Home'. The students of Mr. SVK, from about 500 institutes like the prestigious IITs, IIMs, BITs, NITs, Medical colleges and numerous other professional colleges, teamed up and thus VR1 was launched on 1st January 2009.The strategy of SVK&rsquo;s VR1 is lucid i.e. Even if 20% of the students execute their social responsibility with commitment for only 1 hour a week, VR1 will integrate all these individual efforts into a mighty movement to change the world into a better place, in 18 years. VR1 cells have already been set up in various IITs, NITs and many other colleges across India. As a part of VR1, Mr. SVK has also started various social welfare programs like CAP( child adoption program), VAP( village adoption program ) , PEN (protection of environment and neighborhood),etc. He is also an excellent orator and has given many workshops on leadership qualities, contraptions etc.";
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('para7').innerHTML = '<a style="cursor:pointer;" onClick="tab(1);">Back</a>';
+			if(tr==1)
+			{
+				tr=2;
+				repclk(3);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+		
+		}
+		
+	}
+</script>

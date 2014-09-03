@@ -1,0 +1,78 @@
+<?php
+session_start();
+include "config.php";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ratrace.in</title>
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body style="margin:0px;">
+<div style="float:right; width:50px;">
+		<a target="_blank" href="http://www.facebook.com/ratrace.in"><img title="like" src="images/fb.png"/></a>
+		<a target="_blank" href="http://twitter.com/#!/ratrace_in"><img title="follow" src="images/twit.png"/></a>
+		<a href="#"><img title="subscribe" src="images/rss.png"/></a>
+	</div>
+	<div id="header" style="overflow:auto;" align="left">
+    	<div align="right" id="menu" style="background-color:#18051B; float:left;">
+        	<ul>
+            	<li><a href="./">HOME</a></li>
+                <li><a href="explore.html">EXPLORE</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="experts.html">EXPERTS</a></li>
+                <li><a href="inkspot.html">INK SPOT</a></li>
+            </ul>
+    	</div>
+    	<div style="float:left; overflow:hidden; width:950px;">
+        	<a href="http://www.ratrace.in/"><img title="home" src="images/logo.png" style="margin:0px;"/></a>
+            <div id="cse" style="width: 280px; margin-left:650px;">
+				<p>Search</p>
+                <form action="search.html" id="cse-search-box">
+					<div>
+                    	<input type="text" name="q" value="" id="q" />
+						<input type="hidden" name="cx" value="005095115775871358350:qfwnpq8ofwk" />
+						<input type="hidden" name="cof" value="FORID:10" />
+						<input type="hidden" name="ie" value="UTF-8" />
+                    	<div style="float:right">
+                        	<input type="image" name="search" value="" src="images/search.png">
+                        </div>
+                    </div>
+				</form>
+            </div>
+            <div id="exploremenu" style="background-color:#FFF; margin-top:20px; width:950px;">
+                <ul>
+            		<li class="odd"><a href="explore.html?category=careers">CAREERS</a></li>
+                	<li class="even"><a href="explore.html?category=skills">SKILLS</a></li>
+                	<li class="odd"><a href="explore.html?category=inspiration">INSPIRATION</a></li>
+                	<li class="even"><a href="inkspot.html?category=featured">FEATURED</a></li>
+                	<li class="odd"><a href="inkspot.html?category=top10">TOP 10</a></li>
+            	</ul>
+            </div>
+    	</div>
+    </div>
+	<div align="center" style="width:100%;" >
+		<div id="cse-search-results"></div> 
+		<script type="text/javascript"> 
+			var googleSearchIframeName = "cse-search-results";
+			var googleSearchFormName = "cse-search-box";
+			var googleSearchFrameWidth = 900;
+			var googleSearchDomain = "www.google.com";
+			var googleSearchPath = "/cse";
+		</script> 
+		<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script> 
+	</div>
+    <div align="center" id="foot" style="background-color:#e37c0e; height:100px; width:100%;">
+		<div align="left" style="width:1000px; font-family:Verdana, Geneva, sans-serif; padding-top:20px;"><img title="home" src="images/footer.png" onmouseout="this.src='images/footer.png'" onMouseOver="this.src='images/footerhover.png'" style="float:left; border-right:#FF0 thin solid;"/>
+			<div style="margin-top:15px;">
+				<a href="tandc.html" title="Terms & Conditions">Terms & Conditions</a>
+				<a href="sitemap.html" title="Site Map">Site Map</a>
+				<a href="errors.html" title="Report an Error">Noticed an Error?</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

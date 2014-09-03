@@ -1,0 +1,115 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src/jsScroller.js"> </script> 
+<script type="text/javascript" src="src/jsScrollbar.js"></script> 
+<script type="text/javascript">
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+	{
+	if(r==0)
+	{
+		scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+		scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+		r++;
+	}
+}
+</script>
+<div  class="Container"> 
+	<div style="position:relative;" id="Scroller-1" > 
+		<div class="Scroller-Container" > 
+			<h2 id="para1" text-align:center;">Workshops</h2>
+			<p id="para2">Are you looking for an immensely enjoyable yet an educative experience? Or is it interaction with esteemed personalities from various academic fields that you are after?
+				If yes is the answer to at least one of the above questions, then head straight to the workshops at Elan, where we provide interesting sessions of entertaining yet highly educative lectures.</p> 
+			<p id="para3">We at Elan are combining the famous "watch and learn" and "do it yourself" ideologies by roping in illustrious personalities who are experts in their fields, and also providing rich
+ hands-on experience during the lectures under their guidance..</p> 
+      <p id="para4">The workshops promise to be an enriching and enjoyable experience for the participants with loads of interaction expected among the different people sharing similar interests.</p> </br>
+		<p align="left" ><img style="cursor:pointer;"	width="200" height="80"  onClick="loadPage('autonex.html');" src="./images/autonex.jpg"/>  </p>
+		<p  align="left" style="font-size:20px; cursor:pointer;  color: #000;" onClick="loadPage('autonex.html');" >Autonex  </p>
+		<br/>
+                <p align="left"  onClick="window.open('http://www.iith.ac.in/ELAN/green_workshop.html')" ><img style="cursor:pointer;" src="green.jpg" width="150" height="150" />  </p>
+		<p  align="left"  onClick="window.open('http://www.iith.ac.in/ELAN/green_workshop.html')" >Green Workshop  </p>
+                <br/>
+		<p align="left" ><img style="cursor:pointer;"	width="200" height="80"  onClick="loadPage('enigma.html');" src="./images/enigma.jpeg"/>  </p>
+		<p  align="left" style="font-size:20px; cursor:pointer;  color: #000;" onClick="loadPage('enigma.html');" >Enigma</p>
+		<br/>
+		<p align="left"  onClick="loadPage('hacking.html');" ><img src="images/hacking.gif" width="150" height="150" />  </p> 
+		<p  align="left" onClick="loadPage('hacking.html');" >Hack-O-Mania  </p>
+		
+        </div> 
+  </div> 
+  
+	
+	
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

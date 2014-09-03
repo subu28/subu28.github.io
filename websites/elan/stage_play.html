@@ -1,0 +1,161 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container"  > 
+      <h2 align="center" id="para1">NATYANGAN</h2> 
+      <p align="left" id="para2">Life is like an overlong drama through which we sit being nagged by the vague memories of having read the reviews.
+	  <p align="left" id="para3">  An exciting combination of drama, sensitivity, acting prowess and stage presence. All you stage lovers, here's your moment of glory. Show the world that you own the stage.</p> 
+      <p align="left" id="para4">Be it the stand- up act or the dramas with elaborate scripts, or the effervescently vocal street plays, we have it all!</p> 
+      <p align="left" id="para5"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p> 
+      <p align="left" id="para6"></p> 
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "NATYANGAN";
+		document.getElementById('para2').innerHTML = " Life is like an overlong drama through which we sit being nagged by the vague memories of having read the reviews. ";
+		document.getElementById('para3').innerHTML = " An exciting combination of drama, sensitivity, acting prowess and stage presence. All you stage lovers, here's your moment of glory. Show the world that you own the stage. ";
+		document.getElementById('para4').innerHTML = "   Be it the stand- up act or the dramas with elaborate scripts, or the effervescently vocal street plays, we have it all!";
+		document.getElementById('para5').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		document.getElementById('para6').innerHTML = "";
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = 'Event Format';
+		document.getElementById('para2').innerHTML = '<br>1)Registration will be done online or on the spot during Elan 2011.<br><br>2)The competition is open only to college students with a valid college ID- card<br><br>3)Judging Criteria:<br> 1.Direction<br>2. Script<br>  3. Acting <br>4. Overall Impact<br>5.Message Conveyed  <br><br>4)Judges decision is final and binding.<br><br>5)Prizes:<br>1st Prize: 5,000<br>2nd Prize: 3,500<br>3rd Prize: 1,500<br><br>6)<br>Note - We will give an opportunity to perform at Arts School, Hyderabad to the winning group.';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = 'Rules';
+		document.getElementById('para2').innerHTML = '<br>1)     Rounds will be decided on the spot.<br><br>2)     Play could be in English, Hindi, Telugu or Tamil.<br><br>3)     The team size should be 2-10members.<br><br>4)     Duration of the play should be 10-15minutes.     Backstage voiceovers and narrations are allowed during the performance.<br><br>5)    Any kind of fluid or flame is not allowed on the stage.<br><br>6)     Time limit should be strictly followed.<br><br>7)     Bring your own sound tracks. Basic music like keyboard and guitar is       allowed.<br><br>8)     If you need props for stage play then bring your own ones .Large props like       chairs,tables etc., will be provided but you have to inform earlier by mail.';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Event Organiser</b><br>Bhupesh Kumar<br>Email: me09b008@iith.ac.in<br>Mb# 801910-2850';
+		document.getElementById('para3').innerHTML = '<b>Cultural events Coordinator</b><br>Puneet Gupta<br>Email: cs09b027@iith.ac.in<br>Mb# 94933-29825';
+		document.getElementById('para4').innerHTML = '<b>Events Core</b><br>Ajay M.R.<br>Email: me09b003@iith.ac.in<br>Mb# 88978-61805';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>

@@ -1,0 +1,183 @@
+<style type="text/css">
+.Container {
+position: absolute;
+top: 0px; left: 0px;
+width: 420px;
+height: 420px;
+background:  url(images/container_background.png) no-repeat;
+}
+#Scroller-1 {
+position: absolute;
+overflow: hidden;
+width: 400px;
+height: 400px;
+}
+#Scroller-1 p {
+margin: 0; padding: 10px 20px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 14px;
+text-indent: 20px;
+color: #000;
+}
+.Scroller-Container {
+position: absolute;
+top: 0px; left: 0px;
+}
+#Scrollbar-Container {
+position: absolute;
+top: 40px; left: 60px;
+}
+.Scrollbar-Up {
+cursor: pointer;
+position: absolute;
+left:-15;
+
+top: -0px;
+}
+.Scrollbar-Track {
+width: 20px;
+height: 275px;
+position: absolute;
+top: 47px;
+
+background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+}
+.Scrollbar-Handle {
+position: absolute;
+left:0;
+width: 20px; height: 22px;
+}
+.Scrollbar-Down {
+cursor: pointer;
+position: absolute;
+top: 320px;
+left:-15;
+}
+.{
+	font-size:25;
+}
+</style>
+
+
+<script type="text/javascript" src="src1/jsScroller.js"></script>
+<script type="text/javascript" src="src1/jsScrollbar.js"></script>
+<script type="text/javascript">
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+               // var newHTML2 = "<a   target="blank" href='tdp_robo_epic.pdf'>click here</a> for TDP ";
+
+
+		document.getElementById('para1').innerHTML = "<h3><font size='4'>Code Quest</font></h3>";
+		document.getElementById('para2').innerHTML = "'The best programmers are not marginally better than merely good ones.  They are an order-of-magnitude better, measured by whatever standard: conceptual creativity, speed, ingenuity of design, or problem-solving ability.'<br/>(Randall E. Stross)";
+                document.getElementById('para3').innerHTML = "";
+                document.getElementById('para4').innerHTML = "";
+		document.getElementById('para5').innerHTML = "";
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br/><b>Event format </b>';
+		document.getElementById('para2').innerHTML = "Code quest consists of one round. This is onsite event. You have to submit your solutions in any of these languages (C,C++,JAVA) . Those will be evaluted and result will be declaired depended on Time of submission , Time taken for Execution and space constriants. Depending on that you will get points. Sample test cases are provided with the problem set.<br/>Time provided is 3 hours.";
+		document.getElementById('para3').innerHTML = "";
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = "<br/><b>RULES AND REGULATIONS</b><br/>FIRST LEVEL:<br/>1.	Contest is open to college students only. Teams comprising of students from different institutes allowed.<br/>2.	Maximum of 3 members in a team are allowed. One person can't be part of more than one team.<br/>3.	Languages allowed: C/C++/JAVA.<br/>4.	Compilation will be done on gcc/g++ (version 3.2.3). We advise you to write compiler version independent code.<br/>5.	No system calls will be allowed, other than reading from stdin and writing to stdout.<br/>6.	Any sort of malicious activity will lead to immediate disqualification of the team in question.<br/>7.	In case of a tie,ranks will be based on the time of the last correct submission. If a tie still cremains, we will break it on the basis of total number of submissions.";
+		document.getElementById('para2').innerHTML = '';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '<h3>Organisers</h3>';
+		document.getElementById('para2').innerHTML = "1.NAGARJUNA MALEMPATI <br/>Email: CS10M03@IITH.AC.IN<br/>PH #: 8985156465";
+		document.getElementById('para3').innerHTML = "2.SHRIVASTAVA SURENDRA JAIMOHAN<br/>Email: CS10M02@IITH.AC.IN<br/>PH #: 9494822910";
+		document.getElementById('para4').innerHTML = "";
+		document.getElementById('para5').innerHTML = "";
+		document.getElementById('para6').innerHTML = "";
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+
+<div  class="Container">
+
+			<div id="Scroller-1" >
+				<div class="Scroller-Container" >
+				<p align="left" id="para1"><font size="4"><b>Code Quest</b></font></p>
+                                <p align="left" id="para2">'The best programmers are not marginally better than merely good ones.  They are an order-of-magnitude better, measured by whatever standard: conceptual creativity, speed, ingenuity of design, or problem-solving ability.'<br/>(Randall E. Stross)</p>
+				<p align="left" id="para3"> </p>
+                                <p align="left" id="para4"></p>
+
+				<p align="left" id="para5"></p>
+				<p align="left" id="para6"></p>
+				<p align="left" id="para7"></p>
+				<p align="left" id="para8"></p>
+				<p align="left" id="para9"></p>
+				</div>
+			</div>
+			<div style="position:absolute; top:-25; id="tabb">
+					<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+					<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+					<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+					<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<div>
+			<div onClick="tab(1);" style="position:absolute; left:10; z-index:2; top:-15;cursor:pointer;">
+			<p>Introduction</p>
+			</div>
+			<div onClick="tab(2);" style="position:absolute; left:115; z-index:2; top:-15;cursor:pointer;">
+			<p>Format</p>
+			</div>
+			<div onClick="tab(3);" style="position:absolute; left:215; z-index:2; top:-15;cursor:pointer;">
+			<p>Rules</p>
+			</div>
+			<div onClick="tab(4);" style="position:absolute; left:305; z-index:2; top:-15;cursor:pointer;">
+			<p>Contact</p>
+			</div>
+		<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()">
+			<img src="images/up_arrow.gif" class="Scrollbar-Up" />
+			<img src="images/down_arrow.gif" class="Scrollbar-Down" />
+			<div class="Scrollbar-Track">
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" />
+			</div>
+
+			</div>
+	</div>
+</div>
+</div>

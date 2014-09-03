@@ -1,0 +1,206 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var tr=1;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+{
+	tab(k);
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "Puzzlon";
+		document.getElementById('para2').innerHTML = "'It is one of man's curious idiosyncrasies to create difficulties for the pleasure of resolving them'- Joseph de Maistre<br><br>Are you the type of person who loves to solve challenging puzzles till your brain passes out???????.<br><br>Do you feel left out due to lack of some pre-requisites that most events require?<br><br>Then  look no further;we at elan introduce Puzzlon where you will be exposed to the most brainstorming problems you would have ever faced...<br><br>Pre-requisites: Analytical ability, enthusiasm....and of course pen and paper....<br>Get ready to take a nerve wracking  ride  into the world of puzzles......";
+		document.getElementById('para3').innerHTML = "Prizes worth Rs.10,000 to be won";
+		document.getElementById('para4').innerHTML = "<a href='Problem_puzzlon.pdf'>click here</a> for problem statement <br/><a href='Help_Mr.Looney.jpg'>click here</a> Help Mr Looney! Problem's Larger Image";
+		document.getElementById('para5').innerHTML = "<a href='Problem_puzzlon2.pdf'>click here</a> for problem statement 2 <br/><a href='arrows.png'>click here</a> ARROWS larger Image";
+		document.getElementById('para6').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		document.getElementById('t1').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(1);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = 'The event comprises of two problem sets containing six questions each.<br>Answers (complete with the train of logic) are to be sent in pdf or word format via mail to puzzlon@gmail.com.<br><br>Evaluation will be separate for each set.';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(2);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = 'Only individual participation is allowed. <br><br>Only one entry per person is allowed for each problem set. Re-submission of entry is allowed within the deadline in which case we will consider your previous entries invalid.<br> <br>The deadlines for submission will be put up along with the problem set.<br><br>Solutions should be given in the form of PDF or Word.<br><br>Solutions should be clear and legible if a written, scanned copy is submitted.<br><br>Solutions should be mailed to puzzlon@gmail.com';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(3);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Event organisers';
+		document.getElementById('para2').innerHTML = 'Thomas George<br>Email: me09b032@iith.ac.in<br><br>Gautham M.<br>Email: me09b013@iith.ac.in<br>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(4);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">Puzzlon</h2> 
+      <p align="left" id="para2">'It is one of man's curious idiosyncrasies to create difficulties for the pleasure of resolving them'- Joseph de Maistre<br><br>Are you the type of person who loves to solve challenging puzzles till your brain passes out???????.<br><br>Do you feel left out due to lack of some pre-requisites that most events require?<br><br>Then  look no further;we at elan introduce Puzzlon where you will be exposed to the most brainstorming problems you would have ever faced...<br><br>Pre-requisites: Analytical ability, enthusiasm....and of course pen and paper....<br>Get ready to take a nerve wracking  ride  into the world of puzzles......</p> 
+      <p align="left" id="para3">Prizes worth Rs.10,000 to be won</p> 
+      <p align="left" id="para4"><a href='Problem_puzzlon1.pdf'>click here</a> for problem statement 1 <br/><a href='Help_Mr.Looney.jpg'>click here</a> Help Mr Looney! Problem's Larger Image</p>
+      <p align="left" id="para5"><a href='Problem_puzzlon2.pdf'>click here</a> for problem statement 2 <br/><a href='arrows.png'>click here</a> ARROWS larger Image</p>
+	  <p align="left" id="para6"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p>
+      
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

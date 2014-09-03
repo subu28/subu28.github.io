@@ -1,0 +1,109 @@
+.wrapper{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:11px;
+    width:200px;
+    height:200px;
+    position:relative;
+    top:150px;
+    left:0px;    /*position of  bigger circle*/
+}
+.images img{
+	display:none;
+	position:absolute;
+	left:-50px;
+	top:5px;
+	width: 227px;  /* image position of circle back ground*/
+}
+.circleBig{
+	position:absolute;
+	top:9px;
+	left:-562px;
+	width:202px;
+	height:418px;
+	cursor:pointer;
+	background:transparent url(../images/crclebg.png) no-repeat top left;
+}
+.menu{
+	position:absolute;
+	width:150px;
+	height:175px;
+	top:90px;
+	left:7px;    /*position of menu names on the big bg */
+	z-index:51;
+}
+a.about, a.portfolio, a.contact, a.hospi, a.sponsors{
+    float:right;
+    clear:both;
+    height:23px;
+    margin-bottom:20px;
+    width:135px;
+    text-indent:-2000000px;
+    opacity:0.8;
+    background:transparent url(../images/menu.png) no-repeat top left;  /* menu names on big circle*/
+}
+a.portfolio{
+	float:right;
+    width:140px;
+    background-position:-109px 0px;
+}
+a.contact{
+	float:right;
+    width:170px;
+    background-position:-250px 0px;
+}
+a.hospi{
+	float:right;
+    width:170px;
+    background-position:-445px 0px;
+}
+a.sponsors{
+	float:right;
+    width:130px;
+    background-position:-640px 0px;
+}
+a.about:hover, a.portfolio:hover, a.contact:hover, a.hospi:hover, a.sponsors:hover{
+    opacity:1.0;
+}
+.circle{
+    margin-top:-120px;
+    margin-left:-520px; /*distance of smaller circle wrt bigger one */
+    width:176px;
+    height:215px;  /*width nd height of small circle*/
+    position:absolute;
+    left:0;
+    top:0;
+    background:transparent url(../images/circle.png) no-repeat top left;
+    z-index:50;
+    opacity:0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+.description{
+    width:120px;
+	cursor:pointer;
+    margin:70px auto; /*position of sub menu in small circle */
+    text-align:center;
+    color:#000;
+}
+.description ul{
+    list-style:none;
+    text-align:center;
+    
+}
+.description ul a{
+    line-height:20px;
+    font-weight:bold;
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:11px;
+    text-shadow:1px 1px 1px #aaa;	
+}
+.description ul a:hover{
+    color:#965076;
+}
+.thumbs a img{
+    border:3px solid #f9f9f9;
+    -moz-box-shadow:1px 1px 2px #999;
+    -webkit-box-shadow:1px 1px 2px #999;
+    box-shadow:1px 1px 2px #999;
+}

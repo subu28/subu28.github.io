@@ -1,0 +1,877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Welcome to &eta;vision 2012</title>
+	<meta name="Description" content="Official nvision 2012 website" />
+	<meta name="Keywords"  content="nvision,iith,iit,hyderabad,2012,fest,college,technical,advaya" />
+	<style type="text/css">
+		#slidimg div{
+			border-radius:6px;
+			position:relative;
+			margin:0px;
+			-webkit-transition: -webkit-transform 1s;
+			-moz-transition: -moz-transform 1s;
+                        background-position: center !important ;
+                        background-repeat: no-repeat !important;
+		}
+		.pright{
+			-webkit-transform:rotateY( 90deg );
+			-moz-transform:rotateY( 90deg );
+		}
+		.pleft{
+			-webkit-transform:rotateY( -90deg );
+			-moz-transform:rotateY( -90deg );
+		}
+		.pfront{
+			-webkit-transform:rotateY( 0deg );
+			-moz-transform:rotateY( 0deg );
+		}
+		#maximise
+		{
+			position:absolute;
+			left:5px;
+		}			
+		#programsdiv:hover
+		{
+			background:rgb(2,102,253);
+		}
+		.menu:hover
+		{
+			background:rgb(2,102,253);
+		}
+		.icons:hover
+		{
+			background:rgb(2,102,253);
+			border-radius:3px;
+		}
+		.icons span{
+			cursor:default;
+		}
+		.menuitems:hover
+		{
+			background:rgb(2,102,253);
+		}
+		.menuitems
+		{
+			cursor:default;
+			padding-top:5px;
+			padding-bottom:5px;
+		}
+		#list li:hover
+		{
+			background:rgb(2,102,253);
+		}
+		.list
+		{
+			list-style:none;	
+		}
+		.icons
+		{
+			position:absolute;
+			color:#fff;
+		}
+		.wintop{
+			z-index:3;
+		}
+		.winback{
+			z-index:1;
+		}
+		.titlebar{
+			background:url(images/wintop.png);
+		}
+		.leftborder{
+			background:url(images/winleft.png);
+		}
+		.rightborder{
+			background:url(images/winright.png);
+		}
+		.bottomborder{
+			background:url(images/winbottom.png);
+		}
+		.wintop div.titlebar{
+			background-position:0px 30px;
+		}
+		.wintop div.leftborder{
+			background-position:5px 0px;
+		}
+		.wintop div.rightborder{
+			background-position:5px 0px;
+		}
+		.wintop div.bottomborder{
+			background-position:0px 4px;
+		}
+		.movable{
+			position:absolute;
+			z-index:1;
+		}
+		.clubfolder{
+			padding-left:5px;
+			padding-right:5px;
+			padding-top:5px;
+			cursor:pointer;
+			box-shadow:0px 0px 2px 0px #000;
+		}
+		.clubfolder:hover{
+			background:rgb(2,102,253);
+			border-radius:3px;
+		}
+		.shutdown{
+			cursor:pointer;
+			overflow:auto;
+			float:left;
+			margin:5px;
+			border-radius:5px;
+			border:solid 1px rgba(0,0,0,0);
+		}
+		.shutdown:hover{
+			border:solid 1px rgba(0,0,0,1);
+		}
+		.shutdown img{
+			padding:5px;
+		}
+		.shutdown p{
+			margin:0px;
+			padding:5px
+		}
+		.updates{
+			opacity:0.6;
+			filter:alpha(opacity=40);
+		}
+		.updates:hover{
+			opacity:1.0;
+			filter:alpha(opacity=100);
+		}
+		#contactlist td{
+			padding-left:30px;
+			padding-bottom:3px;
+		}
+		#popback{
+			position:fixed;
+			height:100%;
+			width:100%;
+			top:0px;
+			left:0px;
+			background:rgba(0,0,0,0.7);
+			z-index:10;
+			visibility:hidden;
+		}
+		.brodowns:hover{
+			box-shadow: 0px 0px 5px 0px #000;
+		}
+		.psdownbutton{
+			border: 1px solid #000;
+			cursor: pointer;
+			border-radius: 5px;
+			background:#fff;
+		}
+		.psdownbutton:hover{
+			box-shadow:0px 0px 10px #000;
+			border: 1px solid #fff;
+		}
+                #sponsimgdiv a{
+                    color: #fff;
+                }
+                table tr td{
+                    border-radius:5px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .w{
+                    background: white;
+                }
+                .r{
+                    background: red;
+                }
+                .g{
+                    background: green;
+                }
+	</style>
+</head>
+<body onload="starttimer()" style="width:100%; overflow:hidden; margin:0px;">
+	<div id="screen" class="screen" style="width:100%;">
+		<div style="width:100%; position:absolute; top:0px; bottom:30px;">
+			<div id="desktop" onclick="hidemenu();" style="width:100%; height:100%; background:url(images/aperture.jpg);">
+                                <div align="right" style="float:left; width:60%;">
+                                    <font style='font-family:"Verdana"; font-size:80px; color:#fff;'>&eta;vision</font>
+                                    <font style='font-family:"Verdana"; font-size:20px; color:#fff;'><br/>In Association with</font>
+                                    <img style="width:130px;" float:right; src="images/Coolag.png"/>
+                                </div>
+                                <div align="right" style="float:right;">
+					<div id="fullscreendiv" align="center" style="width:100%;">
+						<a onclick="gofullscreen();">
+							<font title="go fullscreen" size="+1.5" style="cursor:pointer; float:right; padding:10px; color:#008; background:#ccc; border-bottom-left-radius:10px; text-shadow:1px 1px 0px #aaa;"><b>Toggle Full Screen</b></font>
+						</a>
+					</div>
+					<div class="updates" align="center" style="width:200px;height:200px; margin:60px 10px 0px 0px; background:#000;box-shadow:0px 0px 3px 2px #fff;border-radius:6px;cursor:default;">
+						<h3 style="color:#fff; margin:2px;">Sponsors</h3>
+						<div id="sponsimgdiv">
+							<a target="_blank" href="clickser.php" title="thinkdigit">Online Media Partner
+								<img src="images/spons/thinkdigit.jpg" style="width:90%; margin: 10px;"/>
+							</a>
+						</div>
+					</div>
+					<div class="updates" align="center" style="width:200px;height:250px;background:#000; margin:10px 10px 0px 0px;box-shadow:0px 0px 3px 2px #fff;border-radius:6px;cursor:default;">
+						<h3 style="color:#fff; margin:2px;">&eta;vision Updates</h3>
+						<div style="height:200px; width:170px; overflow:hidden;">
+							<div id="up1" style="color:#fff; height:100px; position:relative; border-bottom:solid 1px #fff;"></div>
+							<div id="up2" style="color:#fff; height:100px; position:relative; border-bottom:solid 1px #fff;"></div>
+						</div>
+					</div>
+					<div class="social" align="center" style="width:220px;height:60px;">
+                                            <div style="float:left;">
+						<a href="http://www.coolage.in/" target="_new" title="Coolage"><img style="width:80px;height:80px;" src="images/coolage1.png" alt="coolage" /></a>
+                                            </div>
+                                            <div style="float:left;">
+						<a href="http://www.facebook.com/nvision.IIThyderabad" target="_new" title="Join us on Facebook"><img style="width:60px;height:60px;" src="images/fb.png" alt="fb" /></a>
+                                            </div>
+                                            <div style="float:left;">
+						<a href="#" title="Connect thru G+"><img style="width:60px;height:60px;" src="images/gplus.png" alt="g+" /></a>
+                                            </div>
+					</div>
+				</div>
+				<div align="left" ondragover="allowDrop(event)" ondrop="drop(event)" style="width:100%; height:100%;">
+					<div class="icons" id="abtnvisn" align="center" style="width:80px; top:10px; left:100px; cursor:pointer;"  onclick="openwindow(7);" draggable="true" ondragstart="drag(event)" title="About &eta;vision">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/nvision.png); background-position:center top; background-repeat:no-repeat;">&eta;vision</p>
+					</div>
+					<div class="icons" id="eventsdetails" align="center" style="width:80px; top:130px; left:150px; cursor:pointer;"  onclick="openwindow(1);" draggable="true" ondragstart="drag(event)" title="events folder">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/folder.png); background-position:center top; background-repeat:no-repeat;">Events</p>
+					</div>
+					<div class="icons" id="picgallery" align="center" style="width:80px; top:250px; left:240px; cursor:pointer;" onclick="openwindow(3);" draggable="true" ondragstart="drag(event)" title="pictures">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/picgallery.png); background-position:center top; background-repeat:no-repeat;">PicGallery</p>
+					</div>
+					<div class="icons" id="mediaplayer" align="center" style="width:80px; top:250px; left:330px; cursor:pointer;" onclick="openwindow(4);" draggable="true" ondragstart="drag(event)" title="videos">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/wmp.png); background-position:center top; background-repeat:no-repeat;">Media Player</p>
+					</div>
+					<div class="icons" id="contactus" align="center" style="width:80px; top:400px; left:330px; cursor:pointer;" onclick="openwindow(6);" draggable="true" ondragstart="drag(event)" title="contacts">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/callus.png); background-position:center top; background-repeat:no-repeat;">Contact Us</p>
+					</div>
+					<div class="icons" id="sponsors" align="center" style="width:80px; top:400px; left:420px; cursor:pointer;" onclick="openwindow(5);" draggable="true" ondragstart="drag(event)" title="sponsors">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/folder.png); background-position:center top; background-repeat:no-repeat;">Sponsors</p>
+					</div>
+					<div class="icons" id="workshops" align="center" style="width:80px; top:510px; left:510px; cursor:pointer;" onclick="openwindow(8);" draggable="true" ondragstart="drag(event)" title="workshops">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/workshop.png); background-position:center top; background-repeat:no-repeat;">Workshops</p>
+					</div>
+                                        <div class="icons" id="registrations" align="center" style="width:80px; top:130px; left:240px; cursor:pointer;" onclick="openwindow(9);" draggable="true" ondragstart="drag(event)" title="Registrations">
+						<p style="font-size:14px; margin:0px; padding-top:50px; background:url(images/register.png); background-position:center top; background-repeat:no-repeat;">Registrations</p>
+					</div>
+				</div>
+			</div>
+			<div id="taskbar" style="width:100%; overflow:visible; height:30px; background:url(images/tbarbg.png);">
+				<div id="startbutton" align="left" onclick="openmenu();" style="background:url(images/start.png); float:left; width:100px; height:30px; cursor:pointer;">
+					<p style="color:#fff;font-size:18px; margin:0px; margin-left:17px; margin-top:4px;font-family:verdana;">Menu</p>
+				</div>
+				<div id="notiarea" onclick="hidemenu();" style="float:left; height:30px; position:absolute; right:0px; left:100px;">
+					<img src="images/seperator.png" style="float:left;" alt="null"/>
+					<div style="float:right; height:30px; width:80px; overflow:hidden; background:#1290e9; border-left:1px solid #555; box-shadow:10px 12px 8px -8px #22C4F4 inset,0px -14px 7px -10px #095BC9 inset">
+						<p id="time" style="margin:10px; margin-left:10px; color:#fff; font-size:12px;cursor:default;" ></p>
+					</div>
+				</div>
+			</div>
+			<div id="menulist" style="height:400px; width:300px; visibility:hidden;background:#fff; position:relative; top:-430px; float:left;border-top-left-radius:6px;border-top-right-radius:6px; box-shadow:0px 1px 3px #000;">
+				<div style="width:300px; height:73px; background:url(images/menulisttop.png); border-top-left-radius:6px;border-top-right-radius:6px;">
+                                   <img title="Guest account" src="images/guest.png" style="float:left; margin:10px; width:50px; height:50px; border:1px solid #fff000; border-radius:3px; box-shadow: 1px 1px 1px #00309c; cursor:pointer;" alt="user" />
+                                            <p style="color:white;font-size:20px; float:left; margin-top:25px; font-family:verdana; cursor:default;">Guest</p>
+                                </div>
+				<img src="images/logonthing3.png" style="width:300px;height:2px" alt="logonthing" />
+				<div style="width:150px; height:286px; float:left;background-color:white; cursor:default;">
+					<div style="border:dashed 3px blue; border-radius:10px; margin:3px; padding:5px; margin-top:100px; font-family:verdana; font-size:14px;">
+						Once you register for events they will be displayed here.
+					</div>
+				</div>
+				<div style="width:147px; height:286px; float:right;background:rgb(211,229,250); border-right:solid 1px #0a52fa; border-left:solid 1px #a6caf0;">
+						<div class="menuitems" onclick="openwindow(1);" style="width:100%;height:20px; cursor:pointer;">
+							<img src="images/folder.png" style="width:20px;height:20px;float:left;" alt="logonthing"/>
+							<span style="color:rgb(10,36,106);font-size:20px;">Events</span>
+						</div>
+						<div class="menuitems" onclick="openwindow(4);" style="width:100%;height:20px; cursor:pointer;">
+							<img src="images/wmp.png" style="width:20px;height:20px;float:left;" alt="wmp"/>
+							<span style="color:rgb(10,36,106);font-size:20px;">Videos</span>
+						</div>
+						<div class="menuitems" onclick="openwindow(3);" style="width:100%;height:20px; cursor:pointer;">
+							<img src="images/picgallery.png" style="width:20px;height:20px;float:left;" alt="pics"/>
+							<span style="color:rgb(10,36,106);font-size:20px;">Pictures</span>
+						</div>
+						<div style="width:100%;height:3px;padding-top:8px;padding-bottom:2px;"><img src="images/blueline.png" style="width:130px;margin:2px 0px 0px 3px;" alt="logonthong"/></div>
+						<div class="menuitems" style="width:100%;height:20px; cursor:pointer;" onclick="alert('App under Construction');">
+							<img src="images/schedule.png" style="height:20px;margin:0px 0px 0px 3px;float:left;" alt="schedulix"/><span style="color:rgb(10,36,106);font-size:20px;">Schedulix</span>
+						</div>
+						<div class="menuitems" onclick="openwindow(5);" style="cursor:pointer; width:100%;height:20px">
+							<img src="images/marketing.png" style="height:20px;margin:0px 0px 0px 3px;float:left;" alt="marketing"/><span style="color:rgb(10,36,106);font-size:20px;">Sponsors</span>
+						</div>
+				</div>
+				<div style="width:300px; float:left; height:41px; background:url(images/menulistbot.png); border-radius:3px;border-top-right-radius:0px; border-top-left-radius:0px;">
+                                    <div class="shutdown" onclick="location.href='./';" title="go to login page" style="margin-left:105px;">
+						<img src="images/logout.png" style="width:20px; height:20px; float:left;" alt="login"/>
+						<p style="float:left; color:white;font-size:15px;font-family:verdana;">Log In</p>
+                                                </div>
+					<div class="shutdown" onclick="location.href='about:blank';" title="exit from the site">
+						<img src="images/exit.png" style="width:20px; height:20px; float:left;" alt="exit" />
+						<p style="float:left; color:white;font-size:15px;font-family:verdana;">Exit</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div align="center" id="popback">
+			<div style="width:900px;" id="brochure">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" id="FlashID" title="brochure">
+				<param name="movie" value="pageflip_v225.swf" />
+				<param name="quality" value="high" />
+				<param name="wmode" value="transparent" />
+				<!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="pageflip_v225.swf" width="800" height="600">
+				<!--<![endif]-->
+				<param name="quality" value="high" />
+				<param name="wmode" value="transparent" />
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+				</object>
+				<div style="width:50px; height:50px; float:right; cursor:pointer; border-radius:5px; background:url(images/close.jpg);" onclick="closepop();"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<!--mouse tracker to coordinate between bringing elements to top and managing the css-->
+<!--full screen scripts-->
+<script type="text/javascript">
+function gofullscreen()
+{
+	if((!document.mozFullScreen && !document.webkitIsFullScreen))
+	{
+		var elem = document.getElementById("screen");  
+		if (elem.requestFullScreen)
+			elem.requestFullScreen();
+		else if (elem.mozRequestFullScreen)
+			elem.mozRequestFullScreen();
+		else if (elem.webkitRequestFullScreen)
+			elem.webkitRequestFullScreen(elem.ALLOW_KEYBOARD_INPUT);
+	}
+	else
+	{
+		if (document.cancelFullScreen)
+			document.cancelFullScreen();
+		else if (document.mozCancelFullScreen)
+			document.mozCancelFullScreen();
+		else if (document.webkitCancelFullScreen)
+			document.webkitCancelFullScreen();
+	}
+}
+function mousetracker()
+{;
+}
+</script>
+<!--this manages the desktop-->
+<script type="text/javascript">
+var winheight;
+var winwidth;
+adjust();
+function adjust()
+{
+	winheight=window.innerHeight;
+	winwidth=window.innerWidth;
+}
+</script>
+<!--this is to show and hide start menu-->
+<script type="text/javascript">
+var menuvisib=0;
+function openmenu()
+{
+	if(menuvisib)
+	{
+		document.getElementById('menulist').style.visibility="hidden";
+		menuvisib--;
+	}
+	else
+	{
+		document.getElementById('menulist').style.visibility="visible";
+		menuvisib++;
+	}
+}
+function hidemenu()
+{
+	if(menuvisib)
+	{
+		document.getElementById('menulist').style.visibility="hidden";
+		menuvisib--;
+	}
+}
+</script>
+<!--this manages the window appearance-->
+<script type="text/javascript">
+var size=0;
+function resize(winid)
+{
+	targetw=document.getElementById("window"+winid);
+	targetwindow=targetw.getElementsByTagName("div").item(0);
+	targettitle=targetwindow.getElementsByClassName("titlebar").item(0);
+	targetleft=targetwindow.getElementsByClassName("leftborder").item(0);
+	targetright=targetwindow.getElementsByClassName("rightborder").item(0);
+	targetbottom=targetwindow.getElementsByClassName("bottomborder").item(0);
+	targetbody=targetwindow.getElementsByClassName("windowbody").item(0);
+	targetcont=targetwindow.getElementsByClassName("content").item(0);
+	targetgrey=targetwindow.getElementsByClassName("greybar").item(0);
+	targetblue=targetwindow.getElementsByClassName("bluebar").item(0);
+	if(size==0)
+	{
+		targetw.style.top ="0px";
+		targetw.style.left ="0px";
+		targetwindow.style.width = winwidth+"px";
+		targettitle.style.width = winwidth+"px";
+		targetright.style.width ="0px";
+		targetleft.style.width ="0px";
+		targetbottom.style.height ="0px";
+		targetbody.style.width = winwidth+"px";
+		targetbody.style.height = winheight-60+"px";
+		targetblue.style.height = winheight-122+"px";
+		if(winid=1)
+		{
+			targetgrey.style.width = winwidth+"px";
+			targetcont.style.width = winwidth-200+"px";
+			targetcont.style.height = winheight-122+"px";
+		}
+		size=1;
+	}
+	else
+	{
+		targetw.style.top ="50px";
+		targetw.style.left ="150px";
+		targetwindow.style.width ="750px";
+		targettitle.style.width ="750px";
+		targetright.style.width ="5px";
+		targetleft.style.width ="5px";
+		targetbottom.style.height="5px";
+		targetbody.style.width ="740px";
+		targetbody.style.height ="515px";
+		targetblue.style.height="452px";
+		if(winid=1)
+		{
+			targetgrey.style.width ="740px";
+			targetcont.style.width ="540px";
+			targetcont.style.height ="453px";
+		}
+		size=0;
+	}
+}
+</script>
+<!--this shows the windows-->
+<script type="text/javascript">
+var picgalopen=0;
+var openwins=[0,0,0,0,0,0,0];
+function openwindow(winid)
+{
+	hidemenu();
+	if(openwins[winid-1]==1)
+	{
+		if(winid==1)
+			showcontent(0);
+		return(0);
+	}
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+		xmlhttp=new XMLHttpRequest();
+	else
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	xmlhttp.onreadystatechange=function()
+	{
+        if (xmlhttp.readyState==4 && xmlhttp.status==404)
+			alert("an error occured in windows explorer");
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			var newdiv=document.createElement("div");
+			newdiv.id="window"+winid;
+			newdiv.className="movable";
+			newdiv.style.top="100px"
+			newdiv.style.left="100px"
+			newdiv.innerHTML=xmlhttp.responseText;
+			document.getElementById("desktop").appendChild(newdiv);
+			if(winid==1)
+				showcontent(0);
+			if(winid==3)
+			{
+				picgalopen=1;
+				slideman(1);
+			}
+			if(winid==8)
+				showworkshop(2);
+		}
+	}
+	if(winid==1)
+	xmlhttp.open("GET","events.html?="+Math.random(),true);
+	if(winid==2)
+	xmlhttp.open("GET","account.html?="+Math.random(),true);
+	if(winid==3)
+	xmlhttp.open("GET","picgallery.html?="+Math.random(),true);
+	if(winid==4)
+	xmlhttp.open("GET","mediaplayer.html?="+Math.random(),true);
+	if(winid==5)
+	xmlhttp.open("GET","marketing.html?="+Math.random(),true);
+	if(winid==6)
+	xmlhttp.open("GET","callus.html?="+Math.random(),true);
+	if(winid==7)
+	xmlhttp.open("GET","aboutus.html?="+Math.random(),true);
+	if(winid==8)
+	xmlhttp.open("GET","workshop.html?="+Math.random(),true);
+        if(winid==9)
+        {alert("You need to login to use this feature");return;};
+	xmlhttp.send();
+	openwins[winid-1]=1;
+}
+function closethis(winid)
+{
+	if(winid==3)
+		picgalopen=0;
+	document.getElementById("desktop").removeChild(document.getElementById("window"+winid));
+	openwins[winid-1]=0;
+}
+</script>
+<!--this updates time-->
+<script type="text/javascript">
+function starttimer()//check for simpler one. this one is good though
+{
+	var today=new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var z=checkm(h);
+	h=checkhour(h);
+	m=checkmin(m);
+	document.getElementById('time').innerHTML=h + ':' + m + " " + z;
+	t=setTimeout('starttimer()',1000);
+}
+var i;
+function checkm(i)
+{
+	var z;
+	if(i<12)
+		z="AM";
+	else
+		z="PM";
+	return z;
+}
+function checkhour(i)
+{
+	if(i>12)
+		i=i-12;
+	
+	return i;
+}
+function checkmin(i)
+{
+	if(i<10)
+		i="0" + i;
+	return i;
+}
+</script>
+<!--this is for the icons drag&drop-->
+<script type="text/javascript">
+function allowDrop(ev)//check for better usability
+{
+	ev.preventDefault();
+}
+function drag(ev)
+{
+	ev.dataTransfer.setData("Text",ev.target.id);
+	if(ev.pageX || ev.pageY)
+	{
+		coordx = ev.pageX;
+		coordy = ev.pageY;
+	}
+	else
+	{
+		coordx = ev.clientX + document.body.scrollLeft - document.body.clientLeft;
+		coordy = ev.clientY + document.body.scrollTop - document.body.clientTop ;
+	}
+}
+function drop(ev)
+{
+	ev.preventDefault();
+	if(ev.pageX || ev.pageY)
+	{
+		coordsx = ev.pageX;
+		coordsy = ev.pageY;
+	}
+	else
+	{
+		coordsx = ev.clientX + document.body.scrollLeft - document.body.clientLeft;
+		coordsy = ev.clientY + document.body.scrollTop - document.body.clientTop ;
+	}
+	var data=ev.dataTransfer.getData("Text");
+	document.getElementById(data).style.top = parseInt(document.getElementById(data).style.top)+coordsy-coordy + "px";
+	document.getElementById(data).style.left= parseInt(document.getElementById(data).style.left)+coordsx-coordx + "px";
+}
+</script>
+<!--manages the videos in media player-->
+<script type="text/javascript">
+var vidcur=0;
+function videochanger(vidid)
+{
+	if(vidid==vidcur)
+		return(0);
+	videoframe=document.getElementById("videoframe");
+	if(vidid==1)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/kbzQVb9dbV0?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==2)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/bhPEA3lUXSE?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==3)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/8M-7Vhk1X2M?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==4)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/RyIEPiXPct0?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==5)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/CpV4cXpw24g?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==6)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/gLeVk0kSwjI?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==7)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/CWIjJhpImRE?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==8)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/wReUN1nDbxE?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	if(vidid==9)
+		videoframe.innerHTML='<iframe style="margin:10px; margin-left:85px;" width="560" height="315" src="http://www.youtube.com/embed/WA3dl7BbCR8?rel=0&autoplay=1&wmode=opaque" frameborder="0" allowfullscreen></iframe>';
+	vidcur=vidid
+}
+</script>
+<!--this is for managing slides in picgallery-->
+<script type="text/javascript">
+var s=0;
+var slm=0;
+var slp=1;
+var sln=2;
+var slf=0;
+var slg=0;
+var sld=-50;
+var slr=0;
+function anim()
+{
+	t-=100;
+	if(t==-1000)
+	t=0;
+	document.getElementById('imag').style.left=t+"px";
+	setTimeout("anim()",100);
+}
+function slideaccept()
+{
+	slf=0;
+}
+function slidein(slp)
+{
+	document.getElementById('sl'+slp).style.webkitTransitionDuration='1s';
+	document.getElementById('sl'+slp).style.MozTransitionDuration='1s';
+	document.getElementById('sl'+slp).className="front";
+}
+function slideaut(slr)
+{
+	if(slg==slr)
+	{
+		sld=-50;
+		slidchang();
+	}
+}
+function slideman(slm)
+{
+	if(slf==0)
+	{
+	if(slm==1)
+	sln-=2;
+	slidchang();
+	}
+}
+if('WebkitTransform'in document.body.style || 'MozTransform'in document.body.style)
+document.write("<script type='text/javascript' src=slidcss.js><\/script>");
+else
+document.write("<script type='text/javascript' src=slidjs.js><\/script><style type='text/css'>#slidimg div{opacity:0;}><\/style>");
+</script>
+<!--controls the events window-->
+<script type="text/javascript">
+function showcontent(conid,feedback)
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+		xmlhttp=new XMLHttpRequest();
+	else
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	xmlhttp.onreadystatechange=function()
+	{
+        if (xmlhttp.readyState==4 && xmlhttp.status==404)
+			alert("an error occured while loading content. please reload and try again");
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("content").innerHTML = xmlhttp.responseText;
+			if(feedback!=1)
+			{
+				eventhist(conid);
+			}
+		}
+	}
+	xmlhttp.open("GET","events\/" + conid + ".html?q=" + Math.random(),true);
+	xmlhttp.send();
+}
+function showworkshop(conid)
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+		xmlhttp=new XMLHttpRequest();
+	else
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	xmlhttp.onreadystatechange=function()
+	{
+        if (xmlhttp.readyState==4 && xmlhttp.status==404)
+			alert("an error occured while loading content. please reload and try again");
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("workshopcontent").innerHTML = xmlhttp.responseText;
+			if(feedback!=1)
+			{
+				eventhist(conid);
+			}
+		}
+	}
+	xmlhttp.open("GET","workshop\/" + conid + ".html?q=" + Math.random(),true);
+	xmlhttp.send();
+}
+var eventhistory=new Array();
+var evhistot=0;
+var evhiscur=0;
+function eventhist(conid)
+{
+	if(evhiscur<evhistot-1)
+		evhistot=evhiscur+1;
+	eventhistory[evhistot]=conid;
+	evhistot++;
+	evhiscur=evhistot-1;
+}
+function eventnav(dir)
+{
+	if((evhiscur+dir!=evhistot)&&(evhiscur+dir!=-1))
+	{
+		showcontent(eventhistory[evhiscur+dir],1);
+		evhiscur=evhiscur+dir;
+	}
+}
+</script>
+<!--controls the window movements-->
+<script type="text/javascript">
+var selwin;
+var nope=0;
+var winposx=0;
+var winposy=0;
+var winposix=0;
+var winposiy=0;
+var winposfx=0;
+var winposfy=0;
+function selectwin(winid,ev)
+{
+	selwin=document.getElementById("window"+winid);
+	winposiy=parseInt(selwin.style.top);
+	winposix=parseInt(selwin.style.left);
+	if(ev.pageX || ev.pageY)
+	{
+		winposx = ev.pageX;
+		winposy = ev.pageY;
+	}
+	else
+	{
+		winposx = ev.clientX + document.body.scrollLeft - document.body.clientLeft;
+		winposy = ev.clientY + document.body.scrollTop - document.body.clientTop ;
+	}
+	document.onmousemove = windowmove;
+	document.onmouseup = deselectwin;
+	document.body.focus();
+	document.onselectstart = function () { return false; };
+	target.ondragstart = function() { return false; }; 
+	return false;
+}
+function deselectwin()
+{
+	document.onmousemove = null;
+	document.onmouseup = null;
+	document.onselectstart = null;
+}
+function windowmove(e)
+{
+	if (e == null)
+		var e = window.event; 
+	if(e.pageX || e.pageY)
+	{
+		winposfx = e.pageX;
+		winposfy = e.pageY;
+	}
+	else
+	{
+		winposfx = e.clientX + document.body.scrollLeft - document.body.clientLeft;
+		winposfy = e.clientY + document.body.scrollTop - document.body.clientTop ;
+	}
+	selwin.style.top=winposiy+winposfy-winposy + "px";
+	selwin.style.left=winposix+winposfx-winposx + "px";
+}
+</script>
+<!--controls registrations -->
+<script type="text/javascript">
+var parti=0;
+function reghandle(rh,ob)
+{
+    if(rh==0)
+    {    
+        alert("this event cant be registered to :(");
+        return;
+    }
+    if(rh==-1)
+    {
+        alert("unregistering is not supported :(");
+        return;
+    }    
+    if(ob.className=="g")
+    {
+        ob.className="w";
+        ob.style.background="white";
+        parti=parti-rh;
+        return;
+    }
+    ob.className="g";
+    ob.style.background="green";
+    parti=parti+rh;
+}
+function regsend()
+{
+    if(parti==0)
+    {
+        alert("no events were selected");
+        return;
+    }
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    xmlhttp=new XMLHttpRequest();
+    else
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            alert(xmlhttp.responseText);
+            parti=0;
+            closethis(9);
+        }
+    }
+    xmlhttp.open("POST","eventupd.php",true);
+    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlhttp.send("evsel="+parti);
+}
+</script>
+<script src="resources/updates.js" type="text/javascript"></script>
+<script type="text/javascript">
+var popprog=0;
+var bropad=0;
+function closepop()
+{
+	if(popprog==0)
+	document.getElementById('popback').style.visibility="hidden";
+	document.getElementById('screen').style.opacity=1;
+}
+function showbrochure()
+{
+	document.getElementById('popback').style.visibility="visible";
+	document.getElementById('screen').style.opacity=0.9;
+	bropad=(window.innerHeight-600)/2;
+	document.getElementById('brochure').style.padding=bropad+"px";
+}
+</script>
+<noscript>java script is not enabled in your browser</noscript>

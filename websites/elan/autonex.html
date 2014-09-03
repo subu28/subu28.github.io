@@ -1,0 +1,104 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript">
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+</script>  
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+     <p id="para1"  style=" font-size:20px; text-align:center;">Autonex</p><br>
+      <p id="para2" style="text-align: left">Are you an automobile junkie?Have you always wondered about how automobiles work?. The mechanisms involved? It is time for you to finally get a clear vision into the making and working principle of automobiles.<br><br>We at ELAN 2011, in collaboration with Emangineer India are oragnizing AutoNEX on the 15th and 16th Jan at IIT Hyderabad.<br>In this workshop, participants will find, apart from usual technical stuff, a deep insight (how it works, how to make one, various technical and financial aspects) of various student car projects like Formula student car project, Solar vehicle, Mini Bajaj, Super Mileage Vehicle etc.<br><br>Here you will get lucid explanation of everything about an automobile from the basic structure to the complex IC engines. Everything made simple and interactive using awesome simulations. Learn to design the system on CATIA and AutoCAD. Well this is something you dont want to miss.<br<br>This workshop, conceptualized by Emanagineer India will rock the spirit of an engineer in you.<br><br>*get your lappies for a better experience.<br><br>Cost of the workshop is just 1200 bucks.<br><br>* We will provide you transportation form the city and fooding on 15th and 16th.(no extra charges).<br><br><a target="_blank" href="./server/eventRegistration.jsp">Click here </a> to Register online<br/>OR<br/>Register On the spot.</p>
+      <p id="para3"><a align="left" href="http://www.emanagineer.co.in/AutoNEX%20Course%20Structure.pdf" target="_blank">Click here</a> to download courseware </p>
+      <p id="para4"><a align="left" href="http://www.emanagineer.co.in/Emanagineer Profile.pdf" target="_blank">Click here</a> to download company profile </p>
+      <p id="para5"><a href="autonex_payment.pdf" >click here</a> to download payment procedure </p>
+      <p id="para5"><a href="transport.html" target='_blank' >Click here</a>for bus routes and schedule for Autonex Workshop.</p>
+    </div> 
+  </div> 
+  
+	
+	
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

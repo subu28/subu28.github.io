@@ -1,0 +1,161 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+  
+   <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 id="para1">LOLQUIZ</h2> 
+      <p id="para2">If you think that your G.K. and I.Q. are good, then you are NOT whom we are looking for. This quiz is onemeant for people who are tired of clapping for others and want to beat all the intellectual dudes at least once. Here's your chance.A Quiz about all the funny things that exist. Come and Laugh Out Loud.</p> 
+      <p id="para3"></p> 
+      <p id="para4"></p> 
+      <p id="para5"></p> 
+      <p id="para6"></p> 
+    </div> 
+  </div> 
+ 	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+</div>
+ 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "LOLQUIZ";
+		document.getElementById('para2').innerHTML = "If you think that your G.K. and I.Q. are good, then you are NOT whom we are looking for. This quiz is onemeant for people who are tired of clapping for others and want to beat all the intellectual dudes at least once. Here's your chance.A Quiz about all the funny things that exist. Come and Laugh Out Loud.";
+		document.getElementById('para3').innerHTML = "";
+		document.getElementById('para4').innerHTML = "";
+		document.getElementById('para5').innerHTML = "";
+		document.getElementById('para6').innerHTML = "";
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = 'Registration: On spot registration.';
+		document.getElementById('para3').innerHTML = '<br><br><br><br><br><br><br><br><br><br>.';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '1.    Aaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhh..... Two per team(only) <br>2.   Get a paper <br>3.   Rules are subject to change<br>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = 'Comming Soon';
+		document.getElementById('para3').innerHTML = '<br><br><br><br><br><br><br><br><br><br>.';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>

@@ -1,0 +1,218 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+{
+	tab(k);
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "Sling Shot";
+		document.getElementById('para2').innerHTML = 'If you feel that sophistication, accuracy and raw power are the sole right of modern machine only then you are sorely mistaken, because the ancient war trebuchets could fling a rock of 200kg to distance of 300-500 mts with an accuracy that can make Abhinav Bindra proud. Impressed??So, why not make this war machine??We at Elan give you the perfect opportunity to take up this mechanical challenge via slingshot. What we are want is not a spark in an engine but one in your head. So no motors or circuits to remember';
+		document.getElementById('para3').innerHTML = "<b>\"Simplicity is a strict taskmaster.\"</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masan Cooley";
+		document.getElementById('para4').innerHTML = "<b>Problem statement</b>";
+		document.getElementById('para5').innerHTML = "Design and build a trebuchet using any material of your choice to launch a projectile of a given weight.";
+		document.getElementById('para6').innerHTML = 'Prize money of Rs.10,000 to be won. Participation certificates will be awarded to all the participants.';
+		document.getElementById('para7').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Event format</b><br/> The event will be conducted in three rounds:';
+		document.getElementById('para3').innerHTML = '1.Preliminary round:<br/>In this round the participants system will be judged for safety measures.<br/>The teams passing this round will be allowed to enter the competition.';
+		document.getElementById('para4').innerHTML = '2. Second round:<br/>The system will be judged on the basis of its \"range of shooting\".<br/> The teams will be provided three chances to launch the projectile and the longest range will be considered for scoring.';
+		document.getElementById('para5').innerHTML = '3. Third round:<br/>The system will be judged on the basis of is &ldquo;precision and accuracy&rdquo; that is how precisely it can hit a given target.<br/>The teams have to launch the projectile three times and the sum of the distances where the projectile dropped from the given target. The minimum the sum the higher is the score.';
+		document.getElementById('para6').innerHTML = '<br/><br/><b>Selection procedure:</b> <br/> The teams required to submit abstract of the design of the system they are going to make.';
+		document.getElementById('para7').innerHTML = 'For example the abstract can contain any of the following details:';
+		document.getElementById('para8').innerHTML = '1. Design options and why a design is chosen.<br/> 2. Design specification.<br/> 3. A sketch of the trebuchet you are going to make.<br/> Teams are free to add topics or subtract topics from the above list.';
+		document.getElementById('para9').innerHTML = '<b>Resources:</b><br/>' +
+		'<a href="http://www.algobeautytreb.com/trebmath35.pdf"> http://www.algobeautytreb.com/trebmath35.pdf </a>' +
+		'<a href="http://extraphysics.com/album/albums/projects/files/Trebuchet.pdf"> http://extraphysics.com/album/albums/projects/files/Trebuchet.pdf </a>';
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(2);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+		
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Rules:</b>';
+		document.getElementById('para3').innerHTML = '1. The counterweight must be geometrical shape and should be solid (preferably). It should be detachable from the main system for mass and volume calculations.<br/>' +
+		'2. Maximum height of the counterweight from the base of the trebuchet should not be more than 280 mm.<br/>' +
+		'3. The mass of the counterweight should be 3.5 kg.<br/>' +
+		'4. The base of the trebuchet should not be more than 20mm above the launching platform. The base of the trebuchet is defined as the height at which the projectile rests.<br/>' +
+		'5. The projectile should be of mass 100 grams and should be a sphere of any preferable radius.<br/>' +
+		'6. The only source of energy for launching the projectile should only be the potential energy of the counterweight. Any other energy in stored form should not be used in the process.<br/>' +
+		'7. No other part of the trebuchet should be released while the launching the projectile except the projectile itself.<br/>' +
+		'8. There is no limitation on the number of arms but each trebuchet should contain at least one lever arm pivoted at the fulcrum.<br/>' +
+		'9. The machine should use same parts to fulfill all the requirements of the tests and no change of parts is allowed until they break. Though change of configuration/adjustment of the existing parts is of course allowed.<br/>' +
+		'10. The part to be replaced should be of same specification as the broken part and only one replacement at a time are allowed.<br/>' +
+		'11. After the testing commences only team leader is allowed to touch the system and that too for reloading. No replacements are allowed.<br/>' +
+		'12. The device must be triggered from outside the Launch Area by pulling a string, firing pin, etc. Except for the triggering mechanism, no part of the device and counterweight may extend out of the Launch Area before it is triggered or after the launch motion is complete.<br/>' +
+		'13. The system should be mountable to the given platform specified under specifications.<br/>' +
+		'14. Prior to testing all designs will be checked for safety measures and those not conforming to these will only be allowed to enter the competition. Though they are allowed to make minor changes and try again the prior testing.<br/>' +
+		'15. The launch area will be 2mx2m and your trebuchet should reside inside the launch area before and after the launch.<br/>' +
+		'16. A team can have a maximum of 3 members.';
+		document.getElementById('para4').innerHTML = '<br/><b>Judging criteria and scoring</b><br/> The trebuchets build will be tested for performance on following grounds:';
+		document.getElementById('para5').innerHTML = '1. Precision in shooting a predefined target.<br/>2. Efficiency: Percentage utilization of given energy(longest range thrown per kg of mass).<br/>3. Creativity in the design.';
+		document.getElementById('para6').innerHTML = 'The final scores will be out of 100 and is divided among second and third rounds of the test. These are distributed as follows:';
+		document.getElementById('para7').innerHTML = '1. In second round the scores will be given out of 40.<br/>2. In third round the scores will be given out of 40.<br/>3. The creativity in design is scored out of 20.';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(3);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Event Organisers';
+		document.getElementById('para2').innerHTML = 'Aman Deep Gautam<br/>Email: cs09b003@iith.ac.in<br/>08985156527';
+		document.getElementById('para3').innerHTML = 'K.V.S Pavan<br>Email: me09b016@iith.ac.in';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">Sling Shot</h2> 
+      <p align="left" id="para2">If you feel that sophistication, accuracy and raw power are the sole right of modern machine only then you are sorely mistaken, because the ancient war trebuchets could fling a rock of 200kg to distance of 300-500 mts with an accuracy that can make Abhinav Bindra proud. Impressed??So, why not make this war machine??We at Elan give you the perfect opportunity to take up this mechanical challenge via slingshot. What we are want is not a spark in an engine but one in your head. So no motors or circuits to remember</p> 
+      <p align="left" id="para3"><b>"Simplicity is a strict taskmaster."</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masan Cooley</p> 
+      <p align="left" id="para4"><b>Problem statement</b></p> 
+      <p align="left" id="para5">Design and build a trebuchet using any material of your choice to launch a projectile of a given weight.</p> 
+      <p align="left" id="para6">Prize money of Rs.10,000 to be won. Participation certificates will be awarded to all the participants.</p> 
+	  <p align="left" id="para7"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p>
+	  <p align="left" id="para8"></p>
+	  <p align="left" id="para9"></p>
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

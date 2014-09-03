@@ -1,0 +1,135 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Advaya Cepheid</title>
+<link rel="stylesheet" type="text/css" href="main.css"/>
+<script language="javascript">
+    var datedat = new Date();
+document.write("<script src=scripts/updates.js?q="+datedat.getDate()+"><\/script>");
+document.write("<script src=scripts/events.js?q="+datedat.getDate()+"><\/script>");
+</script>
+<script type="text/javascript">
+var l1="cepheid/starwars.html?q="+Math.random();
+var l2="cepheid/oci.html?q="+Math.random();
+var l="cepheid/club.html?q="+Math.random();
+var h1="#starwars";
+var h2="#oci";
+var h3="#starwars";
+var h4="#oci";
+</script>
+<script src="main.js" type="text/javascript"></script>
+
+xmlhttp.open("GET","cepheid/starwars.html?q="+Math.random(),true);
+                if(dl==2)
+                    xmlhttp.open("GET","cepheid/oci.html?q="+Math.random(),true);
+				if(dl==-1)
+                    xmlhttp.open("GET","cepheid/club.html?q="+Math.random(),true);
+		xmlhttp.send();
+}
+function urlcheck()
+{
+	if(window.location.hash=="#starwars")
+	dynload(1);
+	else if(window.location.hash=="#oci")
+</head>
+
+<body onload="anim(); urlcheck(); updatediv(); eventlinker();">
+<div id="screen">
+	<div id="centering" align="center">
+    	<div id="maindiv">
+        	<div id="header">
+      			<ul>
+            		<li><a href="./"> Home </a></li>
+                	<li><a href="events.html"> Events </a></li>
+                	<li><a href="sponsors.html"> Sponsors </a></li>
+                	<li><a href="contactus.html"> Contact Us </a></li>
+            	</ul>
+			</div>
+            <div id="logodiv">
+			<iframe src="time.jsp"></iframe>
+            <img src="images/final1.png"/>
+			</div>
+            <div id="logindiv">
+            <br/>
+            <a onclick="bring(1);">Login</a>
+            <p> or </p>
+            <a onclick="bring(2);">Sign up now!!</a>
+            </div>
+            <div id="updates">
+				<font size="+2">UPDATES</font><br/><br/>
+				<div style="height:200px; overflow:hidden;">
+				
+					<div id="up1"></div>
+					<div id="up2"></div>
+				</div>
+            	<div style="width:100px; overflow:hidden;">
+                	<img id="imag" src="images/anim.png" alt="anim" />
+                </div>
+            </div>
+			<div id="content">
+				<div id="clubhead">
+				<br/>
+                   <div align="right" style="float:left; width:200px;">
+                   <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="150" height="150" id="FlashID2" title="cube">
+					<param name="movie" value="flash/cub2.swf" />
+					<param name="quality" value="high" />
+					<param name="wmode" value="transparent" />
+					<param name="swfversion" value="6.0.65.0" />
+					<!--[if !IE]>-->
+					<object type="application/x-shockwave-flash" data="flash/cub2.swf" width="150" height="150">
+					<!--<![endif]-->
+					<param name="quality" value="high" />
+					<param name="wmode" value="transparent" />
+					<param name="swfversion" value="6.0.65.0" />
+					<!--[if !IE]>-->
+					</object>
+					<!--<![endif]-->
+                                </object></div>
+				<br/><br/><a href="#cepheid" onClick="dynload(-1)"><img src="images/buttons/cepheid.png"/></a>
+				</div>
+				<div id="secmen">
+				<div id="secmenu">
+				<ul>
+					<li><a href="#starwars" onClick="dynload(1)"><img src="images/buttons/starwars.png"/></a></li>
+					<li><a href="#oci" onClick="dynload(2)"><img src="images/buttons/onlineci.png"/></a></li>
+				</ul>
+				</div>
+				</div>
+				<div id="dynfx">
+                	<img id="imag2" src="images/anim.png" alt="anim" />
+					<p id="dyntext">connecting to server</p>
+                </div>
+				<div id="dyndiv" style="width:700px;">
+			</div>
+			</div>
+            <div id="eventimg">
+            <font size="+2">events</font>
+            <div id="eventlink">
+            <a id="totlink">
+                <img id="changimg"/>
+                <div id="changtxt"></div>
+			</a>
+            </div>
+            </div>
+            <div id="footer">
+                <font color="#FFFFFF" size="+1">&copy; The Advaya Web and Arts Team<br/><a target="_blank" href="http://www.facebook.com/mudit.tanwani">Mudit</a> | <a target="_blank" href="http://www.facebook.com/ssubu">Subhash</a> | <a target="_blank" href="http://www.facebook.com/rockstarjindal">Rohit</a> | <a target="_blank" href="http://www.facebook.com/mayankthp">Mayank</a><br/>IITH<br/><br/></font>
+            </div>
+		</div>
+	</div>
+    <div id="popups">
+    	<div id="loginpop">
+        <a onclick="closepop();"> [close] </a>
+        <iframe src="db/login.jsp"></iframe>
+        </div>
+        <div id="regpop">
+        <a onclick="closepop();"> [close] </a>
+        <iframe src="db/registration.jsp"></iframe>
+        </div>
+    </div>
+	<div style="clear:both;"/>
+</div>
+<div id="popback" onclick="closepop();"/>
+</body>
+</html>

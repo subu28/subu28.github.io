@@ -1,0 +1,162 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container"  > 
+      <h2 align="centre" id="para1">Lose Your Feet</h2> 
+      <p align="left" id="para2">A Solo Dance Competition for all those feet tappers,hip-hoppers who can shake their legs and pull heavy crowd.</p> 
+	  <p align="left" id="para3">Lose Your Feet is here for all you dancers out there who have in them, what it takes to compete at the professional level, Lose Your Feet is the perfect stage. This competition promises you breath-taking performances from the most talented of participants.  </p> 
+      <p align="left" id="para4">All forms of dances are allowed (classical, belly, Bollywood etc.)So here is the stage waiting for you. Don't be a spectator-be a participant.</p> <br>
+      <p align="left" id="para5"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p> 
+      <p align="left" id="para6"></p> 
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "Lose Your Feet";
+		document.getElementById('para2').innerHTML = "A Solo Dance Competition for all those feet tappers,hip-hoppers who can shake their legs and pull heavy crowd.";
+		document.getElementById('para3').innerHTML = "Lose Your Feet is here for all you dancers out there who have in them, what it takes to compete at the professional level, Lose Your Feet is the perfect stage. This competition promises you breath-taking performances from the most talented of participants. ";
+		document.getElementById('para4').innerHTML = "All forms of dances are allowed (classical, belly, Bollywood etc.)So here is the stage waiting for you. Don't be a spectator-be a participant.";
+		document.getElementById('para5').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		document.getElementById('para6').innerHTML = "";
+		
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = 'Event Format';
+		document.getElementById('para2').innerHTML = '<br>1)This event will be held in two rounds- prelims and finals.<br><br>2)Finals will be on the day next to the prelims.<br><br>3)You have to perform two different songs for prelims and finals.<br><br>4)Registration can be done online or on the spot.<br><br>5)Decision of judges will be final and number of participants in the final will depend on participation as well as the judges opinion.<br><br>6)Judging Criteria:<br>1) Choreography<br>2) Skills<br>3) Expressions<br>4) Overall impact<br><br>7)<b>PRIZES:</b> <br>1st prize: Rs.5000<br>2st prize: Rs.3000<br>3st prize: Rs.2000<br>Consolation prizes for other finalists.';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Rules</b><br>  1. Registration can be done online or on the spot.<br>2. Performance duration should be 2-3 min for prelims and 3-5 min for finals.<br>3. On the spot registrations will be closed 1 hr. before the start of the event.<br>4. Bring your song tracks with you.<br>5. Number of final participants will depend on participation as well as judges opinion.<br><br><br>	NOTE: If you need props for dance, then bring them with you. Large props like chair, tables etc., can be provided. But you have to inform the event organizer by mail or on phone for your requirements at least a day before the event.';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Event organisers</b><br>LOKESH GUPTA<br>Email: luckylokigupta27@gmail.com<br>Mb#95504-51651<br><br>MANISH TALREJA<br>Email: manish.iith@gmail.com<br>Mb#95054-28720';
+		document.getElementById('para3').innerHTML = '<b>Cultural events Coordinator</b><br>Puneet Gupta<br>Email: cs09b027@iith.ac.in<br>Mb# 94933-29825';
+		document.getElementById('para4').innerHTML = '<b>Events Core</b><br>Ajay M.R.<br>Email: me09b003@iith.ac.in<br>Mb# 88978-61805';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>

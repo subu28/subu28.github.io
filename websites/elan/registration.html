@@ -1,0 +1,255 @@
+<!-- 
+    Document   : registration
+    Created on : 20 Oct, 2010, 1:00:20 AM
+    Author     : MALEMPATI
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Registration Form</title>
+        <link rel="stylesheet" href="./css/general.css" type="text/css" media="screen" />
+	<script src="JavaScript/registration.js" type="text/javascript"> </script>
+         <link rel="stylesheet" href="../css/confirmation.css" type="text/css" media="screen" />
+         <link rel="stylesheet" href="../css/general.css" type="text/css" media="screen" />
+      
+    <script type="text/javascript" src="/highslide/highslide.js"></script>
+    <link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
+    <script type="text/javascript">
+        // override Highslide settings here
+        // instead of editing the highslide.js file
+        hs.graphicsDir = '/highslide/graphics/';
+    </script>
+
+</head>
+    <body style="background-color: #A8AA7D">
+        <center><br/>
+            <h1>  ELAN 2011 - Registration Form</h1>
+<div id="title">
+<form action="./server/registrationValidate.jsp" method="post" name="loginForm" onSubmit="return validate()">
+	<table align="center"  border="0" cellpadding="2" cellspacing="0" width="1%">
+            <tr align="center">
+			<td>
+			<table  border="0" cellpadding="2" cellspacing="0" width="1%">
+				<tr>
+					<td>
+					<table  border="0" cellpadding="2" cellspacing="0" width="100%">
+						<!--
+                                                	<tr>
+							<td  valign="top" style="height: 218px">
+						            <table  border="0" cellpadding="7" cellspacing="0" width="100%">
+								<tr>
+									<td class="style5" colspan="2" style="height: 51px">
+									<table width="200px" cellpadding="7" cellpadding="0" cellspacing="6" class="style2" align="center">
+                                                                        <tr>
+                                                                          <td>
+                                                                         <span class="title1">ELAN 2011 - Registration Form
+                                                                            </span>
+                                                                         </td>
+                                                                        </tr>
+                                                             </table>
+                                                                </td>
+								</tr>
+						          !-->
+                                                		<tr>
+								 <td colspan="2" style="height: 157px">
+								  <table width:170px cellpadding="7" cellpadding="0" cellspacing="6" class="style2">
+								 <!--  <tr>
+										<td class="style4" style="height: 0">
+										<table style="width: 3px; height: 2px"> </table></td>
+										<td style="width: 251px; height: 0;" class="style4">
+										<table style="width: 170px; height: 2px" cellpadding="1" cellspacing="1"> </table><br/></td>
+								   </tr>
+								!-->
+                                                                 <tr id="email">
+									<td style="width: 180px"> <font color="red">*</font><span class="lables">Email Id:</span>
+									</td>
+									<td style="width: 251px">
+									<input id="email" name="email"  size="30" type="text" value=""/><br />
+									<font  color="#33333" size="2" >(Act as Username for ELAN)</font>
+									</td>
+								</tr>
+								<tr id="password1">
+									<td style="width: 157px"> <font color="red">*</font><span class="lables">Password:</span>
+									</td>
+									<td style="width: 251px">
+									<input id="password1" name="password1" size="30" type="password" value=""/><br />
+									<font color="#33333" size="2" >(At least 5 characters)</font>
+									</td>
+								</tr>
+								<tr id="cpassword">
+									<td style="width: 157px"> <font color="red">*</font><span class="lables">Confirm Password:</span>
+									</td>
+									<td style="width: 251px">
+									<input id="cpassword" name="cpassword" size="30" type="password" value=""/><br />
+									</td>
+								   </tr>
+								<!--   <tr>
+										<td><table style="width: 170px; height: 1px"> </table></td>
+										<td style="width: 251px">
+										<table style="width: 170px; height: 1px" cellpadding="1" cellspacing="1"> </table><br/></td>
+								   </tr>
+								!-->
+                                                                 </table>
+								 </td>
+								</tr>
+
+								<tr>
+								 <td colspan="2" style="height: 157px">
+								  <table width:170px cellpadding="7" cellpadding="0" cellspacing="6" class="style3">
+
+									<tr id="firstname">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">First name:</span>
+										</td>
+										<td style="width: 235px">
+										<div>
+											<input id="firstName" name="firstName" size="30" type="text" value="" />
+										</div>
+										</td>
+									</tr>
+									<tr id="lastname">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">Last name:</span>
+										</td>
+										<td style="width: 235px">
+										<div>
+											<input id="lastName" name="lastName" size="30" type="text" value="" />
+										</div>
+										</td>
+									</tr>
+									<tr id="sex">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">Sex:</span> </td>
+										<td style="width: 235px">
+										<div>
+											<select id="sex" name="sex">
+											<option>MALE</option>
+											<option>FEMALE</option>
+											</select> </div>
+										</td>
+									</tr>
+									<tr id="age">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">Age:</span> </td>
+										<td style="width: 235px">
+										<input id="age" name="age" size="2" type="text" value="" />
+										</td>
+									</tr>
+									<tr id="mobile1">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">Contact number:</span>
+										</td>
+										<td style="width: 235px">
+										<input id="mobile1" name="mobile1" size="13" type="text" value="" />
+										</td>
+									</tr>
+									<tr id="mobile2">
+										<td style="width: 150px">
+										<span class="lables">Emergency Contact:</span>
+										</td>
+										<td style="width: 235px">
+										<input id="mobile2" name="mobile2" size="13" type="text" value="" />
+										</td>
+									</tr>
+
+									<tr id="collegeName">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">College Name:</span>
+										</td>
+										<td style="width: 235px">
+										<input id="collegeName" name="collegeName" size="30" type="text" value="" />
+										</td>
+									</tr>
+									<tr id="departmentName">
+										<td style="width: 150px">
+										<span class="lables">Department Name:</span>
+										</td>
+										<td style="width: 235px">
+										<input id="departmentName" name="departmentName" size="30" type="text" value="" />
+										</td>
+									</tr>
+									<tr id="year1">
+										<td style="width: 150px">
+										<span class="lables">Year:</span> </td>
+										<td style="width: 235px">
+										<div>
+											<select id="year" name="year">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											</select> </div>
+										</td>
+									</tr>
+									<tr id="address">
+										<td style="width: 150px">
+										<span class="lables">Address:</span>
+										</td>
+										<td style="width: 235px">
+										<textarea id="address" cols="25" name="address"></textarea>
+										</td>
+									</tr>
+									<tr id="city">
+										<td style="width: 150px; height: 39px;">
+										<font color="red">*</font><span class="lables">City:</span> </td>
+										<td style="height: 39px; width: 235px;">
+										<input id="city" name="city" size="30" type="text" value="" />
+										</td>
+									</tr>
+									<tr id="state1">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">State:</span> </td>
+										<td style="width: 235px">
+										<input id="state1" name="state" size="30" type="text" value="" />
+										</td>
+									</tr>
+									<tr id="postalCode">
+										<td style="width: 150px">
+										<font color="red">*</font><span class="lables">Postal Code :</span>
+										</td>
+										<td style="width: 235px">
+										<input id="postalCode" name="postalCode" size="6" type="text" value="" />
+										</td>
+									</tr>
+									<tr>
+										<td><span class="lables">Do you want accommodation? </span></td>
+                                                                                <td>
+                                                                                    <label id="accommodation" name="accomdation"> Yes </label>
+                                                                                    <input name="accommodation" type="radio" value="yes"/>
+                                                                                    <label id="accommodation" name="accommodation"> No </label>
+                                                                                    <input name="accommodation" type="radio" checked="checked" value="no" />
+										</td>
+									</tr>
+								  </table>
+								 </td>
+								</tr>
+
+								<tr>
+									<td align="center" colspan="2" style="width: 235px">
+										&nbsp;<input class="submit" type="submit" value="SUBMIT" /></td>
+								</tr>
+							</table>
+							</td>
+						</tr>
+					</table>
+					</td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+	</table>
+</form>
+
+
+		</div>
+	
+
+ <!-- End Register popup -->
+</center>
+
+</body>
+
+</html>

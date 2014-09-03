@@ -1,0 +1,184 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+{
+	tab(k);
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		// var newHTML2 = "<a   target="blank" href='tdp_robo_epic.docx'>click here</a> for TDP ";
+		
+		document.getElementById('para1').innerHTML = "$Screen Wizard$";
+		document.getElementById('para2').innerHTML = "\"Calling out to all aspiring directors. Yes, this is the event for you.\" This event will provide an excellent opportunity for video advertising. This is one location where people will lay back and give you their full attention.";
+        document.getElementById('para4').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		document.getElementById('para5').innerHTML = "";
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = 'Event Format';
+		document.getElementById('para2').innerHTML = '1. Participant has to send short movie before ELAN or you can bring it during Elan. The movies will be screened during Elan and the result will be declared on last day of ELAN.<br/>2.Last day of submission is 29thjan.<br/>3.Judges decision will be final.';
+		document.getElementById('para3').innerHTML = 'Prizes worth Rs.5000';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(2);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = 'RULES';
+		document.getElementById('para2').innerHTML = '1. Short movie can be sent throughCDs(by post) or mail. <br/>2. Length of the movieshould not be more than 15 minutes.<br/>3. Innovative ideas will be encouraged.<br>4. Camera quality should not be less than 2MP.<br/>5. Event can be registered online.<br/>6. Movie should be submitted 5 days before the event';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Event Organiser</b><br/>Prasanna<br/>Email:  prasanna@iith.ac.in<br/>Mb# 90521-87986';
+		document.getElementById('para3').innerHTML = '<b>Cultural events Coordinator</b><br/>Puneet Gupta<br/>Email: cs09b027@iith.ac.in<br/>Mb# 94933-29825';
+		document.getElementById('para4').innerHTML = '<b>Events Core</b><br/>Ajay M.R.<br/>Email: me09b003@iith.ac.in<br/>Mb# 88978-61805';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+			<div style="position:relative;" id="Scroller-1" > 
+				<div class="Scroller-Container" > 
+				<h2 align="center" id="para1">$Screen Wizard$</h2>
+		<p align="left" id="para2">"Calling out to all aspiring directors. Yes, this is the event for you." This event will provide an excellent opportunity for video advertising. This is one location where people will lay back and give you their full attention.</p>
+		<p align="left" id="para3"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p>
+		<p align="left" id="para4"></p>
+		<p align="left" id="para5"></p>
+		<p align="left" id="para6"></p> 
+				<p align="left" id="para7"></p>
+				<p align="left" id="para8"></p>
+				<p align="left" id="para9"></p>
+				</div> 
+			</div> 
+				<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+		<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+			<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+			<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+			<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+			</div> 
+	
+			</div> 
+	</div>

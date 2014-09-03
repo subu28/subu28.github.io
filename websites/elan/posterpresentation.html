@@ -1,0 +1,170 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var tr=1;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+{
+	tab(k);
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		// var newHTML2 = "<a   target="blank" href='tdp_robo_epic.pdf'>click here</a> for TDP ";
+		
+		document.getElementById('para1').innerHTML = "Poster Presentation";
+		document.getElementById('para2').innerHTML = 'In this event, contestants prepare a poster that showcases and effectively presents experiments with given objectives, new ideas related to the field or even an entire business plan. The main idea of the event is to analyse a topic and exhibit presentation skills within the restricted space of expression.  The more creative you get, the higher is your chance of impressing the panel.';
+		document.getElementById('para3').innerHTML = "Prize money of Rs.10,000/- to be won.<br/>Participation certificates will be given to all the finalists.";
+        document.getElementById('para4').innerHTML = "";
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = 'Event format';
+		document.getElementById('para2').innerHTML = "<b>Disciplines for poster presentation</b> <br/>Any department of engineering<br/>Economics<br/> Biology/Biotechnology<br/>Any other upcoming fields like nanotechnology, material science or any other eco-friendly ideas";
+		document.getElementById('para3').innerHTML = '<b>ABSTRACT SUBMISSIONS AND DEADLINES</b>The abstracts can be submitted in an MS Word file or a PDF file to cs09b011@iith.ac.in. Participants MUST submit the abstracts for Poster Presentation before 17 January 2011, 23:59:59. You will be put on a mailing list as soon as you register and will be informed of all the latest updates regarding Poster Presentation.    <br/><br/>Abstract Format:<br/>1. The abstract has to be mailed in PDF/MS-Word (2003) format<br/>2. The subject of mail should be: paper - <paper title>.<br/>3. The Abstract should not exceed 500 words (along with bibliography).<br/>4. The front page of the abstract should consist of team member names, contact no., e-mail ids and college name at the bottom of page and the title of paper at the top of page.<br/>8. The abstract MUST have an attached certificate that certifies that the contents of the paper are original and not published, not a copyright or under print or review elsewhere from HOD/institution head.<br/>9. The abstract should be in IEEE format.';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(2);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = 'RULES AND REGULATIONS';
+		document.getElementById('para2').innerHTML = '<br>&middot;	The abstract should not exceed 500 words. <br/>&middot; Short listing will be done based on the abstract.<br/>&middot; Selected candidates have to present their idea on a standard poster of dimensions 3ft X 4ft.<br/>&middot; The poster can be either hand-made or printed.<br/>&middot; All relevant data and figures must be represented in the poster.<br/>&middot; Organizers decision will be final and binding.<br/>&middot; Teams of maximum 3 members are allowed.<br/>&middot; Nominal fee will be charged at the time of presentation of poster (if selected).<br/>&middot; All results will be announced on the website and will be mailed to the team members.<br/>&middot; Any paper that is selected and is not presented shall not qualify for any award.<br/><b>JUDGING CRITERIA</b><br/>&middot; Correctness of facts<br/>&middot; Methods of analysis<br/>&middot; Innovativeness of idea<br/>&middot; Presentation of solution or ideas<br/>&middot; Practical feasibility or implication of ideas';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Coordinators';
+		document.getElementById('para2').innerHTML = 'GUDIVADA HARSHA VARDHAN';
+		document.getElementById('para3').innerHTML = 'cs09b011@iith.ac.in';
+		document.getElementById('para4').innerHTML = '8106321682<br/><br/><br/><br/><br/><br/><br/>.';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">Poster Presentation</h2> 
+      <p align="left" id="para2">In this event, contestants prepare a poster that showcases and effectively presents experiments with given objectives, new ideas related to the field or even an entire business plan. The main idea of the event is to analyse a topic and exhibit presentation skills within the restricted space of expression.  The more creative you get, the higher is your chance of impressing the panel.</p> 
+     <p align="left" id="para3">Prize money of Rs.10,000/- to be won.<br/>Participation certificates will be given to all the finalists.</p>
+      <p align="left" id="para4"></p> 
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

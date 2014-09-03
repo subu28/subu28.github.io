@@ -1,0 +1,167 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container"  > 
+      <h2 align="centre" id="para1">BREAK-FREEE...!!!</h2> 
+       <p align="left" id="para2"><br>To dance is to be out of yourself.  Larger, more beautiful, more powerful. ~Agnes De Mille</p> 
+	  <p align="left" id="para3">Truly, dance is nothing but the free expression of a soul's desires. So all you folks, here arrives "BREAK-FREEE...!!!"...... the Street-dancing event of Elan. </p> 
+      <p align="left" id="para4">We call upon all the shakers, hoppers, movers...people who can  dream with their feet...captivate with their expressions...intoxicate with their movements......& in the process end up with HEAVY POCKETS!!! </p> <br>
+      <p align="left" id="para5">Whether you are good at Hip-hop, or if B-boying is your stuff, come join this extravaganza...!! </p> 
+      <p align="left" id="para6">"On with the dance! let joy be unconfined; No sleep till morn, when Youth and Pleasure meet To chase the glowing hours with flying feet." ~George Gordon, Lord Byron, Childe Harold's Pilgrimage </p> 
+      <p align="left" id="para7"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p> 
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "BREAK-FREEE...!!!";
+		document.getElementById('para2').innerHTML = "To dance is to be out of yourself.  Larger, more beautiful, more powerful. ~Agnes De Mille ";
+		document.getElementById('para3').innerHTML = "Truly, dance is nothing but the free expression of a soul's desires. So all you folks, here arrives BREAK-FREEE...!!!...... the Street-dancing event of Elan. ";
+		document.getElementById('para4').innerHTML = "We call upon all the shakers, hoppers, movers...people who can  dream with their feet...captivate with their expressions...intoxicate with their movements......& in the process end up with HEAVY POCKETS!!! ";
+		document.getElementById('para5').innerHTML = "Whether you are good at Hip-hop, or if B-boying is your stuff, come join this extravaganza...!! ";
+		document.getElementById('para6').innerHTML = "On with the dance! let joy be unconfined; No sleep till morn, when Youth and Pleasure meet To chase the glowing hours with flying feet.~George Gordon, Lord Byron, Childe Harold's Pilgrimage ";
+		document.getElementById('para7').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = 'Event Format';
+		document.getElementById('para2').innerHTML = 'You can perform any type of street-dancing like Hip-hop, B-boying, Break Dance, Stepping, Popping, Tutting, Krumping and Western Freestyle.';
+		document.getElementById('para3').innerHTML = 'It is one-round event and requires prior registration<br/> The floor will be a rectangular one divided into squares.<br/>';
+		document.getElementById('para4').innerHTML = '<b>Judging Criteria:</b><br/> 1) Choreography<br> 2) Coordination <br>3) Costumes <br>4) Stunts <br>5) Overall';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = 'Rules';
+		document.getElementById('para2').innerHTML = '1)Team size: 5-15. <br><br>2)  Time limit: 5-10 minutes(length of music piece).<br><br>3)Props are allowed.(props details to be submitted beforehand)<br><br>4)Live music is not allowed.<br><br>5)In case of any dispute the organizers decision shall be considered final. ';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Event organisers</b><br>Tushar Kumar Roy<br>Email: cs09b035@iith.ac.in<br>Mb# 94937-08270';
+		document.getElementById('para3').innerHTML = '<b>Cultural events Coordinator</b><br>Puneet Gupta<br>Email: cs09b027@iith.ac.in<br>Mb# 94933-29825';
+		document.getElementById('para4').innerHTML = '<b>Events Core</b><br>Ajay M.R.<br>Email: me09b003@iith.ac.in<br>Mb# 88978-61805';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>

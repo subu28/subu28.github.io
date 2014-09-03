@@ -1,0 +1,184 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+{
+	tab(k);
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		// var newHTML2 = "<a   target="blank" href='tdp_robo_epic.docx'>click here</a> for TDP ";
+		
+		document.getElementById('para1').innerHTML = "PROJECT-X";
+		document.getElementById('para2').innerHTML = "Do you know the power of your brain?? Wanna know the limit of your imagination??<br/>Let me introduce you to something very exciting...............Here comes<br/>";
+        document.getElementById('para4').innerHTML = "&ldquo;PROJECT-X&rdquo; ";
+		document.getElementById('para5').innerHTML = "Just get some basic skills and imagination in your bag because that is all you need to participate in this event. The event focuses on implementation of your imagination with efficiency and elegance";
+		document.getElementById('para5').innerHTML = 'Prize money:<br/> Great prizes and lots of goodies are to be won.';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = 'Event Format';
+		document.getElementById('para2').innerHTML = 'You have to register yourself 3 hrs. Before the commencement of the event and the details of the venue will be told to you. Required materials will be provided and you are not allowed to use anything else.';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(2);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = 'RULES';
+		document.getElementById('para2').innerHTML = '1.Problem statement will be given on the spot.<br/>2.	Teams with a maximum of three members are allowed.<br/>3.	Only given materials should be used.<br/>4.	All the team members should be present at the time of testing of the model.<br/>5.	The decision of the Event organizers will be final.<br/>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Event Organiser</b><br/>T.ANIL KUMAR<br/>Email: ee09b033@iith.ac.in  <br/>Mb# +91-9014876567<br/><br/>M.RAHUL CHAUHAN<br/>Email: m.rahulchauhan@gmail.com  <br/>Mb# +91-9963775190<br/><br/> P.MONSON PRASAD<br/>Email: ee09b021@iith.ac.in<br/>Mb# +91-9493103357<br/>';
+		document.getElementById('para3').innerHTML = '<b>Events Core</b><br/>Ajay M.R.<br/>Email: me09b003@iith.ac.in<br/>Mb# 88978-61805';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+			<div style="position:relative;" id="Scroller-1" > 
+				<div class="Scroller-Container" > 
+				<h2 align="center" id="para1">PROJECT-X</h2>
+		<p align="left" id="para2">Do you know the power of your brain?? Wanna know the limit of your imagination??<br/>Let me introduce you to something very exciting...............Here comes<br/></p>
+		<p align="left" id="para3"> &ldquo;PROJECT-X&rdquo; </p>
+		<p align="left" id="para4">Just get some basic skills and imagination in your bag because that is all you need to participate in this event. The event focuses on implementation of your imagination with efficiency and elegance</p>
+		<p align="left" id="para5">Prize money:<br/>     Great prizes and lots of goodies are to be won.</p>
+		<p align="left" id="para6"></p> 
+				<p align="left" id="para7"></p>
+				<p align="left" id="para8"></p>
+				<p align="left" id="para9"></p>
+				</div> 
+			</div> 
+				<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+		<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+			<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+			<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+			<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+			</div> 
+	
+			</div> 
+	</div>

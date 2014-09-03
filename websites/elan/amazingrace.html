@@ -1,0 +1,157 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+	<div style="position:relative;" id="Scroller-1" > 
+		<div class="Scroller-Container"  > 
+			<h2 id="para1"><br>Amazing Race</h2> 
+			<p id="para2">Amazing race is a race between enthusiasm and time. It's a different kind of treasure hunt where you get to perform the tasks in a sequential manner. Try beating the ticking clock with your talent, speed and undying enthu. Event comprises of tasks from various interesting fields ranging from technical stuff to funny ones. It's a complete package of entertainment and fun. So prepare yourself for the A-'MAZE'-ing race. The event details will be updated soon.</p>
+			<p id="para3"></p> 
+			<p id="para4"></p> 	  
+			<p align="left" id="para5"></p> 
+			<p align="left" id="para6"></p> 
+		</div> 
+	</div> 
+	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+		<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+		<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+		<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+		</div> 
+	</div> 
+</div>
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "<br>Amazing Race";
+		document.getElementById('para2').innerHTML = "Amazing race is a race between enthusiasm and time. It's a different kind of treasure hunt where you get to perform the tasks in a sequential manner. Try beating the ticking clock with your talent, speed and undying enthu. Event comprises of tasks from various interesting fields ranging from technical stuff to funny ones. It's a complete package of entertainment and fun. So prepare yourself for the A-'MAZE'-ing race. The event details will be updated soon.";
+		document.getElementById('para3').innerHTML = "";
+		document.getElementById('para4').innerHTML = "";
+		document.getElementById('para5').innerHTML = "";
+		document.getElementById('para6').innerHTML = "";
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = "1.	It's the race between Enthusiasm and Time.<br>2.	It's a team event comprising TWO per each team.<br>3.	Race consists of different tasks to be performed in sequential manner at a defined particular place.<br>4.	The team that completes all the tasks first is the WINNER.<br>5.	Special prizes for Winners and Runners-up.<br>";
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '1.	Each team must be of TWO members only.<br>2.	First, route map should be collected. Clue papers given at the end of every performed task should be submitted in the next task, so that the task paper will be provided to other contestants. If FAILED to submit clue papers, contestants will be OUT OF THE RACE.<br>3.	Find the place according to the clue provided at the end of every task. Route map helps to reach the place. Its the own effort of contestants to reach the next place correctly. If found wrong, search again.<br>4.	Bicycles will be given to every contestant. Powered vehicles are not allowed.<br>5.	Organiser approval at every task is needed to step up to the next.<br>6.	Both the team members should be present in performing every task i.e., task papers will be given to each team if only both of them are present at the task place.<br>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Coordinators:';
+		document.getElementById('para2').innerHTML = 'Comming Soon';
+		document.getElementById('para3').innerHTML = '<br><br><br><br><br><br><br><br><br>.';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>

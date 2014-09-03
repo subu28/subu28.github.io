@@ -1,0 +1,177 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript">
+var r=0;
+var tr=1;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+{
+	tab(k);
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+		if(t==1)
+	{
+		document.getElementById('para2').innerHTML = "<b>Hospitality, Transport & Security Core</b>";
+		document.getElementById('para3').innerHTML = "Abram Benny Kakkozha<br>		Email: me09b002@iith.ac.in<br>		Mb# 94934-60020";
+		document.getElementById('para4').innerHTML = "<b>Events Core</b>";
+		document.getElementById('para5').innerHTML = "Ajay M.R. <br>		Email: me09b003@iith.ac.in<br>		Mb# 88978-61805";
+		document.getElementById('para6').innerHTML = "<b>Workshops, Arts & Web Core</b>";
+		document.getElementById('para7').innerHTML = "Tanmay Patil<br>			Email: cs09b026@iith.ac.in<br>			Mb# 81218-57456";
+		document.getElementById('para8').innerHTML = "<b>Finance Cores</b>";
+		document.getElementById('para9').innerHTML = "Kunal Aggarwal <br>		Email: cs09b014@iith.ac.in  <br>	Mb# 95336-40415";
+		document.getElementById('para10').innerHTML = "Akshay Jain <br>			Email: cs09b002@iith.ac.in <br>		Mb# 95738-96035";
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	else if(t==2)
+	{
+		document.getElementById('para2').innerHTML = "<br><b>Campus Publicity</b><br>Syed Khalid Mohammed<br>ee09b032@iith.ac.in 9885872986<br><b>Online Publicity</b><br>Prince Gupta<br>gupta.prince08@gmail.com 9505428730<br><b>Marketing</b><br>Chintamaneni Naveen<br>cs09b007@iith.ac.in 9618081376<br><b>Infrastructure</b><br>Nagaraj R. Mahajan<br>me09b018@iith.ac.in 7569039127";
+		document.getElementById('para3').innerHTML = "<br><b>Hospitality</b><br>Saraogi Parag Shiv<br>cs09b031@iith.ac.in 9502833013<br>Varshitha Gokari H<br>ee09b034@iith.ac.in 9010165040<br><b>Transport</b><br>Divanshu Chaturvedi<br>ee09b010@iith.ac.in 9493460010<br><b>Security</b><br>Madhu Mohan Bhukhya<br>cs09b016@iith.ac.in 7799519607<br>Saurabh Singh<br>cs09b032@iith.ac.in 9573896038<br><b>Technical</b><br>G. Harsha Vardhan<br>cs09b011@iith.ac.in 8106321682";
+		document.getElementById('para4').innerHTML = "<br><b>Cultural</b><br>Puneet Gupta<br>cs09b027@iith.ac.in 9493329825<br><b>Literary</b><br>Siddartha Kamepalli<br>ee09b031@iith.ac.in 8142526041<br><b>Informal</b><br>Nithin Nayak<br>me09b019@iith.ac.in 9989553375<br><b>Biggies</b><br>Karthik Vajapeyajula<br>me09b034@iith.ac.in 9701225695<br>R. Aswin Karthik<br>me09b004@iith.ac.in 9640982966<br>Sai Chandra Teja<br>ee10m06@iith.ac.in 9885299874";
+		document.getElementById('para5').innerHTML = "<br><b>Proof Reading</b><br>T. Aditya Srinivas<br>ee09b002@iith.ac.in 9966162816<br><b>Workshops</b><br>Govind Balachandran<br>me09b014@iith.ac.in 9440240876<br><b>Extra Mural Lectures</b><br>Ananya Sethi<br>cs09b033@iith.ac.in 9573229076<br>K. Sai Dinesh<br>me09b015@iith.ac.in 9703710329<br><b>Arts</b><br>Sashwat Mishra<br>me09b027@iith.ac.in 8099479301";
+		document.getElementById('para6').innerHTML = "<br><b>Web</b><br>Chirag Chaudhary<br>cs09b008@iith.ac.in 9573896034<br>Manik Jindal<br>cs09b017@iith.ac.in 9493329820";
+		document.getElementById('para7').innerHTML = "";
+		document.getElementById('para8').innerHTML = "";
+		document.getElementById('para9').innerHTML = "";
+		document.getElementById('para10').innerHTML = "";
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(2);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+}
+</script>  
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <p id="para1"  style="  text-align:left;">If you have any queries regarding ELAN-2011, you can either send an e-mail at elan@iith.ac.in or call the corresponding core.</p>
+	  <br>
+      <p id="para2" ><b>Hospitality, Transport & Security Core</b></p> 
+      <p id="para3" >Abram Benny Kakkozha<br>
+		Email: me09b002@iith.ac.in<br>
+		Mb# 94934-60020</p> 
+		<br>
+      <p id="para4"><b>Events Core</b></p> 
+      <p id="para5">Ajay M.R. <br>
+		Email: me09b003@iith.ac.in<br>
+		Mb# 88978-61805</p> 
+		<p id="para6"><b>Workshops, Arts & Web Core</b></p>
+		<p id="para7">Tanmay Patil<br>
+			Email: cs09b026@iith.ac.in<br>
+			Mb# 81218-57456
+			</p>
+		<br>
+		<p id="para8"><b>Finance Cores</b></p>
+		<p id="para9">Kunal Aggarwal <br>
+								Email: cs09b014@iith.ac.in  <br>
+								Mb# 95336-40415</p> <br>
+		<p id="para10">Akshay Jain <br>
+									Email: cs09b002@iith.ac.in <br>
+									Mb# 95738-96035</p>
+		
+		
+         </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-40;" id="tabb">
+		<img height="25" width="80" onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img height="25" width="120" onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-10; left:-190; cursor:pointer;">Cores</a>
+		<a onClick="tab(2);" style="position:relative; top:-10; left:-145; cursor:pointer;">Co-Ordinators</a>
+	</div>
+
+	
+	
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

@@ -1,0 +1,189 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "<b>Killer Note</b>";
+		
+		document.getElementById('para2').innerHTML = "If u ever thought only SUPERSTARS and MEGASTARS could do this, think again... ELAN gives you an opportunity to showcase your talent in writing one-liners or (more popularly known as) Punches... <br/>We provide a chance for you to knock your opponents away with the fire in your punches... Think like a hero (You can try comedy though) and punch your way to glory.<br/>Team Size: solo<br/>";
+	    document.getElementById('para3').innerHTML ="<b>Registration : On the spot at the venue during ELAN '10. The competition is open only to college students with a valid college I-card.</b>";
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>Coming Soon</b>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '<b>RULES</b>';
+		document.getElementById('para3').innerHTML = "Rule a)<br/>For those who bothered to visit the rules section, kindly note that you are disqualified.<br/>For those who bothered to read further, kindly note that you are disqualified for Knock Out 2011 as well.<br/>If you have read the first 2 rules and are still reading, we appreciate your belief that ELAN 2010 is run following a set of rules and hence, to appease your ego and our appetite for stupid theories, here it is:<br/>	Only original punch lines shall be accepted. They can be either philosophical or plain comedy...<br/>	A set of sensitive and light hearted topics will be given and participants can write not more than 2 punches for each topic...<br/>";
+		document.getElementById('para4').innerHTML = "Rule b)<br/>Shall be overruled in case you manage to tickle the judge's funny bone so much that he has a fracture.<br/>Any paper submitted without the author's name shall be deemed as a paper submitted by the Coordinators. If he/she cries \"Foul play\" on hearing this rule, we shall book them under Section 377 (b) of the Knock Out Penal Code, which is yet to be framed...<br/>Judges' decision shall be final and binding.<br/>The Coordinators are not Gods, but may portray a bit Holier than thou attitude. If you feel that they are getting on your nerves, you can...you just can't do anything... Just enjoy the event.";
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Co-ordinator';
+		document.getElementById('para2').innerHTML = 'Siddhartha Kampali<br/>91-8142526041<br/>Ee09b031@iith.ac.in';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">Killer Note</h2> 
+      <p align="left" id="para2">If u ever thought only SUPERSTARS and MEGASTARS could do this, think again... ELAN gives you an opportunity to showcase your talent in writing one-liners or (more popularly known as) Punches... 
+<br/>
+We provide a chance for you to knock your opponents away with the fire in your punches... Think like a hero (You can try comedy though) and punch your way to glory.
+<br/>
+Team Size: solo
+<br/>
+</p> 
+	  
+      <p align="left" id="para3"><b>Registration : On the spot at the venue during ELAN '10. The competition is open only to college students with a valid college I-card. 
+ </b></p>
+	  
+	<p align="left" id="para4"></p> 
+	
+	<p align="left" id="para5"></p> 
+	<p align="left" id="para6"></p> 
+	<p align="left" id="para7"></p>
+	<p align="left" id="para8"></p>
+	<p align="left" id="para9"></p>
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

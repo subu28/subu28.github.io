@@ -1,0 +1,171 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+	<div  style="position:relative;" id="Scroller-1" > 
+		<div class="Scroller-Container"  > 
+			<h2 align="center" id="para1">Fringes</h2> 
+			<p align="left" id="para2"><br>Photography is the art of representing your point of view. The beauty of photography lies in the hands holding the camera. Showing us what you saw really requires some skill. Patience, steadiness and creativity define a photographer.</p> 
+			<p align="left" id="para3">Want to express yourself in front of the world? Here is the stage for you to perform. FRINGES, the Nature Photography event, is here for you. Being an online event, FRINGES promises a wider stage for you.</p> 
+			<p align="left" id="para4">A non profit event intended to showcase the beauty of this world.</p> <br>
+			<p align="left" id="para5"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p>
+			<p align="left" id="para6"><a target="_blank" href='fringes/fringes_gallery_11-1.html'>Click here </a> To see Image gallery</p>
+		</div> 
+	</div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Jury</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+		<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+		<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+		<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+		</div> 
+	</div> 
+</div>
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+	var r=0;
+	var tr=1;
+	var scroller  = null;
+	var scrollbar = null;
+	function f1 ()
+	{
+		if(r==0)
+		{
+			scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+			scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+			r++;
+		}
+	}
+	function repclk(k)
+	{
+		tab(k);
+	}
+	function tab(t)
+	{
+		scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+		scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+		document.getElementById('t1').src="images/tabc.png";
+		document.getElementById('t2').src="images/tabc.png";
+		document.getElementById('t3').src="images/tabc.png";
+		document.getElementById('t4').src="images/tabc.png";
+		if(t==1)
+		{
+			document.getElementById('para1').innerHTML = "Fringes";
+			document.getElementById('para2').innerHTML = "Photography is the art of representing your point of view. The beauty of photography lies in the hands holding the camera. Showing us what you saw really requires some skill. Patience, steadiness and creativity define a photographer.";
+			document.getElementById('para3').innerHTML = "Want to express yourself in front of the world? Here is the stage for you to perform. FRINGES, the Nature Photography event, is here for you. Being an online event, FRINGES promises a wider stage for you.";
+			document.getElementById('para4').innerHTML = "A non profit event intended to showcase the beauty of this world.";
+			document.getElementById('para5').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+			document.getElementById('para6').innerHTML = "<a target='_blank' href='fringes/fringes_gallery_11-1.html'>Click here </a> To see Image gallery";
+			document.getElementById('t1').src="images/tabb.png";
+		}
+		if(t==2)
+		{
+			document.getElementById('para1').innerHTML = 'Who can participate?';
+			document.getElementById('para2').innerHTML = 'The event is open to all photographers, amateurs and professionals worldwide, except members of the Event Committee and members of the jury. Anyone who is interested in photography can submit his/her images for this event. The participant should follow the conditions.';
+			document.getElementById('para3').innerHTML = '<b>Conditions for entry</b><br>*   The exhibition is open to all photographers, amateurs and professionals, worldwide, except members of the Exhibition Committee and members of the jury. However, an entry may be rejected when the sponsoring organisation or its agents, in its reasonable discretion, believes the entry does not conform to the exhibition rules and conditions.<br><br>*   A maximum of ten images may be entered by an entrant. The same image must NOT be entered more than one time. An entrant&rsquo;s images will be presented to the jury consecutively.<br><br>*   There is no entry fee for any participant.<br>Entries must originate as photographs (image-captures of objects via light sensitivity) made by the entrant on photographic emulsion, scanned to create a digital file, or acquired digitally. By virtue of submitting an entry, the entrant certifies the work as his own and permits the sponsors to reproduce all or part of the entered material free of charge for publication and/or display in media related to the exhibition. This may include low resolution posting on a website. The exhibition assumes no liability of any misuse of copyright.<br><br>*   Images entered must satisfy FIAP definitions of NATURE PHOTOGRAPHY.<br><br>*   Decisions of the jury are final.';
+			document.getElementById('para4').innerHTML = '<b>Rules</b><br>Participants should follow the conditions.<br><br>One entrant can submit a maximum of ten photos.<br/><br/>But once one image is uploaded by the entrant that cannot be removed or deleted by him/her.<br><br>Images must be in JPEG format. Maximum horizontal dimension is 1024 pixels. Maximum vertical dimension is 768 pixels.<br><br>Entries submitted on CDs, DVDs, floppy disks etc., or sent by mail, are NOT accepted.<br/><br/>	Entries not complying with the conditions of entry will be disqualified.<br/>The event will end on 14th january.';
+			document.getElementById('para5').innerHTML = '<br><br><br><br><br><br><br><br><br><br><br><br>';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('t2').src="images/tabb.png";
+			if(tr==1)
+			{
+				tr=2;
+				repclk(2);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+		}
+		if(t==3)
+		{
+			document.getElementById('para1').innerHTML = 'Jury';
+			document.getElementById('para2').innerHTML = "<br/><b>Kahini Ghosh Mehta</b>:She is the founder of the organization <a href='http://naturewanderers.com' >Nature Wanderers</a>; not only that, she is an experienced naturalist, photographer and a film-maker. She has spent years tracking tigers in the wilderness of Madhya Pradesh and Uttarakhand in India. She has done remarkable work in Corbett National Park as a photographer and a film-maker. Producer and director of Wild Saga of Corbett - Corbett's only travel film. Kahini also featured in Femina - a leading women's magazine - in November of 2008 for her contribution as a naturalist in Corbett National Park. Kahini has also written travel columns for Discover India magazine. Kahini is the location manager and logistics coordinator for key conservation projects in and around Corbett NP.<br/><br/><b>Shivang Mehta</b>:<br/>He is the co-founder of <a href='http://naturewanderers.com' >Nature Wanderers</a> along with Kahini Ghosh Mehta. He is a travel writer and columnist with publications like Economic Times, Discover India and Swagat. Honorary mention at the Nature Conservancy Awards - organised by the Nature Conservancy magazine based in UK. Published work in Outlook Traveller, Mail Today, Swagat, Discover India, Economic Times and Femina.";
+			document.getElementById('para3').innerHTML = '';
+			document.getElementById('para4').innerHTML = '';
+			document.getElementById('para5').innerHTML = '';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('t3').src="images/tabb.png";
+		}
+		if(t==4)
+		{
+			document.getElementById('para1').innerHTML = '';
+			document.getElementById('para2').innerHTML = '<b>Event organisers</b><br>Debajyoti Das<br>Email: cs09b009@iith.ac.in<br>Mb# 94933-31974<br><br>Govind Balachandran<br>Email: me09b014@iith.ac.in<br>Mb# 94402-40876';
+			document.getElementById('para3').innerHTML = '<b>Cultural events Coordinator</b><br>Puneet Gupta<br>Email: cs09b027@iith.ac.in<br>Mb# 94933-29825';
+			document.getElementById('para4').innerHTML = '<b>Events Core</b><br>Ajay M.R.<br>Email: me09b003@iith.ac.in<br>Mb# 88978-61805';
+			document.getElementById('para5').innerHTML = '';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('t4').src="images/tabb.png";
+		}
+	}
+</script>

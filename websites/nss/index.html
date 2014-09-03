@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<META http-equiv="Pragma" content="no-cache">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>&nbsp;NSS-IIT Hyderabad&nbsp;</title>
+<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+<script src="tikr/tikr.js"+Math.random() type="text/javascript"></script>
+<script language="javascript">
+    var datedat = new Date();
+document.write("<script src=tikr/tikr.js?q="+datedat.getDate()+"><\/script>");
+</script>
+<script type="text/javascript">
+var repeat=1 //enter 0 to not repeat scrolling after 1 run, othersise, enter 1
+var title=document.title
+var leng=title.length
+var start=1
+function titlemove() {
+  titl=title.substring(start, leng) + title.substring(0, start)
+  document.title=titl
+  start++
+  if (start==leng+1) {
+    start=0
+    if (repeat==0)
+    return
+  }
+  setTimeout("titlemove()",300)
+}
+if (document.title)
+titlemove()
+var speed=2;
+var t=0;
+var u=0.1;
+var t1=300;
+var t2=600;
+var t3=900;
+var t4=1200;
+var t5=1500;
+var fir=0;
+var tikrpos=800;
+function speedup(){
+	if(speed<3)
+	speed++;
+}
+function speeddo(){
+	if(speed>-3)
+	speed--;
+}
+function slider(){
+	if(fir==0){
+		fir++;
+		setInterval("{slider();}",22);
+	}
+	if(speed==2){
+		document.getElementById('nss01').style.left=(t+"px");
+		document.getElementById('nss02').style.left=(t1+"px");
+		document.getElementById('nss03').style.left=(t2+"px");
+		document.getElementById('nss04').style.left=(t3+"px");
+		document.getElementById('nss05').style.left=(t4+"px");
+		document.getElementById('nss06').style.left=(t5+"px");
+		
+		if(speed>0){
+			if(t<-300)
+			t+=1800;
+			if(t1<-300)
+			t1+=1800;
+			if(t2<-300)
+			t2+=1800;
+			if(t3<-300)
+			t3+=1800;
+			if(t4<-300)
+			t4+=1800;
+			if(t5<-300)
+			t5+=1800;
+		}
+		if(speed<0){
+			if(t>900)
+			t-=1200;
+			if(t1>900)
+			t1-=1200;
+			if(t2>900)
+			t2-=1200;
+			if(t3>900)
+			t3-=1200;
+			if(t4>900)
+			t4-=1200;
+			if(t5>900)
+			t5-=1200;
+		}
+		u+=0.05;
+		if(Math.sin(u)>0){
+			t-=9.5*(Math.sin(u)*Math.sin(u));
+			t1-=9.5*(Math.sin(u)*Math.sin(u));
+			t2-=9.5*(Math.sin(u)*Math.sin(u));
+			t3-=9.5*(Math.sin(u)*Math.sin(u));
+			t4-=9.5*(Math.sin(u)*Math.sin(u));
+			t5-=9.5*(Math.sin(u)*Math.sin(u));
+			if(u>6.2){
+				u=0.1;
+				t-=1.7;
+				t1-=1.7;
+				t2-=1.7;
+				t3-=1.7;
+				t4-=1.7;
+				t5-=1.7;
+			}
+		}
+	}
+}
+function tikrload()
+{
+document.getElementById('tikr').innerHTML=window['tikre'];
+tiker();
+}
+function tiker()
+{
+document.getElementById('tikr').style.left=(tikrpos+"px");
+tikrpos-=1;
+if(tikrpos>100)
+setTimeout("tiker()",10)
+}
+</script>
+</head>
+<body onLoad="slider(); tikrload();">
+	<div id="holder" align="center">
+		<div align="center" id="headcontent">
+			<img style="margin-top: 25px; float:left; width:90px;" src="images/nss.gif"/>
+			<h1 style="float:left; margin-top: 45px; left:30px;"> <font size="+3" color="#FFFFFF" face="QuillScript"> <span class="clear"></span>&nbsp;National Service Scheme</font></h1>
+			<img style="margin-top: 25px; float:left; position:relative; left:250px; width:90px;" src="images/ts.png"/>
+			<div id="nav">
+			<ul>
+			<li><a style="background:url(images/mb.gif)">Home</a></li>
+			<li><a href="nss_objective.html">Objective</a></li>
+			<li><a href="nss_our_team.html">Our Team</a></li>
+			<li><a href="nss_schools.html">Schools</a></li>
+			<li><a href="nss_gallery.html">Gallery</a></li>
+			<li><a href="nss_contactus.html">Contact Us</a></li>
+			</ul>
+			
+			</div>
+			<div style="float:left; width:800px; overflow:hidden;">
+				<a style="position:relative; float:left; left:800px;" id="tikr"></a>
+			</div>
+		</div>
+		<div align="center" id="homefront">
+			<div id="photo">
+				<div align="left" style="overflow:hidden; height:254px;" width="540">
+					<img id="nss01" style="position:relative; top:0px;" src="images/h1.jpg" width="300" height="254"/>
+					<img id="nss02" style="position:relative; top:-254px;" src="images/h2.jpg" width="300" height="254"/>
+					<img id="nss03" style="position:relative; top:-508px;" src="images/h3.jpg" width="300" height="254"/>
+					<img id="nss04" style="position:relative; top:-762px;" src="images/h4.jpg" width="300" height="254"/>
+					
+					<img id="nss05" style="position:relative; top:-1016px;" src="images/h5.JPG" width="300" height="254"/>
+					
+					<img id="nss06" style="position:relative; top:-1270px;" src="images/h6.JPG" width="300" height="254"/>
+				</div>
+			</div>
+			<div align="left" id="search-news">
+				<h2>Search this site</h2>
+				<form action="nsearch.html" id="cse-search-box">
+					<div><input type="text" name="q" value="" id="q" />
+					<input type="hidden" name="cx" value="005232329098712076966:tbuf8ykzewi" />
+					<input type="hidden" name="cof" value="FORID:10" />
+					<input type="hidden" name="ie" value="UTF-8" /></div>
+					<div class="more"><input type="image" name="search" value="" src="images/btn_search.gif"></div>
+				</form>
+				<h2 class="downcast">News &amp; Events</h2>
+				<div id="news-box">
+					<h3><a target="_new" href="mastschedule.html">15.08.11</a></h3>
+					<p>Master schedule</p>
+					<p class="more"><a target="_new" href="mastschedule.html">view here</a></p>
+					<h3><a target="_new" href="09_04_11.pdf">09.04.11</a></h3>
+					<p>Sanitation Campaign</p>
+					<p class="more"><a target="_new" href="09_04_11.pdf">view here</a></p>
+					<h3><a target="_new" href="undercon.html">26.03.11</a></h3>
+					<p>Education Campaign</p>
+					<p class="more"><a target="_new" href="undercon.html">view here</a></p>
+					
+				</div>
+			</div>
+		</div>
+		<div align="center" id="bodymain">
+			<div align="left" id="bodyleft">
+				<p>&nbsp;</p>
+				<h2><img src="images/h_welcome_to_our_site.gif" width="203" height="20" alt="Welcome" /></h2>
+				<p> &nbsp;National Service Scheme (NSS) at <a href="http://www.iith.ac.in">IIT Hyderabad</a> is aimed at providing each student with a significant context in which he/she can reach a deeper understanding of social reality in India today.  NSS encourages the meaning of the life through service in the realm of today's changing world. By the spirit of selfless service, NSS volunteers try to cater the society in best possible manner and hence arrive at a set of values integral to the Indian philosophy of life.</p>
+				<p>&nbsp;&nbsp;The cardinal principle of the NSS programme is that it is organised by the students themselves, and both students and teachers through their combined participation in community service, get involved in the tasks of nation building.</p>	
+				<p>&nbsp;&nbsp;&nbsp;NSS stipulates that the welfare of an individual is ultimately dependent on the welfare of the society as a whole. This expresses the essence of democratic living and upholds the need of selfless service and appreciation of the other man's effort and also respect for fellow human beings, environment and wildlife.</p>
+				<P>&nbsp;&nbsp;NSS at IITH is a two semester voluntary service where students will develop their personality through social service. Camps are held in nearby villages where attempts are made to improve educational conditions for the school students. Activities like Educational drives, Cleaniness Campaigns and Environment Awareness drives are actively taken up by NSS volunteers.</p>
+				<h2><img src="images/updates.gif" width="195" height="20" alt="Urgent Needs"></h2>
+				<img src="images/pic_3.jpg" width="139" height="118" alt="Pic 3" class="left" />
+				<ul class="plussbullets">
+					<li><a href="mastschedule.html" target="_blank">Master schedule for aug-dec '11</a></li>
+					<li>Schedule for 12th mar.</li>
+					<li>Schedule for 19th feb.</li>
+				</ul>
+			</div>
+			<div style="position:relative; top:40px;" id="bodyright">
+				<h2><img src="images/h_gallery.gif" width="65" height="22" alt="Gallery"></h2>
+				<div id="gallery">
+					<a href="#"><img src="images/hgal1.jpg" width="101" height="96" alt="Gal 1"></a>
+					<a href="#"><img src="images/hgal2.jpg" width="114" height="96" alt="Gal 2"></a>
+					<a href="#"><img src="images/hgal3.jpg" width="112" height="96" alt="Gal 3"></a>
+					<a href="#"><img src="images/hgal4.jpg" width="101" height="96" alt="Gal 3"></a>
+					<a href="#"><img src="images/hgal5.jpg" width="114" height="96" alt="Gal 3"></a>
+					<a href="#"><img src="images/hgal6.jpg" width="112" height="96" alt="Gal 3"></a>
+				</div>
+				<p class="more"><a href="nss_gallery.html"><img src="images/btn_more.gif" width="51" height="19" alt="Btn Click Here"></a></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div align="right" id="footer">
+			<p>&copy;2011 IIT HYDERABAD. All rights reserved		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designed & Maintained by&nbsp;&nbsp;&nbsp;<a target="_new" style="color:#33CCFF" href="http://profiles.google.com/sumitchhuttani007/"> Sumit</a>&nbsp;&nbsp; ,&nbsp;&nbsp;&nbsp;<a target="_new"  style="color:#33CCFF" href="http://www.facebook.com/ssubu/"> Subhash</a>&nbsp;&nbsp; & &nbsp;&nbsp;&nbsp;<a target="_new" style="color:#33CCFF" href="http://www.facebook.com/profile.php?id=1812346128"> Pushkar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22160969-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

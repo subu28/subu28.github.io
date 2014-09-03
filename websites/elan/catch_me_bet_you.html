@@ -1,0 +1,161 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+  <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">Catch Me Bet You</h2> 
+      <p align="left" id="para2">Ever wanted to be a spy? Or a detective? Were you ever fascinated by the hidden microphones of the detectives or the spy-cams? If yes, then we invite you to be a part of this unique event. You have to design a transmitter (electronic bug) that does not get caught or a receiver (detector) that can find a hidden bug.</p> 
+	  <p align="left" id="para3">Prize money of Rs.10,000/- to be won.<br/>Participation certificates will be given to all the participants.</p> 
+      <p align="left" id="para4"><a  target='_blank' href='problem_catchme.pdf'>click here</a> to download problem statement</p>
+      <p align="left" id="para5">Registration is compulsory. Last date for registration: 15 January, 2011</p> 
+      <p align="left" id="para6"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p> 
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+</div>
+
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "Catch Me Bet You";
+		document.getElementById('para2').innerHTML = "Ever wanted to be a spy? Or a detective? Were you ever fascinated by the hidden microphones of the detectives or the spy-cams? If yes, then we invite you to be a part of this unique event. You have to design a transmitter (electronic bug) that does not get caught or a receiver (detector) that can find a hidden bug.";
+		document.getElementById('para3').innerHTML = "Prize money of Rs.10,000/- to be won.<br/>Participation certificates will be given to all the participants.";
+		document.getElementById('para4').innerHTML = "<a  target='_blank' href='problem_catchme.pdf'>click here</a> to download problem statement</p>";
+		document.getElementById('para5').innerHTML = "Registration is compulsory. Last date for registration: 15 January, 2011";
+		document.getElementById('para6').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register.';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = "We invite teams of four students. Each team has to make a bug and a detector. You have to bring your bug and detector along with you on the day of the competition. You don't have to make it here. When you come to Elan, you will be divided in two sub-teams, Team Bug and Team Detector. All Bug Teams will be given an hour to hide their bugs in a specific area given by the Elan Team. Then the Detector Teams will get 45 minutes to find as many as bugs as possible. There will be only two winners. The team whose bug does not get detected wins the Bug Design Challenge and the Detector Team which detects the maximum number of bugs wins the Detector Design Challenge. Read the rules for tie-break criteria.";
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = '1.  <b> Bug</b><br><br><br>1.a Maximum size 10"X10"X5"<br>1.b The antenna length should be at least 10 inches measured from hook-up      point and the bug must be detectable within 3 ft radius.<br>1.c Acceptable fluctuation of signal is 10% on both sides.<br>1.d It should work nonstop for at least 1 hour 30 minutes.<br>1.e Maximum power output 50 Watts.<br>   ';
+		document.getElementById('para3').innerHTML = '2.  <b> Detector</b><br><br><br>      2.a Maximum size 12"X12"X6"<br>      2.b Maximum antennae length 8 inches from hook-up point<br>';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Coordinators:';
+		document.getElementById('para2').innerHTML = 'Rijul Bansal   <br>   9392582343  <br> ee10b032@iith.ac.in<br>';
+		document.getElementById('para3').innerHTML = 'Anuj Gangwar <br> 9494823723  <br> me10b008@iith.ac.in<br>';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>

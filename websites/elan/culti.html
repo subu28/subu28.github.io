@@ -1,0 +1,139 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript">
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+</script>  
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <p id="para1"  style=" font-size:20px; text-align:center;">Cultural Events</p>
+      <p id="para2">"Every artist was first an amateur"<br>~Ralph Waldo Emerson<br></p>
+      <p id="para3">What is a fest without a cultural aspect to it? Nothing! Here at 
+Elan 2011, we welcome you to a very festival of creative and cultural 
+extravaganza. Leave behind your routine, come and be reborn with 
+the exciting events Culti has to offer. With events like Solo Singing, Solo 
+Dance, Leisure Art, and Short Movie Making, Culti at Elan 2011 ensures that people 
+from all walks of life rediscover their artistic sides and get back in touch with their cultural heritage. The events in Culti at Elan 2011 promise to be that extra bit special and we guarantee all our participants an experience of a lifetime! Come and be changed!
+</p> 
+	<p align="left">
+		<img style="cursor:pointer;"	width="150" height="100"  onClick="loadPage('art_exhibition.html');" src="art_exhibition3.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img style="cursor:pointer;" width="150" height="100"  onClick="loadPage('Breakfreee.html');" src="break_free.jpg"/><br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a style="cursor:pointer;" onClick="loadPage('art_exhibition.html');">Art your heart out</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a style="cursor:pointer;" onClick="loadPage('Breakfreee.html');"> Break Free</a>
+	</p>
+	
+	<p align="left">
+		<img style="cursor:pointer;"	width="150" height="100"  onClick="loadPage('mono_acting.html');" src="mono_acting.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img style="cursor:pointer;" width="150" height="100"  onClick="loadPage('solo_dance.html');" src="solo_dance.jpg"/><br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a style="cursor:pointer;" onClick="loadPage('mono_acting.html');">Mono Acting</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+		<a style="cursor:pointer;" onClick="loadPage('solo_dance.html');">Loose your feet</a>
+	</p>
+	
+	<p align="left">
+		<img style="cursor:pointer;"	width="150" height="100"  onClick="loadPage('stage_play.html');" src="stage play3.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img style="cursor:pointer;" width="150" height="100"  onClick="loadPage('screenwizard.html');" src="screenwizard.jpg"/><br>
+		&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+		<a style="cursor:pointer;" onClick="loadPage('stage_play.html');">Stage Play</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+		<a style="cursor:pointer;" onClick="loadPage('screenwizard.html');">$Screen Wizard$</a>
+	</p>
+	
+	<p align="left">
+		<img style="cursor:pointer;" width="150" height="100"  onClick="loadPage('vibrazione.html');" src="vibrazione.jpg"/>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a style="cursor:pointer;" onClick="loadPage('vibrazione.html');">Vibrazione</a>
+	</p>
+	
+	
+	
+	
+         </div> 
+  </div> 
+  
+	
+	
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

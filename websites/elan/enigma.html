@@ -1,0 +1,114 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript">
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+</script>  
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+     <p id="para2" style="text-align: left">
+			<b>Enigma</b> is going to pull the drapes off the art of prediction with Angel Cards. This will be a one-of-its-kind event at ELAN 2011. ELAN brings to you <b>Meenakshi Soni</b>, a big league in Angel card reading, who will reveal the mystical perspective of card readings, and you can rest assured that it will pace beyond your visionary!!!
+			<br/>
+			<b>Enigma</b> is a world of signs...and this event will outline Angel Card Readings, Angel Box, Discovering Your Guardian Angels and a lot more enigmatic stuff, which is definitely worth experiencing. Discover Your Angels on the 30th of January at ELAN 2011 and unleash their power. Enigma will do card reading predictions for a few lucky ones from the audience. So, get your Lady Luck set and look forward to see the magic of your angels. This ELAN, there will be a mystical aura around, which will drive you into believing the unbelievable...
+			<br/>
+			...which you would surely not want to miss!!!
+			<br/>
+			Date: 30th January, 2011<br/>
+			<b>This workshop is totally free of cost.</b>
+			<br/>
+			<a href="./server/eventRegistration.jsp">Click here </a> To Register..
+			<br/>
+			<center>
+				<a href="http://www.vibescentre.com" target="_blank"><img src="./images/enigma.jpeg"/></a>
+			</center>
+		</p>
+	</div> 
+  </div> 
+  
+	
+	
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

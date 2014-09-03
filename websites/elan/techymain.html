@@ -1,0 +1,151 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container"  > 
+      <h2 align="center" id="para1">Technical Events</h2> 
+      <p align="left" id="para2">"<i>Technical skill is the mastery of complexity, while creativity is the mastery of simplicity</i> "<br><font size="2">Christopher Zeeman, founder of Warwick's Mathematics Department and Research Centre.</font> <br> <br> Elan 2011 is your inception into the multidimensional possibilities in various realms of technology. With enthralling competitions and professional hands-on workshops, TECHY promises to amaze you with the best of participation and be an ultimate learning experience.<br><br> From noobs to geeks, beginners to "know-it-alls", Elan 2011 has something in store for all you tech savvy folk out there. <br><br>Be it robotics, coding or machine rush, TECHY will bring out the tech-demon in you with its various challenges. Techy shall keep you enticed with innovative exhibits and exciting shows, thus keeping your enthusiasm burning throughout the fest. So get ready to be launched into Domain: TECHY!</p>
+	  <p align="left" id="para3"></p> 
+      <p align="left" id="para4"></p> 
+      <p align="left" id="para5"></p> 
+      <p align="left" id="para6"></p> 
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-40;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-10; left:-180; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-10; left:-145; cursor:pointer;">Events</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var tr=1;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function repclk(k)
+{
+	tab(k);
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "Technical Events";
+		document.getElementById('para2').innerHTML = '"<i>Technical skill is the mastery of complexity, while creativity is the mastery of simplicity</i> "<br><font size="2">Christopher Zeeman, founder of Warwick&rsquo;s Mathematics Department and Research Centre.</font> <br> <br> Elan 2011 is your inception into the multidimensional possibilities in various realms of technology. With enthralling competitions and professional hands-on workshops, TECHY promises to amaze you with the best of participation and be an ultimate learning experience.<br><br> From noobs to geeks, beginners to "know-it-alls", Elan 2011 has something in store for all you tech savvy folk out there. <br><br>Be it robotics, coding or machine rush, TECHY will bring out the tech-demon in you with its various challenges. Techy shall keep you enticed with innovative exhibits and exciting shows, thus keeping your enthusiasm burning throughout the fest. So get ready to be launched into Domain: TECHY!';
+		document.getElementById('para3').innerHTML = "";
+		document.getElementById('para4').innerHTML = "";
+		document.getElementById('para5').innerHTML = "";
+		document.getElementById('para6').innerHTML = "";
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = "<img style='cursor:pointer;'    width='140' height='100'  onClick=\"loadPage('bridgeomania.html')\"       src='bridgeomania.jpg'/>&nbsp;&nbsp;<img style='cursor:pointer;' width='140' height='100'        onClick=\"loadPage('mastersciencequiz.html')\" src='sciencemasterquiz.jpg'/><br> &nbsp;&nbsp;&nbsp;&nbsp;<a style='cursor:pointer;' onClick=\"loadPage('bridgeomania.html')\">Bridge-o-mania</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style='cursor:pointer;' onClick=\"loadPage('mastersciencequiz.html')\"> Science Master Quiz</a>"+" <br><img style='cursor:pointer;'	width='140' height='100'  onClick=\"loadPage('catch_me_bet_you.html')\" src='catch_me_bet_you.gif'/>&nbsp;&nbsp;<img style='cursor:pointer;' width='140' height='100'  onClick=\"loadPage('biolock.html')\" src='bio_lock.gif'/><br>		<a style='cursor:pointer;' onClick=\"loadPage('catch_me_bet_you.html')\">Catch me bet you</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a style='cursor:pointer;' onClick=\"loadPage('biolock.html')\">Biolock</a>";
+		document.getElementById('para3').innerHTML = "<img style='cursor:pointer;'	width='140' height='100'  onClick=\"loadPage('techcharades.html')\"       src='techcharades.jpg'/>&nbsp;&nbsp;<img style='cursor:pointer;' width='140' height='100'        onClick=\"loadPage('save_yours.html')\" src='save_yours.jpg'/><br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style='cursor:pointer;' onClick=\"loadPage('techcharades.html')\">Techcharades</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a style='cursor:pointer;' onClick=\"loadPage('save_yours.html')\">Save Yours</a> "+"<br>&nbsp;&nbsp;&nbsp;&nbsp;<img style='cursor:pointer;'	width='140' height='100'  onClick=\"loadPage('roboepic.html')\" src='roboepic.jpg'/>&nbsp;&nbsp;<img style='cursor:pointer;' width='140' height='100'  onClick=\"loadPage('machine_rush.html')\" src='machine_rush.jpg'/><br>   &nbsp;&nbsp;&nbsp; <a style='cursor:pointer;' onClick=\"loadPage('roboepic.html')\">Robo Epic</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a style='cursor:pointer;' onClick=\"loadPage('machine_rush.html')\">Machine Rush</a> ";
+		
+		document.getElementById('para4').innerHTML = "<img style='cursor:pointer;' width='140' height='100'  onClick=\"loadPage('posterpresentation.html')\" src='posterpresentation.jpg'/> &nbsp;&nbsp; <img style='cursor:pointer;' width='140' height='100'  onClick=\"loadPage('cadeye.html')\" src='cadeye.jpg'/><br>	&nbsp;&nbsp;&nbsp;	<a style='cursor:pointer;' onClick=\"loadPage('posterpresentation.html')\">Poster Presentation</a>	&nbsp;&nbsp;&nbsp;&nbsp;	<a style='cursor:pointer;' onClick=\"loadPage('cadeye.html')\"> Cad Eye</a>" + 
+		"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style='cursor:pointer;'	width='140' height='100'  onClick=\"loadPage('codequest.html')\" src='codequest.jpg'/>&nbsp;&nbsp;<img style='cursor:pointer;' width='140' height='100'  onClick=\"loadPage('egcc.html')\" src='egcc.jpg'/><br>	&nbsp;&nbsp;&nbsp;	<a style='cursor:pointer;' onClick=\"loadPage('codequest.html')\">Code Quest</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<a style='cursor:pointer;' onClick=\"loadPage('egcc.html')\">EGCC</a> <br><br>&nbsp;&nbsp;&nbsp;<img style='cursor:pointer;' width='140' height='100'        onClick=\"loadPage('slingshot.html')\" src='slingshot.jpg'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style='cursor:pointer;'    width='140' height='100'  onClick=\"loadPage('projectx.html')\"       src='projectx.jpg'/><br>&nbsp;&nbsp;&nbsp;<a style='cursor:pointer;' onClick=\"loadPage('slingshot.html')\">Sling Shot</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style='cursor:pointer;' onClick=\"loadPage('projectx.html')\">Project-X</a>";
+		document.getElementById('para5').innerHTML = "<img style='cursor:pointer;' width='140' height='100'        onClick=\"loadPage('electronicbloopers.html')\" src='electronicbloopers.jpg'/><br>&nbsp;&nbsp;&nbsp; <a style='cursor:pointer;' onClick=\"loadPage('electronicbloopers.html')\">Electronic Bloopers</a>";
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+		if(tr==1)
+		{
+			tr=2;
+			repclk(2);
+		}
+		if(tr==2)
+		{
+			tr=1;
+		}
+	}
+}
+</script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ratrace.in</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body style="background-color:#3A0D43; margin:0px;">
+    <div style="float:right; width:50px;">
+		<a target="_blank" href="http://www.facebook.com/ratrace.in"><img title="like" src="images/fb.png"/></a>
+		<a target="_blank" href="http://twitter.com/#!/ratrace_in"><img title="follow" src="images/twit.png"/></a>
+		<a href="#"><img title="subscribe" src="images/rss.png"/></a>
+	</div>
+	<div id="header" style="overflow:auto;" align="left">
+    	<div align="right" id="menu" style="background-color:#18051B; float:left;">
+        	<ul>
+            	<li><a onmouseover="out=0; pop=0; dotbring();" onmouseout="dotout()">HOME</a></li>
+                <li><a onmouseover="out=0; pop=1; dotbring();" onmouseout="dotout()" href="explore.html">EXPLORE</a></li>
+                <li><a onmouseover="out=0; pop=2; dotbring();" onmouseout="dotout()" href="aboutus.html">ABOUT US</a></li>
+                <li><a onmouseover="out=0; pop=3; dotbring();" onmouseout="dotout()" href="experts.html">EXPERTS</a></li>
+                <li><a onmouseover="out=0; pop=4; dotbring();" onmouseout="dotout()" href="inkspot.html">INK SPOT</a></li>
+            </ul>
+    	</div>
+    	<div style="float:left;">
+        	<img src="images/logo.png" style="margin:0px;"/>
+    	</div>
+    </div>
+    <div style="box-shadow:0px 0px 30px #000; margin-top:5px; margin-bottom:5px; font-size:28px; font-family:'Century Gothic';background-image:url(images/stripes.png); width:100%;" align="center">
+    	<div style="padding-top:60px; padding-bottom:60px;"><font color="#dfdddb">play your</font><font color="white"> natural game</font></div>
+    </div>
+    <div id="footer" align="right">
+    	<div align="left" style="background-color:#18051B; width:320px;">
+		<p style="padding:10px; color:#999;"><a  href="main_article.html?id=22">Exclusive Interview with Parikrama - the Awesomest Rock Band </a><br/>Parikrama needs no introduction. It is the trendsetter, the band which defined India's rock scene more than 20 years ago</p>
+    	</div>
+        <div align="left" style="background-color:#18051B; width:320px;">
+		<p style="padding:10px; color:#999;"><a  href="main_article.html?id=24">Voice Artist - Thinking Beyond Singing</a><br/>Ever thought you can earn from your voice. No, I am not talking about singing.</p>
+    	</div>
+    </div>
+    <div id="dotdiv">
+    	<p id="helptext"></p>
+    </div>
+</body>
+<script type="text/javascript">
+	var dotdiv=document.getElementById('dotdiv');
+	var helptext=document.getElementById('helptext');
+	var i=0;
+	var w=0;
+	var h=50;
+	out=1;
+	var pop;
+	var textsize=0;
+	var text="";
+	var help0="Welcome to Ratrace. Learn about different career opportunities and follow your heart!";
+	var help1="Explore the world of Ratrace. Read and know about all that you can do with your career.";
+	var help2="Get to know us. We are an open book and would love to talk to you :)";
+	var help4="Contribute to ratrace and Learn from your peers. As a token of our appreciation, we pay the TOP 10 articles!";
+	var help3="Know about our Masters. The learned who have agreed not only to guide us but are available to you too to answer your queries.";
+	function dotbring()
+	{
+		if(out)
+			return;
+		dotdiv.style.top=36*pop+'px';
+		dotdiv.style.display="block";
+		if(i<6)
+		{
+			i++;
+			w+=16;
+			dotdiv.style.width=w+'px';
+			setTimeout("dotbring()",15);
+		}
+		else if(i<31)
+		{
+			i++;
+			h+=16;
+			dotdiv.style.height=h+'px';
+			setTimeout("dotbring()",15);
+		}
+		else if(i<37)
+		{
+			i++;
+			w+=16;
+			dotdiv.style.width=w+'px';
+			setTimeout("dotbring()",15);
+		}
+		else if(i==37)
+		{
+			text=window["help"+pop];
+			i++;
+			setTimeout("dotbring()",15);
+		}
+		else
+		{
+			textsize++;
+			helptext.innerHTML=text.substring(0,textsize);
+			if(textsize<text.length)
+				setTimeout("dotbring()",10);
+		}
+	}
+	function dotout()
+	{
+		out=1;
+		dotdiv.style.display="none";
+		dotdiv.style.width=0+'px';
+		dotdiv.style.height=50+'px';
+		helptext.innerHTML="";
+		i=0;
+		w=0;
+		h=50;
+		textsize=0;
+	}
+</script>
+</html>

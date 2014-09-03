@@ -1,0 +1,113 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+  
+	<div style="position:relative;"  id="Scroller-1" > 
+		<div class="Scroller-Container"  > 
+			<p id="para1"  style=" font-size:20px; text-align:center;">Online events</p>
+			<p align="left"><img style="cursor:pointer;" width="150" height="100"  onClick="loadPage('fringes.html');" src="fringes.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="cursor:pointer;" width="150" height="100"  onClick="loadPage('celestial.html');" src="celestial.jpg"/></p>
+			<p><a style="cursor:pointer;" align="left" onClick="loadPage('fringes.html');">Fringes</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  style="cursor:pointer;" align="right" onClick="loadPage('celestial.html');">Celestial Inquisition</a></p>
+
+	 <p align="left"><img style="cursor:pointer;" width="150" height="100"  onClick="loadPage('puzzlon.html');" src="puzzlon.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="cursor:pointer;" width="150" height="80"   onClick="window.open('http://www.khelostocks.com/indian/stocks/contest/showContest/Showbiz/ELAN%202011%20-%20IIT%20HYDERABAD/2011');" src="khelostocks.gif"/></p>
+		<p><a style="cursor:pointer;" align="left" onClick="loadPage('puzzlon.html');">Puzzlon</a>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a  style="cursor:pointer;" align="right" target="_blank" href="http://www.khelostocks.com/indian/stocks/contest/showContest/Showbiz/ELAN%202011%20-%20IIT%20HYDERABAD/2011');">Khelo Stocks</a></p>
+	
+	<p align="left">
+		<a href="./green_quiz.html" target="_blank"><img style="cursor:pointer;" height="80"  src="green.jpg"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="./Programming/default.jsp" target="_blank"><img style="cursor:pointer;" height="80"  src="sha.png"/></a>
+	</p>
+	<p>
+		<a  style="cursor:pointer;" align="left" target="_blank" href="./green_quiz.html"><font color="black">Green Quiz</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a  style="cursor:pointer;" align="right" target="_blank" href="./Programming/default.jsp"><font color="black">Online Programming Contest</font></a>
+	</p>
+					
+	</div> 
+  </div> 
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+</script>

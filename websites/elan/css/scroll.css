@@ -1,0 +1,19 @@
+/* Area di scorrimento */
+#right {
+	width: 162px;                /* length of image scroll box */
+	height: 100px;
+	overflow: hidden;
+	border: 3px solid black;
+	padding: 0px;
+	clear:both;
+	}
+
+/* Immagini */
+#right img {
+	cursor:pointer;
+	height: 100px;
+	margin: 0px;
+	border: 0px;
+	clear:both;
+	}
+	

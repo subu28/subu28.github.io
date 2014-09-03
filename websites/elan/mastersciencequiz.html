@@ -1,0 +1,182 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container"> 
+	<div style="position:relative;"  id="Scroller-1" > 
+		<div class="Scroller-Container" > 
+			<h2 id="para1">Master Science Quiz</h2> 
+			<p id="para2">'Science is simply common sense at its best'  <br> ~Huxley, Thomas H.<br><br> 'Science is nothing but perception.'<br> ~Plato<br></p> 
+			<p id="para3">Do you observe what you see around you?<br><br>Do you see the science behind the things you see?<br><br>Come this January and enjoy one of the most fascinating and interesting quizzes you will have ever encountered.<br><br>You need not be a geek or a freak, just common sense is what we seek.<br></p> 
+			<p id="para4"></p> 
+			<p id="para5"></p> 
+			<p id="para6"></p> 
+			<p id="para7"></p>
+			<p id="para8"></p>
+		</div> 
+	</div> 
+	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" width="60" height="25" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" width="60" height="25" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" width="60" height="25" id="t4" src="images/tabc.png"/>
+		<img onClick="tab(5);" id="t5" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-55; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-40; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:-20; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:5; cursor:pointer;">FAQ</a>
+		<a onClick="tab(5);" style="position:relative; top:-25; left:45; cursor:pointer;">Contact</a>
+	</div>
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+		<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+		<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+		<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+		</div> 
+	</div> 
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+	var r=0;
+	var scroller  = null;
+	var scrollbar = null;
+	function f1 ()
+	{
+		if(r==0)
+		{
+			scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+			scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+			r++;
+		}
+	}
+	function tab(t)
+	{
+		scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+		scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+		document.getElementById('t1').src="images/tabc.png";
+		document.getElementById('t2').src="images/tabc.png";
+		document.getElementById('t3').src="images/tabc.png";
+		document.getElementById('t4').src="images/tabc.png";
+		document.getElementById('t5').src="images/tabc.png";
+		if(t==1)
+		{
+			document.getElementById('para1').innerHTML = "Science Master  Quiz";
+			document.getElementById('para2').innerHTML = "Science is simply common sense at its best.'<br> ~Huxley, Thomas H.<br><br><br>'Science is nothing but perception.'<br> ~Plato<br>";
+			document.getElementById('para3').innerHTML = "Do you observe what you see around you?<br><br>Do you see the science behind the things you see?<br><br>Come this January and enjoy one of the most fascinating and interesting quizzes you will have ever encountered.<br><br>You need not be a geek or a freak, just common sense is what we seek.<br>";
+			document.getElementById('para4').innerHTML = '';
+			document.getElementById('para5').innerHTML = '';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('para7').innerHTML = '';
+			document.getElementById('para8').innerHTML = '';
+			document.getElementById('t1').src="images/tabb.png";
+		}
+		if(t==2)
+		{
+			document.getElementById('para1').innerHTML = '';
+			document.getElementById('para2').innerHTML = 'Techy quiz consists of a preliminary round and 3other rounds.';
+			document.getElementById('para3').innerHTML = 'Preliminary round followed by second and third rounds for those who are qualified.';
+			document.getElementById('para4').innerHTML = 'In case of tie-break teams will be selected based on starred questions.';
+			document.getElementById('para5').innerHTML = 'No pre-registration is required.';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('para7').innerHTML = '';
+			document.getElementById('para8').innerHTML = '';
+			document.getElementById('t2').src="images/tabb.png";
+		}
+		if(t==3)
+		{
+			document.getElementById('para1').innerHTML = '';
+			document.getElementById('para2').innerHTML = 'Each team can consist of a maximum of 3 members';
+			document.getElementById('para3').innerHTML = 'For prelims please bring your own pens, paper would be provided';
+			document.getElementById('para4').innerHTML = 'Any form of malpractice would lead to disqualification';
+			document.getElementById('para5').innerHTML = 'Event organisers decision is the final decision and must be abided by all.';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('para7').innerHTML = '';
+			document.getElementById('para8').innerHTML = '';
+			document.getElementById('t3').src="images/tabb.png";
+		}
+		if(t==4)
+		{
+			document.getElementById('para1').innerHTML = 'FAQ';	
+			document.getElementById('para2').innerHTML = '<br><b>Q:</b> How can I register for quiz?<br><b>ANS:</b> the registry of the event is on the spot.';
+			document.getElementById('para3').innerHTML = '<br><b>Q:</b> What is the registration fee?<br><b>ANS:</b> there is no registration fee for the event.';
+			document.getElementById('para4').innerHTML = '<br><b>Q:</b> Is there any requirement for participation?<br><b>ANS:</b> NO. the competition is open to all.';
+			document.getElementById('para5').innerHTML = '';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('para7').innerHTML = '';
+			document.getElementById('para8').innerHTML = '';
+			document.getElementById('t4').src="images/tabb.png";
+		}
+		if(t==5)
+		{
+			document.getElementById('para1').innerHTML = 'Organisers';	
+			document.getElementById('para2').innerHTML = 'M.Rahul Chauhan<br/>+91-9963775190<br/>+91-8019680468<br/>ee09b019@iith.ac.in<br/>';
+			document.getElementById('para3').innerHTML = 'T.Anil kumar<br/>+91-9014876567<br/>ee09b033@iith.ac.in<br/>';
+			document.getElementById('para4').innerHTML = 'Amit anurag <br>Ph: +91-7702306655 <br>me10b005@iith.ac.in<br>';
+			document.getElementById('para5').innerHTML = 'Mayank thapliyal<br>Ph:+91-9502602937<br>cs10b025@iith.ac.in<br>';
+			document.getElementById('para6').innerHTML = '';
+			document.getElementById('para7').innerHTML = '';
+			document.getElementById('para8').innerHTML = '';
+			document.getElementById('t5').src="images/tabb.png";
+		}
+	}
+</script>

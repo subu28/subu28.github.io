@@ -1,0 +1,160 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "Bridge-o-Mania";
+		document.getElementById('para2').innerHTML = "<i>A great bridge is a great monument which should serve to make known the splendor and genius of a nation; one should not occupy oneself with efforts toperfect it architecturally, for taste is always susceptible to change, but to conserve always in its form and decoration the character of solidity which is proper.</i>";
+		document.getElementById('para3').innerHTML = "-Jean Peronnet";
+		document.getElementById('para4').innerHTML = "Just like the long awaited engineering marvel, the Bandra Worli Sea Link, one of the spectacular works of precision engineering which is admired by all of us; this time at ELAN we have decided to present you with a similar challenge. ";
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = 'Bridge-o-Mania is an event of planning and innovation. It provides a stage to display your creativity, design, analytical skills and engineering attitude. The aim is to design and build a bridge using given stuff and test it until it fails.';
+		document.getElementById('para3').innerHTML = 'All you have is just some ice-cream sticks, a bottle of fevicol, some newspaper, and some other stuff to make a full-fledged bridge which can not only stand by itself but can also bear maximum load so that you can outrun others to win this event. ';
+		document.getElementById('para4').innerHTML = 'Attractive prize money and lots of goodies are to be won';
+		document.getElementById('para5').innerHTML = 'Are u ready for it? ';
+		document.getElementById('para6').innerHTML = "have a live glimpse of the event<a href='http://www.youtube.com/watch?v=PYXa9uftSLY' >http://www.youtube.com/watch?v=PYXa9uftSLY</a>";
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = 'No pre-registration is required for this event.Each team can have a maximum of 3 participants.Only the materials provided are to be used.The models of those teams who exceed the time limit will be disqualified.The models of those teams who are not present at the time of testing will not be tested.';
+		document.getElementById('para3').innerHTML = 'The decision of coordinators is final and binding in any circumstance';
+		document.getElementById('para4').innerHTML = 'The organizers reserve all rights to change any or all the above rules .You are suggested to check for any updates regularly.';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Coordinators';
+		document.getElementById('para2').innerHTML = "Arpit Jain <br/>09494823551<br/>ee10b005@iith.ac.in";
+		document.getElementById('para3').innerHTML = 'Chirag Kapur';
+		document.getElementById('para4').innerHTML = "Ajitesh Jindal<br/>09494823720";
+		document.getElementById('para5').innerHTML = 'Contact us at ee10b001@iith.ac.in';
+		document.getElementById('para6').innerHTML = 'Mail your queries with subject as Queries on the given contact.';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+ 	<div style="position:relative;" id="Scroller-1" > 
+		<div class="Scroller-Container" > 
+			<h2 align="center" id="para1">Bridge-o-Mania</h2> 
+			<p align="left" id="para2"><br><br><i>A great bridge is a great monument which should serve to make known the splendor and genius of a nation; one should not occupy oneself with efforts toperfect it architecturally, for taste is always susceptible to change, but to conserve always in its form and decoration the character of solidity which is proper.</i></p>
+			<p align="left" id="para3">-Jean Peronnet</p>
+			<p align="left" id="para4">Just like the long awaited engineering marvel, the Bandra Worli Sea Link, one of the spectacular works of precision engineering which is admired by all of us; this time at ELAN we have decided to present you with a similar challenge.</p> 
+			<p align="left" id="para5"></p> 
+			<p align="left" id="para6"></p> 
+		</div> 
+	</div> 
+	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+		<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+		<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+		<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+		</div>
+	</div>
+</div> 

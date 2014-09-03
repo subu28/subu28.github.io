@@ -1,0 +1,162 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;"  id="Scroller-1" > 
+   <div class="Scroller-Container"  > 
+      <h2 align="center" id="para1">SAVE YOUR&rsquo;S......</h2> 
+      <p align="left" id="para2"><br>Getting Bored at ELAN being the audience?? Then come over to this Event to give your imagination and thoughts a real picture<br>To go all the way and win the event, all you need is basic hands-on skills and craftsmanship. The unbound imagination of 50 odd participants is put to test in this awesome battle arena. And after hours of tiresome working, each model that arises pricks the acumen. And battling with others in this 3-level action packed event is the best you can do at ELAN.<br></p>
+      <p align="left" id="para3"></p>
+      <p align="left" id="para4"> </p> 
+      <p align="left" id="para5"></p> 
+      <p align="left" id="para6"></p> 
+    </div> 
+  </div> 
+ 	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "SAVE YOUR&rsquo;S......";
+		document.getElementById('para2').innerHTML = '<br>Getting Bored at ELAN being the audience?? Then come over to this Event to give your imagination and thoughts a real picture<br>To go all the way and win the event, all you need is basic hands-on skills and craftsmanship. The unbound imagination of 50 odd participants is put to test in this awesome battle arena. And after hours of tiresome working, each model that arises pricks the acumen. And battling with others in this 3-level action packed event is the best you can do at ELAN.';
+		document.getElementById('para3').innerHTML = " ";
+		document.getElementById('para4').innerHTML = "";
+		document.getElementById('para5').innerHTML = "";
+		document.getElementById('para6').innerHTML = "";
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = 'Register yourself at the hospitality desk on the same day and rush to the venue. We will give you the materials and the problem statement on the spot. First come, first serve. Only 25 teams of 2 participants each will be allowed. A one day event, it will mark out the potential engineers in you.';
+		document.getElementById('para3').innerHTML = 'Participation certificates will be awarded to the top 5 teams.';
+		document.getElementById('para4').innerHTML = '<b>Prize and Prize Money</b><br>First Prize &ndash; Rs 1500<br>Second Prize &ndash; Rs 1000<br>Third Prize &ndash; Rs 500<br>';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = 'No pre-registration is required for this event.Each team can have a maximum of 2 participants.Only the materials provided along with the problem statement are to be used.The models of those teams who exceed the time limit will be disqualified.The models of those teams who are not present at the time of testing will not be tested.The decision of coordinators is final and binding in any circumstance.The organizers reserve all rights to change any or all the above rules.You are suggested to check for any updates regularly.';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Coordinators:';
+		document.getElementById('para2').innerHTML = '<br>Chirag Kapur<br>Ajitesh Jindal<br>Ashok<br>Contact us at EE10B001@iith.ac.in<br>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>_

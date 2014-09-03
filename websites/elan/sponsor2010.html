@@ -1,0 +1,113 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript">
+	var r=0;
+	var scroller  = null;
+	var scrollbar = null;
+	function f1 ()
+	{
+		if(r==0)
+		{
+			scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+			scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+			r++;
+		}
+	}
+</script>  
+<div  class="Container"> 
+	<div style="position:relative;" id="Scroller-1" > 
+		<div class="Scroller-Container" >
+			<p id="para6"  style=" font-size:25px;  text-align:centre;">&nbsp &nbsp &nbsp &nbsp 2010 Sponsors</p>
+			<a href="http://www.bsnl.co.in" target="_blank">				<img src="sponsor images/bsnl.jpg"  alt="bsnl" width="60px" height="60px" border="0px"/></a>
+			<a href="http://bsnl.co.in" target="_blank">					<img src="sponsor images/bsnl3g.jpg" alt="bsnl3g" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.hitachi.co.in" target="_blank">				<img src="sponsor images/hitachi.jpg" alt="hitachi" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.adobe.com" target="_blank">					<img src="sponsor images/adobe.jpg"  alt="adobe" width="80px" height="60px" border="0px"/></a>
+			<a href="http://www.tatatiscon.co.in" target="_blank">			<img src="sponsor images/tatatiscon.jpg" alt="tatatiscon"  width="100px" height="60px" border="0px"/></a>
+			<a href="http://www.landmarkonthenet.com" target="_blank">		<img src="sponsor images/landmark.jpg" alt="landmark"  width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.statebankofindia.com" target="_blank">		<img src="sponsor images/sbi.jpg"  alt="sbi" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.kyrion.in" target="_blank">					<img src="sponsor images/kyrion.jpg"  alt="kyrion" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.infotech-enterprises.com" target="_blank">	<img src="sponsor images/infotech.gif"  alt="infotech" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.agilent.com" target="_blank">				<img src="sponsor images/agilent.jpg"  alt="agilent" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.yashodahospitals.com" target="_blank">		<img src="sponsor images/yashoda.jpg" alt="yashoda"  width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.rsjonline.com" target="_blank">				<img src="sponsor images/rsj.jpg"  alt="rsj" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.lahariresorts.com/" target="_blank">		<img src="sponsor images/lahari.jpg"  alt="lahari" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.knowafest.com" target="_blank">				<img src="sponsor images/knowafest.jpg"  alt="knowafest.com" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.koutonsparivar.com/" target="_blank">		<img src="sponsor images/koutons.jpg"  alt="koutons" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.btechguru.com" target="_blank">				<img src="sponsor images/btechguru.jpg"  alt="btechguru" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.big927fm.com" target="_blank">				<img src="sponsor images/bigfm.jpg"  alt="bigfm" width="120px" height="60px" border="0px"/></a>
+			<a href="http://www.ksbakers.com" target="_blank">				<img src="sponsor images/ksbakers.jpg"  alt="ksbakers" width="120px" height="60px" border="0px"/></a>
+			<a href="#" target="_blank">									<img src="sponsor images/spiceit.jpg"  alt="spiceit" width="120px" height="60px" border="0px"/></a>
+		</div> 
+	</div> 
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+		<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+		<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+		<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+		</div> 
+	</div> 
+
+</div>

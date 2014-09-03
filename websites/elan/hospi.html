@@ -1,0 +1,160 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<div  class="Container">   
+	<div style="position:relative;" id="Scroller-1" >
+		<div class="Scroller-Container" > 
+			<p align="left" id="para1">Elan is fast on its way to becoming one of the highlights of the year, of the city of Hyderabad and all of India. In this celebration of human skill, creativity and pure undiluted awesomeness, it is vital that all participants be able to give it their all, for all the events. We believe in the age old concept of 'Mehman, Bhagwan'. So come over to IIT H, where you will be accorded 'godly' treatment.</p> 
+			<p align="left" id="para2">We assure you that your short stay with us will be fun, secure and comfortable. Our team will be available round the clock to make you feel at home to address your every need.</p> 
+			<p align="left" id="para3"><a href='transport.html' >click here</a> for bus routes and schedule for Autonex Workshop.</p>
+			<p align="left" id="para4"></p>
+		</div> 
+	</div> 
+	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img width="60" height="25" onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img width="120" height="25" onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-45; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-25; cursor:pointer;">Rules</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:0; cursor:pointer;">Accommodation</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:25; cursor:pointer;">Contact</a>
+	</div>
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+		<img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+		<img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+		<div class="Scrollbar-Track"> 
+			<img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+		</div> 
+	</div> 
+</div> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+	var r=0;
+	var scroller  = null;
+	var scrollbar = null;
+	function f1 ()
+	{
+		if(r==0)
+		{
+			scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+			scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+			r++;
+		}
+	}
+	function repclk(k)
+	{
+		tab(k);
+	}
+	function tab(t)
+	{
+		scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+		scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+		document.getElementById('t1').src="images/tabc.png";
+		document.getElementById('t2').src="images/tabc.png";
+		document.getElementById('t3').src="images/tabc.png";
+		document.getElementById('t4').src="images/tabc.png";
+		if(t==1)
+		{
+			document.getElementById('para1').innerHTML = "Elan is fast on its way to becoming one of the highlights of the year, of the city of Hyderabad and all of India. In this celebration of human skill, creativity and pure undiluted awesomeness, it is vital that all participants be able to give it their all, for all the events. We believe in the age old concept of 'Mehman, Bhagwan'. So come over to IIT H, where you will be accorded 'godly' treatment.";
+			document.getElementById('para2').innerHTML = "We assure you that your short stay with us will be fun, secure and comfortable. Our team will be available round the clock to make you feel at home to address your every need.";
+			document.getElementById('para3').innerHTML = "<a href='transport.html' >click here</a> for bus routes and schedule for Autonex Workshop.";
+			document.getElementById('para4').innerHTML = "";
+			document.getElementById('t1').src="images/tabb.png";
+		}
+		else if(t==2)
+		{
+			document.getElementById('para1').innerHTML = 'Dear All,<br><br>This is to inform you about the rules to be followed in the IITH campus, to make Elan-11 a hassle-free and fun filled experience for everyone.<br><br>*   Kindly carry your college ID card and IITH Registration card in the campus.<br><br>*    Any kind of misbehavior will not be tolerated and will be dealt with, strictly.<br><br>*    Frisking is done for security reasons. Kindly cooperate.<br><br>*    Security personnel are not responsible for any of your personal belongings.<br><br>*    Security personnel reserve the right to refuse your entry at any point of time if they deem it unsafe.<br><br>*    Kindly cooperate with workshop team of ELAN-11.<br><br>*    The accommodation fee & deposit may be paid at the time of registration, deposit will be refunded at the time of check out if the registration card is submitted back.<br><br>*    The students are advised not to keep large amounts of cash or valuables in the room. The student is responsible for the safety of his/ her belongings.<br><br>*     Any damage/breakage to hostel property will be charged to the occupants of the room/ block with a fine. Disciplinary action will also be initiated.<br><br>*     Substance abuse, consumption of alcohol and smoking or chewing of tobacco and its related products is strictly banned in the campus.<br><br>*    Water should be carefully used and not wasted.<br><br>*    Keep the campus clean.<br><br>*     The student has to deposit the room key at the registration desk when you are going out for long duration.<br><br>*     Coupons for food will be given only to individuals having registration card.';
+			document.getElementById('para2').innerHTML = '';
+			document.getElementById('para3').innerHTML = '';
+			document.getElementById('para4').innerHTML = '';
+			document.getElementById('t2').src="images/tabb.png";
+			if(tr==1)
+			{
+				tr=2;
+				repclk(2);
+			}
+			if(tr==2)
+			{
+				tr=1;
+			}
+		}
+		else if(t==3)
+		{
+			document.getElementById('para1').innerHTML = '<b>Accommodation during the workshops.</b>';
+			document.getElementById('para2').innerHTML = 'Mattresses, pillows, buckets and mugs will be provided once accommodation is confirmed.';
+			document.getElementById('para3').innerHTML = '';
+			document.getElementById('para4').innerHTML = '';
+			document.getElementById('t3').src="images/tabb.png";
+		}
+		else if(t==4)
+		{
+			document.getElementById('para1').innerHTML = '<b>Hospitality Coordinators</b><br><br>Parag Saraogi<br>Email: cs09b031@iith.ac.in<br>Mb# 95028-33013<br><br>Varshitha Gokari H<br>Email: ee09b034@iith.ac.in<br>Mb# 90101-65040';
+			document.getElementById('para2').innerHTML = '<b>Transport Coordinator</b><br><br>Divanshu Chaturvedi<br>Email: ee09b010@iith.ac.in<br>Mb# 94934-60010';
+			document.getElementById('para3').innerHTML = '<b>Hospitality, Transport & Security Core</b><br><br>Abram Benny Kakkozha<br>Email: me09b002@iith.ac.in<br>Mb# 94934-60020';
+			document.getElementById('para4').innerHTML = '';
+			document.getElementById('t4').src="images/tabb.png";
+		}
+	}
+</script>

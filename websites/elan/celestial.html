@@ -1,0 +1,181 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "Celestial Inquisition";
+		document.getElementById('para2').innerHTML = 'The world is a board game, the pieces are the phenomena of the universe, and the rules of the game are laws of Nature. This is "Celestial Inquisition" where you will encounter the biggest stars in the depths of space, go to the very origin of the universe and to the regions where space ends and time itself comes to a standstill, as you journey towards unravelling the mysteries of the universe. Be ready as it will be tough, be ready as it will be demanding,be ready as the universe can show you things that will change your very perception of yourself.So, areyou GAME?';
+		document.getElementById('para3').innerHTML = "<a href='./server/eventRegistration.jsp'>Click here </a> To Register..";
+		document.getElementById('para4').innerHTML = "<a target='_blank' href='./problem_ci3.pdf'>Click here </a> To Download Problem statement Three.";
+                document.getElementById('para5').innerHTML = "<a target='_blank' href='./problem_ci_2.pdf'>Click here </a> To Download Problem statement Two.";
+		document.getElementById('para6').innerHTML = "<a target='_blank' href='./problem_celestial.pdf'>Click here </a> To Download Problem statement one";
+		document.getElementById('para7').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = 'This event will be held in two phases.';
+		document.getElementById('para3').innerHTML = 'Each phase will span four weeks. Every week, there will be a problem set comprising of 3 to 5 questions.';
+		document.getElementById('para4').innerHTML = 'The marking system will be specified along with the problem sets. Problems within a particular set may be related to each other.';
+		document.getElementById('para5').innerHTML = '<br><b>Selection procedure</b>';
+		document.getElementById('para6').innerHTML = 'If a contestant finishes in the top two in both the phases, he shall win the Alpha prize.';
+		document.getElementById('para7').innerHTML = 'If a contestant finishes in the top two in exactly one phase, he shall win the Beta prize.';
+		document.getElementById('para8').innerHTML = 'If a contestant finishes in the top five (Alpha and Beta prize winners excluded), he stands to win the Gamma prize.';
+		document.getElementById('para9').innerHTML = 'There will be a tie-breaker in alternate sets.';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = 'The contestant is free to use any resource of knowledge which he may find useful.';
+		document.getElementById('para3').innerHTML = 'All the general rules of online quizzes are applicable.';
+		document.getElementById('para4').innerHTML = 'The decision of the event organizers is final and binding.';
+		document.getElementById('para5').innerHTML = 'Send your answers to: <br/>Ee09b009@iith.ac.in or <br/>Cephied.iith@gmail.com';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Coordinators';
+		document.getElementById('para2').innerHTML = 'AniketDeshmukh <br>Ph: 9502580449 <br>cepheid.iith@gmail.com<br>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = 'Sri Sharan<br>Ph:9505233152<br>Sharan1narahs@gmail.com<br>';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">Celestial Inquisition</h2> 
+      <p align="left" id="para2">The world is a board game, the pieces are the phenomena of the universe, and the rules of the game are laws of Nature. This is "Celestial Inquisition" where you will encounter the biggest stars in the depths of space, go to the very origin of the universe and to the regions where space ends and time itself comes to a standstill, as you journey towards unravelling the mysteries of the universe. Be ready as it will be tough, be ready as it will be demanding,be ready as the universe can show you things that will change your very perception of yourself.So, areyou GAME?</p> 
+      <p align="left" id="para3"><a href='./server/eventRegistration.jsp'>Click here </a> To Register..</p>
+      <p align="left" id="para4"><a target='_blank' href='./problem_ci3.pdf'>Click here </a> To Download Problem statement Three.</p>
+      <p align="left" id="para5"><a target='_blank' href='./problem_ci_2.pdf'>Click here </a> To Download Problem statement Two.</p>
+      <p align="left" id="para6"><a target='_blank' href='./problem_celestial.pdf'>Click here </a> To Download Problem statement one</p>
+      <p align="left" id="para7"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p>
+	 
+	  <p align="left" id="para8"></p>
+	  <p align="left" id="para9"></p>
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

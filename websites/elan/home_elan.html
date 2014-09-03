@@ -1,0 +1,107 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+
+
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript">
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+</script>  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <p id="para1"  style=" font-size:20px; text-align:center;">Elan 2011</p>
+      <p id="para2">Many years ago, Einstein proclaimed that time stops at moments called 'singularities'. The theory also predicts that 'singularities' are impossible. This January, he's being proven wrong(YES!!)...coz at Elan, 
+time itself is gonna stand still. A huge wave of excitement, awesomeness and pure unmitigated fun, is coming to sweep you off your feet...! Yes... Elan is back and this time, IT IS GONNA BE COLOSSAL...!</p> 
+      <p id="para3">After the tremendous success last year, we are determined to make this year better than ever...! Elan 2.0 has something for everyone...from the most hardcore nerd, to the dudes and dudettes in the nearby disco. 
+Our five domains viz. Techy, Culti, Biggies, Infi and Litr promise you the ultimate learning ( fun ) experience.</p> 
+      <p id="para4">So come one come all, experience Fungeneering at Elan 2K11 - The Complete Fest.</p> 
+      <p id="para5">Statutory Warning: Highly Addictive. So be warned before you ENTER</p> 
+         </div> 
+  </div> 
+  
+	
+	
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

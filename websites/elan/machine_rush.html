@@ -1,0 +1,183 @@
+<style type="text/css">
+	.Container
+	{
+		position: absolute;
+		top: 30px; left: 0px;
+		width: 420px;
+		height: 420px;
+		background:  url(images/container_background.png) no-repeat;
+	}
+	#Scroller-1
+	{
+		position: absolute;
+		overflow: hidden;
+		width: 400px;
+		height: 400px;
+	}
+	#Scroller-1 p
+	{
+		margin: 0; padding: 10px 20px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		text-indent: 20px;
+		color: #000;
+	}
+	.Scroller-Container
+	{
+		position: absolute;
+		top: 0px; left: 0px;
+	}
+	#Scrollbar-Container
+	{
+		position: absolute;
+		top: 40px; left: 60px;
+	}
+	.Scrollbar-Up
+	{
+		cursor: pointer;
+		position: absolute;
+		left:-15;
+		top: -0px;
+	}
+	.Scrollbar-Track
+	{
+		width: 20px;
+		height: 275px;
+		position: absolute;
+		top: 47px;
+		background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+	}
+	.Scrollbar-Handle
+	{
+		position: absolute;
+		left:0;
+		width: 20px; height: 22px;
+	}
+	.Scrollbar-Down
+	{
+		cursor: pointer;
+		position: absolute;
+		top: 320px;
+		left:-15;
+	}
+</style> 
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "<h3><font size='4'>Machine Rush</font></h3>";
+		
+		document.getElementById('para2').innerHTML = 'please click on format tab for event details';
+
+	//	var newHTML = "<a     target='_blank' href='problem_machine_rush.doc'>click here</a> for problem statement ";
+	//	var newHTML2 = "<a  target="_blank" href='tdp_machine_rush.doc'>click here</a> for TDP ";
+	     document.getElementById('para3').innerHTML ="<a     href='problem_machine_rush.doc'>click here</a> for problem statement ";
+		document.getElementById('para4').innerHTML = "<a   href='tdp_machine_rush.doc'>click here</a> for TDP ";
+		document.getElementById('para5').innerHTML ='Prize money of Rs.25000/- to be won.<br/>Participation certificates will be given to all the participants.';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<br>';
+		document.getElementById('para2').innerHTML = 'Event contains two rounds<br/><b>Round-1</b>:<br/>          A straight line path of length about 6m will be the arena<br/>Time of each bot will be recorded and points will be given accordingly<br/><b>Round-2</b>:<br/>       In this round the arena will be in the form of a loop which contains <br/>radial and circular curves .<br/> The perimeter of the loop will be about 10m<br/>Time for each bot is recorded and points are given accordingly.';
+		document.getElementById('para3').innerHTML = '<b>Selection procedure</b> (Prize money) (Certificate)<br/><br/>Preliminary selections:<br/> The participating teams must send an abstract about their bot. <br/>Teams are selected based on their abstract.<br/>Abstract must contain the following:<br/> 1. Brief description materials and components used for the bot<br/> 2. which motors you are using? <br/>3. Which battery are you using and its specifications (Volts, Ampere-hours)?<br/>4. Which processor/microcontroller are you using? <br/>5. Team details and their college details and the team contacts.<br/><br/>   All bots have to participate in both the rounds <br/>Time of each bot will be recorded and points will be given accordingly            <br/>in both the rounds. <br/>  60% weightage is given for Round-2 marks<br/>  30% weightage is given for Round-1 marks<br/> 10%  weightage  is given for aesthetics of the bot';
+		document.getElementById('para4').innerHTML = "resources<br/> <a href='http://www.youtube.com/watch?v=JDxIorDI1VQ'>http://www.youtube.com/watch?v=JDxIorDI1VQ</a> ";
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '';
+		document.getElementById('para2').innerHTML = "<br/>A team can have a maximum of  4  members.<br/>1. Each team is allowed to have only one bot<br/>2.The bot must fit into a cube of dimensions 200 mm x 200 mm x 200 mm.<br/>3.The bot must use solar or chemical energy to drive the motors.<br/>4.The max voltage difference between any two points must not exceed 12V.<br/>5.The bot must be fully autonomous with all powering and motoring mechanisms self contained.<br/>6.Human operators are not permitted to enter any information into the bot during the event. The bot must not communicate with any wireless device also.<br/>7.The bot cannot be constructed using ready made Lego kits or any ready made mechanism. But you can make use of ready made gear assemblies. Violating this clause will lead to the disqualification of the machine.<br/>8.Organizers decision will be the final and no arguments with the organizer shall  be entertained.<br/><br/>Submission details<br/>The TDP must be sent on or before 20th January and results are uploaded within three days.<br/>The TDP can be in the form of  word file or pdf file. ";
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = '';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = 'Coordinators';
+		document.getElementById('para2').innerHTML = 'K.Hari Krishna <br/>  Email: ee09b014@iith.ac.in<br/>Ph:      +919849295361';
+		document.getElementById('para3').innerHTML = 'M.Neehar<br/>Email: ee09b017@iith.ac.in<br/>Ph:      +919493222408';
+		document.getElementById('para4').innerHTML = 'GLN Vinay<br/>Email: ee09b011@iith.ac.in<br/>Ph:      +919493460703';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = '';
+		document.getElementById('para7').innerHTML = '';
+		document.getElementById('para8').innerHTML = '';
+		document.getElementById('para9').innerHTML = '';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div style="position:relative;" id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <h2 align="center" id="para1">Machine Rush</h2> 
+      <p align="left" id="para2"><br><br>please click on format tab for event details</p> 
+      <p align="left" id="para3"><a href='problem_machine_rush.doc'>click here</a> for problem statement </p>
+	<p align="left" id="para4"><a href='tdp_machine_rush.doc'>click here</a> for TDP</p> 
+	<p align="left" id="para5">Prize money of Rs.25000/- to be won.<br/>Participation certificates will be given to all the participants.</p> 
+	<p align="left" id="para6"></p> 
+	  <p align="left" id="para7"></p>
+	  <p align="left" id="para8"></p>
+	  <p align="left" id="para9"></p>
+    </div> 
+  </div> 
+  	<div style="position:relative; top:-425; left:-20;" id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+		<a onClick="tab(1);" style="position:relative; top:-25; left:-75; cursor:pointer;">Introduction</a>
+		<a onClick="tab(2);" style="position:relative; top:-25; left:-45; cursor:pointer;">Format</a>
+		<a onClick="tab(3);" style="position:relative; top:-25; left:10; cursor:pointer;">Rules</a>
+		<a onClick="tab(4);" style="position:relative; top:-25; left:55; cursor:pointer;">Contact</a>
+	</div>
+
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

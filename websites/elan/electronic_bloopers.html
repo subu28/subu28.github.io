@@ -1,0 +1,188 @@
+<style type="text/css">
+.Container {
+position: absolute;
+top: 0px; left: 0px;
+width: 420px;
+height: 420px;
+background:  url(images/container_background.png) no-repeat;
+}
+#Scroller-1 {
+position: absolute;
+overflow: hidden;
+width: 400px;
+height: 400px;
+}
+#Scroller-1 p {
+margin: 0; padding: 10px 20px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 14px;
+text-indent: 20px;
+color: #000;
+}
+.Scroller-Container {
+position: absolute;
+top: 0px; left: 0px;
+}
+#Scrollbar-Container {
+position: absolute;
+top: 40px; left: 60px;
+}
+.Scrollbar-Up {
+cursor: pointer;
+position: absolute;
+left:-15;
+
+top: -0px;
+}
+.Scrollbar-Track {
+width: 20px;
+height: 275px;
+position: absolute;
+top: 47px;
+
+background: transparent url(images/scrollbar_track.gif) no-repeat center center;
+}
+.Scrollbar-Handle {
+position: absolute;
+left:0;
+width: 20px; height: 22px;
+}
+.Scrollbar-Down {
+cursor: pointer;
+position: absolute;
+top: 320px;
+left:-15;
+}
+.{
+	font-size:25;
+}
+</style> 
+
+
+
+<script type="text/javascript" src="src1/jsScroller.js"></script> 
+<script type="text/javascript" src="src1/jsScrollbar.js"></script> 
+<script type="text/javascript"> 
+var r=0;
+var scroller  = null;
+var scrollbar = null;
+function f1 ()
+ {
+ if(r==0)
+ {
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	r++;
+	}
+}
+function tab(t)
+{
+	scroller  = new jsScroller(document.getElementById("Scroller-1"), 400, 200);
+	scrollbar = new jsScrollbar (document.getElementById("Scrollbar-Container"), scroller, false);
+	document.getElementById('t1').src="images/tabc.png";
+	document.getElementById('t2').src="images/tabc.png";
+	document.getElementById('t3').src="images/tabc.png";
+	document.getElementById('t4').src="images/tabc.png";
+	if(t==1)
+	{
+		document.getElementById('para1').innerHTML = "<b><font size='4'>Electronic Bloopers</font></b>";
+		document.getElementById('para2').innerHTML = 'Do you like meddling with circuits? Do you like tinkering with the circuits in electronic items? Do you like designing circuits but are just plain lazy to make a complete one yourself? Then you are at the right place.<br>';
+		document.getElementById('para3').innerHTML = 'Do you observe what you see around you?<br>Do you see the science behind the things you see?<br>Come this January and enjoy one of the most fascinating and interesting quizzes you will have ever encountered.You need not be a geek or a freak, just common sense is what we seek.<br>';
+		document.getElementById('para4').innerHTML = 'Prizes worth Rs 6000/- to be won';
+		document.getElementById('para5').innerHTML = '<b>All you need to do: </b>';
+		document.getElementById('para6').innerHTML = 'All you need to do to participate in this event is, form a team of 2 or 3 and then register for this event via the website of Elan .A small questionnaire will be presented before you to answer and the teams will be selected based on their answers.';
+		document.getElementById('para7').innerHTML = '<a href="./server/eventRegistration.jsp">Click here </a> To Register..';
+		document.getElementById('para8').innerHTML = ' ';
+		document.getElementById('para9').innerHTML = ' ';
+		document.getElementById('t1').src="images/tabb.png";
+	}
+	if(t==2)
+	{
+		document.getElementById('para1').innerHTML = '<h1></h1>';
+		document.getElementById('para2').innerHTML = 'This is an on-the-spot event .Pre-registration is required. ';
+		document.getElementById('para3').innerHTML = 'At the start of the event, a circuit will be given to your team .The circuit may be faulty.';
+		document.getElementById('para4').innerHTML = 'What you must do is, make the circuit fully operational before the end of the specified time, with less than a given number of changes to the circuit.';
+		document.getElementById('para5').innerHTML = 'This event can be held in two modes .Be ready for anything <br>  1) Pre-requisites about the final circuit will be mentioned, unlimited changes allowed.<br> 2 Pre-requisites about the final circuit will be mentioned, limited changes only. ';
+		document.getElementById('para6').innerHTML = '<br>The points will be given on the following grounds:<br> Does the final circuit satisfy the pre-requisites?  If yes then <br>The number of changes made-the lesser the better<br>Time taken to finish-the sooner the better </br> </br><b> Note: In case of a tie, the number of changes made will be considered for awarding the positions.</b>';
+		document.getElementById('para7').innerHTML = ' ';
+		document.getElementById('para8').innerHTML = ' ';
+		document.getElementById('para9').innerHTML = ' ';
+		document.getElementById('t2').src="images/tabb.png";
+	}
+	if(t==3)
+	{
+		document.getElementById('para1').innerHTML = '1)	Only undergraduate students can register for this event';
+		document.getElementById('para2').innerHTML = '2)	There might be many levels, with a different problem statement for each level.;
+		document.getElementById('para3').innerHTML = '3)	Each team will consist of 2 or 3 participants pre – registered at the Elan website.';
+		document.getElementById('para4').innerHTML = '4)	All the registered participants of the team must be present at the time of the event; else it will be disqualified from the event.';
+		document.getElementById('para5').innerHTML = '5)	The circuits and other materials which may be required for the event will be provided by the organisers themselves, no other external materials can be used.';
+		document.getElementById('para6').innerHTML = '6)	Teams which do not submit the corrected circuit before the end of the given time shall be disqualified.';
+		document.getElementById('para7').innerHTML = '7)	Malpractices will lead to immediate disqualification. Yellow cards are not dealt here.';
+		document.getElementById('para8').innerHTML = '8)	In any case, the decision of the event organisers will be final and binding.';
+		document.getElementById('para9').innerHTML = '"Resources: <br>
+www.alldatasheet.com/<br>
+Google &lsquo;Debug electronic circuit&rsquo;
+";
+		document.getElementById('t3').src="images/tabb.png";
+	}
+	if(t==4)
+	{
+		document.getElementById('para1').innerHTML = '<h3>Coordinators<h3>';	
+		document.getElementById('para2').innerHTML = 'B.N. Sri Sharan <br>Ph: +91-9505233152<br>me09b007@iith.ac.in<br>';
+		document.getElementById('para3').innerHTML = '';
+		document.getElementById('para4').innerHTML = 'T Anil Kumar   <br>Ph:+91-9014876567<br>ee09b033@iith.ac.in <br>';
+		document.getElementById('para5').innerHTML = '';
+		document.getElementById('para6').innerHTML = ' ';
+		document.getElementById('para7').innerHTML = ' ';
+		document.getElementById('para8').innerHTML = ' ';
+		document.getElementById('para9').innerHTML = ' ';
+		document.getElementById('t4').src="images/tabb.png";
+	}
+}
+</script>
+
+
+  
+<div  class="Container"> 
+  
+  <div id="Scroller-1" > 
+   <div class="Scroller-Container" > 
+      <p id="para1"><b>Electronic Bloopers</b></p> 
+      <p id="para2"> Do you like meddling with circuits? Do you like tinkering with the circuits in electronic items? Do you like designing circuits but are just plain lazy to make a complete one yourself? Then you are at the right place. </p> 
+      <p id="para3">Elan 2011 gives you the opportunity to present your logic, your circuit designing skill (and your laziness) here at Electronic Bloopers. Join in this fun and exciting event as you race against time to &lsquo;Debug&rsquo; the given circuit</p> 
+      <p id="para4">Prizes worth Rs 6000/- to be won </p> 
+      <p id="para5"><b>All you need to do:</b></p> 
+      <p id="para6">All you need to do to participate in this event is, form a team of 2 or 3 and then register for this event via the website of Elan .A small questionnaire will be presented before you to answer and the teams will be selected based on their answers.</p> 
+	  <p id="para7"><a href="./server/eventRegistration.jsp">Click here </a> To Register..</p>
+	  <p id="para8"></p>
+	  <p id="para9"></p>
+    </div> 
+  </div> 
+  <div style="position:absolute; top:-25; id="tabb">
+		<img onClick="tab(1);" id="t1" src="images/tabb.png"/>
+		<img onClick="tab(2);" id="t2" src="images/tabc.png"/>
+		<img onClick="tab(3);" id="t3" src="images/tabc.png"/>
+		<img onClick="tab(4);" id="t4" src="images/tabc.png"/>
+	<div>
+	<div onClick="tab(1);" style="position:absolute; left:5; z-index:2; top:-15;cursor:pointer;">
+	<p>Introduction</p>
+	</div>
+	<div onClick="tab(2);" style="position:absolute; left:115; z-index:2; top:-15;cursor:pointer;">
+	<p>Format</p>
+	</div>
+	<div onClick="tab(3);" style="position:absolute; left:220; z-index:2; top:-15;cursor:pointer;">
+	<p>Rules</p>
+	</div>
+	<div onClick="tab(4);" style="position:absolute; left:300; z-index:2; top:-15;cursor:pointer;">
+	<p>Contact</p>
+	</div>
+	<div style="top:15; left:420;" id="Scrollbar-Container" onMouseMove="f1()"> 
+    <img src="images/up_arrow.gif" class="Scrollbar-Up" /> 
+    <img src="images/down_arrow.gif" class="Scrollbar-Down" /> 
+    <div class="Scrollbar-Track"> 
+      <img src="images/scrollbar_handle.gif" class="Scrollbar-Handle" /> 
+    </div> 
+	
+  </div> 
+
+</div> 

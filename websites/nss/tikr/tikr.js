@@ -1,0 +1,1 @@
+var tikre='<a href="blooddonation11.html">Thanks all for making the blood donation camp a success(8/oct saturday)</a>'
