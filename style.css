@@ -28,3 +28,17 @@ section#snaps{
     top: -70px;
     right: -100px;
 }
+.photomargin{
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.btn-subu{
+    background: transparent;
+    border: 2px solid #ffffff;
+    margin: 10px 0 30px 0;
+    color: #ffffff;
+}
+.btn-subu:hover{
+    background: #ffffff;
+    color: #e00057;
+}

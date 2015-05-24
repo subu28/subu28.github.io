@@ -6,16 +6,16 @@
         <meta name="description" content="Personal Portfolio of Subhash">
         <meta name="author" content="Subhash">
         <meta name="keywords" content="subhash subu subu28 portfolio ssubu">
-        <link rel="stylesheet" href="style.css"/>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <section id="aboutme">
             <div class="row">
-                <div class="col-xs-12">
+                <div style="overflow:hidden;" class="col-xs-12">
                     <img alt="photo" src="images/photo_onesta.jpg" id="photo"/>
                     <h1>Subhash S</h1>
                     <h3>Half Engineer</h3>
@@ -37,15 +37,82 @@
                 </div>
             </div>
         </section>
-        <section id="snaps">
+        <section id="snaps" style="text-align:center; color:#ffffff;">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>A few of my Clicks</h1>
+                    <h1>Me, People I Hang Out With...</h1>
                     <div class="container">
-                        lfjkb
+                        <div class="row picscontainer">
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/101.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/102.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/103.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/104.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/105.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/106.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/107.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/108.jpg"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 photomargin">
+                                <img style="width:100%;" src="images/gallery/109.jpg"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-lg btn-subu" onclick="loadpics(this)">Load More</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background:#009456;">
+                    <div class="modal-body">
+                        <div class="row">
+                            <img class="col-xs-12" id="modalimg"/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
+    <script type="text/javascript">
+        var picsshown = 110;
+        function loadpics(btn){
+            for(var a = picsshown;a<picsshown+9;a++){
+                if(a<136){
+                    $('.picscontainer').append('<div class="col-xs-12 col-sm-6 col-md-4 photomargin"><img style="width:100%;" src="images/gallery/'+a+'.jpg"/></div>')
+                    $('#snaps img').click(function(){
+                        $('#modalimg').attr('src',$(this).attr('src'));
+                        $('#picModal').modal();
+                    });
+                }
+                else{
+                    btn.style.display="none";
+                }
+            }
+            picsshown+=9;
+        }
+        $('#snaps img').click(function(){
+            $('#modalimg').attr('src',$(this).attr('src'));
+            $('#picModal').modal();
+        });
+    </script>
 </html>
