@@ -10,10 +10,12 @@ section>.row{
 section#aboutme{
     background: #158cd0;
     min-height: 100%;
+    color: #ffffff;
 }
 section#projects{
     background: #ffcc00;
     min-height: 100%;
+    color: #444444;
 }
 section#snaps{
     background: #e00057;
@@ -32,6 +34,9 @@ section#snaps{
     margin-top:15px;
     margin-bottom: 15px;
 }
+.photomargin>img{
+    border-radius: 3px;
+}
 .btn-subu{
     background: transparent;
     border: 2px solid #ffffff;
@@ -41,4 +46,24 @@ section#snaps{
 .btn-subu:hover{
     background: #ffffff;
     color: #e00057;
+}
+.biodiv{
+    margin:90px 30px 0 30px;
+}
+@media screen and (max-width: 768px) {
+    .biodiv {
+        float: left;
+        margin:0;
+    }
+}
+.icons{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    float: left;
+    margin: 10px;
+    border-radius: 20px;
+}
+.icons>img{
+    width: 100%;
 }
