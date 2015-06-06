@@ -63,7 +63,36 @@ section#snaps{
     float: left;
     margin: 10px;
     border-radius: 20px;
+    transition: background 500ms
 }
-.icons>img{
+.icons:hover{
+    background: #009CE0 !important;
+}
+.projectmargin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+.workphoto{
+    height: 150px;
+    padding: 0;
+}
+.workphoto>div{
+    width: 100%;
+    position: absolute;
+    padding:0 15px;
+    z-index: 10;
+}
+.workphoto>div>div{
+    max-height: 150px;
+    transition: max-height 1s, box-shadow 300ms;
+    overflow: hidden;
+    width: 100%;
+}
+.workphoto>div>div:hover{
+    max-height: 500px;
+    box-shadow: 0 0 6px black;
+}
+.workphoto>div>div>img{
     width: 100%;
 }
