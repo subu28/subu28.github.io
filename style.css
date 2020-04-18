@@ -1,98 +1,150 @@
-html{
-    height: 100%;
+* {
+  box-sizing: border-box;
 }
-body{
-    height: 100%;
+html, body{
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
 }
-section>.row{
-    margin:0;
+section {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0 70px;
 }
-section#aboutme{
-    background: #158cd0;
-    min-height: 100%;
-    color: #ffffff;
+h1, h3 {
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 0;
 }
-section#projects{
-    background: #ffcc00;
-    min-height: 100%;
-    color: #444444;
+h1 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+p {
+  margin-top: 0;
+  font-size: 18px;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px dashed #ffffff;
+  padding-bottom: 2px;
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  display: none;
+  background: black;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 5px;
+  margin-left: 10px;
+  bottom: 0;
+}
+a:hover>.tooltip {
+  display: initial;
+}
+
+/* about me */
+.aboutme {
+  background: #0b74ca;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+.aboutme-photo {
+  position: absolute;
+  top: -75px;
+  right: -80px;
+}
+.aboutme-photo-img {
+  width: 500px;
+  border-radius: 250px;
+  border: 5px solid #ffffff;
+}
+.aboutme-text {
+  margin-top: 100px;
+  width: calc(100% - 400px);
+}
+.aboutme-icons{
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  float: left;
+  margin: 10px;
+  border-radius: 20px;
+  transition: background 500ms
+}
+.aboutme-icons:hover{
+  background: #009CE0 !important;
+}
+/* section#projects{
+  background: #ffcc00;
+  min-height: 100%;
+  color: #444444;
 }
 section#snaps{
-    background: #e00057;
-    min-height: 100%;
-}
-#photo{
-    width:500px;
-    border-radius:250px;
-    border: 5px solid #ffffff;
-    position: relative;
-    float: right;
-    top: -70px;
-    right: -100px;
+  background: #e00057;
+  min-height: 100%;
 }
 .photomargin{
-    margin-top:15px;
-    margin-bottom: 15px;
+  margin-top:15px;
+  margin-bottom: 15px;
 }
 .photomargin>img{
-    border-radius: 3px;
+  border-radius: 3px;
 }
 .btn-subu{
-    background: transparent;
-    border: 2px solid #ffffff;
-    margin: 10px 0 30px 0;
-    color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  margin: 10px 0 30px 0;
+  color: #ffffff;
 }
 .btn-subu:hover{
-    background: #ffffff;
-    color: #e00057;
+  background: #ffffff;
+  color: #e00057;
 }
 .biodiv{
-    margin:90px 30px 0 30px;
+  margin:90px 30px 0 30px;
 }
 @media screen and (max-width: 768px) {
-    .biodiv {
-        float: left;
-        margin:0;
-    }
-}
-.icons{
-    width: 80px;
-    height: 80px;
-    padding: 10px;
+  .biodiv {
     float: left;
-    margin: 10px;
-    border-radius: 20px;
-    transition: background 500ms
+    margin:0;
+  }
 }
-.icons:hover{
-    background: #009CE0 !important;
-}
+
 .projectmargin{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
 }
 .workphoto{
-    height: 150px;
-    padding: 0;
+  height: 150px;
+  padding: 0;
 }
 .workphoto>div{
-    width: 100%;
-    position: absolute;
-    padding:0 15px;
-    z-index: 10;
+  width: 100%;
+  position: absolute;
+  padding:0 15px;
+  z-index: 10;
 }
 .workphoto>div>div{
-    max-height: 150px;
-    transition: max-height 1s, box-shadow 300ms;
-    overflow: hidden;
-    width: 100%;
+  max-height: 150px;
+  transition: max-height 1s, box-shadow 300ms;
+  overflow: hidden;
+  width: 100%;
 }
 .workphoto>div>div:hover{
-    max-height: 500px;
-    box-shadow: 0 0 6px black;
+  max-height: 500px;
+  box-shadow: 0 0 6px black;
 }
 .workphoto>div>div>img{
-    width: 100%;
-}
+  width: 100%;
+} */
