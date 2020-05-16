@@ -148,6 +148,7 @@ a:hover>.tooltip {
   justify-content: center;
   align-items: center;
   min-width: 300px;
+  margin-left: 20px;
 }
 .project-photo-div img {
   max-width: 100%;
