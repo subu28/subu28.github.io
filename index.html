@@ -6,6 +6,7 @@
     <meta name="description" content="Personal Portfolio of Subhash">
     <meta name="author" content="Subhash">
     <meta name="keywords" content="subhash subu subu28 portfolio ssubu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
@@ -23,14 +24,14 @@
       <div class="aboutme-text">
         <h1>Hi, I am Subhash</h1>
         <h3>I build stuff for the internet</h3>
-        <p>I have been building web apps and tools for about 10yrs. Some of my works are critical parts of systems that manage billions of dollars at <a href="https://plateiq.com/">PlateIQ</a> and <a href="https://boomerangcommerce.com/ppm/">Boomerang Commerce*<span class="tooltip">business division acquired by Lowe's</span></a>.</p>
+        <p>I have been building web apps and tools for about 10yrs. Some of my works are critical parts of systems that manage billions of dollars at <a target="_blank" referrerpolicy="no-referrer" href="https://plateiq.com/">PlateIQ</a> and <a target="_blank" referrerpolicy="no-referrer" href="https://boomerangcommerce.com/ppm/">Boomerang Commerce*<span class="tooltip">business division acquired by Lowe's</span></a>.</p>
         <p>
           I have also built a bunch of tools for my daily use and have occasional contributions to opensource projects. I keep myself busy with a lot of video games and a bit each of travel, bike rides and runs.
         </p>
         <br>
         <h3>More about me</h3>
-        <div>
-          <a href="http://github.com/subu28" target="_blank">
+        <div class="abouteme-svg-links">
+          <a referrerpolicy="no-referrer" href="https://github.com/subu28" target="_blank">
             <div class="aboutme-icons" style="background:#ffffff; fill:#ababab;">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;" xml:space="preserve">
                 <g>
@@ -58,7 +59,7 @@
               </svg>
             </div>
           </a>
-          <a href="http://steamcommunity.com/id/subu28/" target="_blank">
+          <a referrerpolicy="no-referrer" href="https://steamcommunity.com/id/subu28/" target="_blank">
             <div class="aboutme-icons" style="background:#59AD5B; fill:#ffffff;">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.828 31.828" style="enable-background:new 0 0 31.828 31.828;" xml:space="preserve">
                 <g>
@@ -105,29 +106,30 @@
         </div>
       </div>
     </section>
-    <section id="projects">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1 style="text-align:center;">Stuff I Do</h1>
-          <div class="container">
-            <div class="row projectmargin">
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-5 col-md-4 col-lg-3 col-lg-offset-1 workphoto"><div><div><img src="images/nvision.jpg"></div></div></div>
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-7 col-md-8 col-lg-7"><strong>&eta;vision-2013</strong><br/>&eta;vision is the Technical Festival of IITH. got Started in 2012 and I worked on its website for 2-Yrs before graduating out. This work was commisioned for the second edition and was a replica of windows XP platform on browser, suggestive of WEB-OS concept.</div>
-            </div>
-            <div class="row projectmargin">
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-7 col-md-8 col-lg-7 col-lg-offset-1"><strong>RatRace.in</strong><br/>Ratrace was a startup-idea/blog which tried to address the concerns about the narrow stream of opportunities targeted by the high-schoolers and society at large. We captured some of the often neglected opportunities like Jewellery Designing, Law, Chef which offer similar challenges and rewards.</div>
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-5 col-md-4 col-lg-3 workphoto"><div><div><img src="images/ratrace.jpg"></div></div></div>
-            </div>
-            <div class="row projectmargin">
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-5 col-md-4 col-lg-3 col-lg-offset-1 workphoto"><div><div><img src="images/nss.jpg"></div></div></div>
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-7 col-md-8 col-lg-7"><strong>National Service Scheme - IITH Chapter</strong><br/>no Org is complete without a web presence. NSS of IITH is no different. The Website contains the mission of NSS and provides an overview of weekly activities. Plans for upcoming weeks and other trackers are ussualy hosted here.</div>
-            </div>
-            <div class="row projectmargin">
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-7 col-md-8 col-lg-7 col-lg-offset-1"><strong>Mymbee</strong><br/>Mymbee is the Cultural News Harbinger of IITH. It served as a platform for keeping the students upto date with the activities of various cultural clubs. Along with the News it also hosted articles from the students.</div>
-              <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-5 col-md-4 col-lg-3 workphoto"><div><div><img src="images/cult.jpg"></div></div></div>
-            </div>
-          </div>
+    <section class="projects" id="projects">
+      <h1 class="projects-section-title">I made these!</h1>
+      <div class="project-item">
+        <div>
+          <h3>Zoot</h3>
+          <p>Zoot is a 3d render of my alma mater IITH's housing complex. It is based on WebGL and has contribution from other IITH alumni for the various 3d models.</p>
+          <p>Since the time this was made, the institute and the hostels have moved to a new permanent address. Zoot remains the only way you can visit the old times.</p>
+          <p><a target="_blank" href="/zoot">Take a trip</a></p>
         </div>
+        <div class="project-photo-div">
+          <img src="images/nvision.jpg">
+        </div>
+      </div>
+      <div class="row projectmargin">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-7 col-md-8 col-lg-7 col-lg-offset-1"><strong>RatRace.in</strong><br/>Ratrace was a startup-idea/blog which tried to address the concerns about the narrow stream of opportunities targeted by the high-schoolers and society at large. We captured some of the often neglected opportunities like Jewellery Designing, Law, Chef which offer similar challenges and rewards.</div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-5 col-md-4 col-lg-3 workphoto"><div><div><img src="images/ratrace.jpg"></div></div></div>
+      </div>
+      <div class="row projectmargin">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-5 col-md-4 col-lg-3 col-lg-offset-1 workphoto"><div><div><img src="images/nss.jpg"></div></div></div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-7 col-md-8 col-lg-7"><strong>National Service Scheme - IITH Chapter</strong><br/>no Org is complete without a web presence. NSS of IITH is no different. The Website contains the mission of NSS and provides an overview of weekly activities. Plans for upcoming weeks and other trackers are ussualy hosted here.</div>
+      </div>
+      <div class="row projectmargin">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-7 col-md-8 col-lg-7 col-lg-offset-1"><strong>Mymbee</strong><br/>Mymbee is the Cultural News Harbinger of IITH. It served as a platform for keeping the students upto date with the activities of various cultural clubs. Along with the News it also hosted articles from the students.</div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-5 col-md-4 col-lg-3 workphoto"><div><div><img src="images/cult.jpg"></div></div></div>
       </div>
     </section>
     <section id="snaps" style="text-align:center; color:#ffffff;">
@@ -171,43 +173,6 @@
         </div>
       </div>
     </section>
-    <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content" style="background:#009456;">
-          <div class="modal-body">
-            <div class="row">
-              <img class="col-xs-12" id="modalimg"/>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
-  <script type="text/javascript">
-    var picsshown = 110;
-    function loadpics(btn){
-      for(var a = picsshown;a<picsshown+9;a++){
-        if(a<136){
-          $('.picscontainer').append('<div class="col-xs-12 col-sm-6 col-md-4 photomargin"><img style="width:100%;" src="images/gallery/'+a+'.jpg"/></div>')
-          $('#snaps img').click(function(){
-            $('#modalimg').attr('src',$(this).attr('src'));
-            $('#picModal').modal();
-          });
-        }
-        else{
-          btn.style.display="none";
-        }
-      }
-      picsshown+=9;
-    }
-    $('#snaps img').click(function(){
-      $('#modalimg').attr('src',$(this).attr('src'));
-      $('#picModal').modal();
-    });
-		smoothScroll.init();
-  </script>
   <script type="text/javascript" src="main.js"></script>
 </html>

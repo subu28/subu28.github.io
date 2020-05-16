@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zoot</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="ministyle.css" type="text/css">
+    <link rel="stylesheet" href="options.css" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.autosize.min.js"></script>
+    <style type="text/css">
+        body{
+            margin:0px;
+	    position: absolute;
+	    top: 0px;
+	    bottom: 0px;
+	    left: 0px;
+	    right: 0px;
+        }
+        .nonselec{
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        #tuttext{
+            font-size: 40px;
+            color:#00bad3;
+            text-shadow: 0px 0px 10px white,0px 0px 10px white,0px 0px 10px white;
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+        }
+    
+        @font-face {
+            font-family: 'FORQUE';
+            src: url('Forque.ttf') format('truetype'); 
+        }
+        @font-face {
+            font-family: 'Featured Item';
+            src: url('Featured.ttf') format('truetype'); 
+        }
+        @font-face {
+            font-family: 'Billabong';
+            src: url('Billabong.ttf') format('truetype'); 
+        }
+
+    
+    </style>
+</head>
+<body>
+	
+    <div style="position: absolute; z-index: -10; top: 0px; bottom: 0px; left: 0px; right: 0px;">
+		<canvas id="3dbg" style="width:100%; height:100%;">
+		</canvas>
+	</div>
+	    <div id="frontground" style="position: absolute; z-index: 0; width: 100%; height: 100%;">
+        <div id="header" style=" overflow: auto;">
+            <div id="tinger" style="float: right; background:url(images/gear.png); margin: 10px; width: 50px; height: 50px; background-size: 50px 50px; cursor: pointer;" >
+            </div>
+        </div>
+
+        <div id="tutarea" style="width: 100%;">
+            <div id="tut" style="width: 700px; height: 200px; margin: auto; display:none; text-align: center;">
+                <span id="tuttext" class="nonselec"></span>
+            </div>
+        </div>
+    </div>
+
+	<div id="iith-map" class="iith-map  nonselec">
+		<div id="iith-map-button" style="color:black;"class="iith-map-button  nonselec">IIT-H MAP</div>
+		<img id="iith-map-img" src="images/iithmap.png" class="iith-map-img  nonselec">
+	</div>
+	<div id="loader" class="nonselec" style="display: none; width:80px; height:50px; position:absolute;top: 50%; left: 50%;  font-size: 40px;"><img src="images/490.gif"> Loading...</div>
+
+            <div id="about_us_info"> 
+                <img src="credits.svg">
+            </div>
+
+    <div class="overlay" id="overlay_window"> </div>
+
+    <div id="options">
+            <div id="inneroptions">
+                <div id="about_us" class="menu"> About Us </div>
+            </div>
+            <div id="options_btn" >Options</div>
+    </div>
+
+</body>
+    <script type="text/javascript" src="populate_test.js?version=12"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="cadpeer.api.alpha.js"></script>
+    <script>do_post_login();</script>
+</html>
+

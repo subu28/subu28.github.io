@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 html, body{
+  scroll-behavior: smooth;
   margin: 0;
   font-family: "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -89,7 +90,7 @@ a:hover>.tooltip {
   height: 14px;
   width: 14px;
   margin: 5px;
-  border-radius: 7px;
+  border-radius: 20px;
   border: 2px solid #ffffff;
   transition: all ease 0.4s;
   cursor: pointer;
@@ -101,23 +102,92 @@ a:hover>.tooltip {
   margin-top: 100px;
   width: calc(100% - 400px);
 }
+.abouteme-svg-links {
+  display: flex;
+}
+.abouteme-svg-links a {
+  border-bottom: none;
+  margin: 10px 20px 20px 0;
+}
+
 .aboutme-icons{
   width: 80px;
   height: 80px;
   padding: 10px;
   float: left;
-  margin: 10px;
   border-radius: 20px;
   transition: background 500ms
 }
 .aboutme-icons:hover{
   background: #009CE0 !important;
 }
-/* section#projects{
+
+.projects {
   background: #ffcc00;
-  min-height: 100%;
-  color: #444444;
+  color: #333333;
 }
+.projects-section-title {
+  padding-top: 20px;
+  text-align: center;
+}
+.project-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+.project-item h3,.project-item p {
+  margin-bottom: 8px;
+  max-width: 900px;
+}
+.project-item a {
+  color: #333333;
+  border-color: #333333;
+}
+.project-photo-div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+.project-photo-div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (min-width: 1400px) {
+  section {
+    padding: 0 calc((50vw - 700px) + 70px);
+  }
+  .aboutme-photo {
+    right: calc(50vw - 780px);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  section {
+    padding: 0 20px;
+  }
+  .aboutme-photo {
+    right: unset;
+    left: calc((100vw - 500px) / 2)
+  }
+  .aboutme-photo-switcher {
+    bottom: -15px;
+  }
+  .aboutme-photo-switch {
+    height: 30px;
+    width: 30px;
+  }
+  .aboutme-photo-switch.active {
+    border-width: 15px;
+  }
+
+  .aboutme-text {
+    margin-top: 500px;
+    width: 100%;
+  }
+}
+/* 
 section#snaps{
   background: #e00057;
   min-height: 100%;
