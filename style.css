@@ -132,7 +132,7 @@ a:hover>.tooltip {
 }
 .project-item {
   display: flex;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .project-item h3,.project-item p {
   margin-bottom: 8px;
