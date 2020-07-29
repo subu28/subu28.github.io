@@ -127,7 +127,8 @@ a:hover>.tooltip {
   color: #333333;
 }
 .projects-section-title {
-  padding-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   text-align: center;
 }
 .project-item {
@@ -155,6 +156,56 @@ a:hover>.tooltip {
   max-height: 100%;
 }
 
+.snaps {
+  background: #e00057;
+  color: #ffffff;
+}
+.snaps-section-title {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.snaps-container {
+  border-left: 2px dotted #ffffff;
+}
+.snaps-flag {
+  margin-left: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 2px dotted #ffffff;
+  background: #e00057;
+}
+.snaps-photos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px 50px 10px;
+}
+.snaps-photos .img {
+  margin: 5px;
+  border: 2px solid #ffffff;
+  height: 217px;
+  width: 324px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.snaps-photos .img.potrait {
+  width: 144px;
+}
+.snaps-photos .img .caption{
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  padding: 4px 10px;
+  font-size: 13px;
+  width: 100%;
+}
 @media only screen and (min-width: 1400px) {
   section {
     padding: 0 calc((50vw - 700px) + 70px);
