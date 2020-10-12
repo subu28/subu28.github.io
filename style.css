@@ -130,6 +130,7 @@ a:hover>.tooltip {
 .projects {
   background: #ffcc00;
   color: #333333;
+  padding-bottom: 30px;
 }
 .projects-section-title {
   padding-top: 40px;
@@ -138,7 +139,13 @@ a:hover>.tooltip {
 }
 .project-item {
   display: flex;
-  padding-bottom: 30px;
+}
+.project-item-divider {
+  text-align: center;
+  padding: 30px 0;
+}
+.project-item-divider:before {
+  content: '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 }
 .project-item h3,.project-item p {
   margin-bottom: 8px;
