@@ -46,6 +46,7 @@ a {
   padding: 0 5px;
   margin-left: 10px;
   bottom: 0;
+  z-index: 1;
 }
 a:hover>.tooltip {
   display: initial;
