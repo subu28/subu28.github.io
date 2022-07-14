@@ -1,7 +1,7 @@
 "use strict";
 (function() {
   const photoSwitches = document.querySelectorAll('.aboutme-photo-switch');
-  let activeSwitch = 0;
+  let activeSwitch = 1;
   const profileImgs = document.querySelectorAll('.aboutme-photo-img');
   let timeout;
 
