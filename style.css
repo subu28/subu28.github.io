@@ -13,7 +13,7 @@ section {
   min-height: 100vh;
   padding: 0 70px;
 }
-h1, h3 {
+h1, h3, h4 {
   font-weight: 500;
   line-height: 1;
   margin-top: 0;
@@ -23,6 +23,9 @@ h1 {
 }
 h3 {
   font-size: 24px;
+}
+h4 {
+  font-size: 18px;
 }
 p {
   margin-top: 0;
@@ -163,6 +166,7 @@ a:hover>.tooltip {
   align-items: center;
   min-width: 300px;
   margin-left: 20px;
+  flex-direction: column;
 }
 .project-photo-div img {
   max-width: 100%;
